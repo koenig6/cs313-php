@@ -5,13 +5,13 @@ div:hover{
 }
 
 .first{
-    font-size: 35px;
+    font-size: 25px;
     background-color: azure;
 
 }
 
 .second{
-    font-size: 25px;
+    font-size: 35px;
      background-color: lightcyan;
 }
 
@@ -34,7 +34,7 @@ div:hover{
     color: white;
 }
 
-.thrirdBtn{
+.secondBtn{
     border-radius: 8px;
     background-color: white;
     border: 3px solid #008CBA;
@@ -42,7 +42,7 @@ div:hover{
     transition-duration: .5s;
 }
 
-.thrirdBtn:hover{
+.secondBtn:hover{
     background-color: #008CBA;
     color: white;
 }
