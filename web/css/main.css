@@ -1,16 +1,23 @@
 /* CS 313 */
 
+div:hover{
+    font-weight: bold;
+}
+
 .first{
-    font-family: "Commic Sans MS"
+    font-size: 35px;
+    background-color: azure;
 
 }
 
 .second{
-
+    font-size: 25px;
+     background-color: lightcyan;
 }
 
-.thrid{
-
+.third{
+    font-size: 15px;
+     background-color: lightblue;
 
 }
 
