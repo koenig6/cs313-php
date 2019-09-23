@@ -1,15 +1,41 @@
 /* CS 313 */
 
-.top{
+.first{
     font-family: "Commic Sans MS"
 
 }
 
-.middle{
+.second{
 
 }
 
-.bottom{
+.thrid{
 
 
+}
+
+.firstBtn{
+    border-radius: 8px;
+    background-color: white;
+    border: 3px solid #008CBA;
+    padding: 12px 28px;
+    transition-duration: .5s;
+}
+
+.firstBtn:hover{
+    background-color: #008CBA;
+    color: white;
+}
+
+.thrirdBtn{
+    border-radius: 8px;
+    background-color: white;
+    border: 3px solid #008CBA;
+    padding: 12px 28px;
+    transition-duration: .5s;
+}
+
+.thrirdBtn:hover{
+    background-color: #008CBA;
+    color: white;
 }
