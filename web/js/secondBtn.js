@@ -1,3 +1,4 @@
-function colorChange() {
-    document.getElementsByClassName('first').value = document.getElementById('color').value;
-}
+var div = document.getElementById('first');
+div.children[1].onclick = function(){
+   div.style.backgroundColor = div.children[0].value;
+};
