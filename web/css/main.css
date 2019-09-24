@@ -4,18 +4,18 @@ div:hover{
     font-weight: bold;
 }
 
-.first{
+#first{
     font-size: 25px;
     background: azure;
 
 }
 
-.second{
+#second{
     font-size: 35px;
      background-color: lightcyan;
 }
 
-.third{
+#third{
     font-size: 15px;
      background-color: lightblue;
 
