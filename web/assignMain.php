@@ -4,6 +4,7 @@
         <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jody Koenig CS 313</title>
+        <link href="css/main.css" rel="stylesheet">
 
     </head>
     <body>
@@ -26,73 +27,54 @@
     ?>
 
                <table>
-           <caption>CIT 261 Assignment Portfolio</caption>
+           <caption>CS 313 Assignment Portal</caption>
            <thead>
                <tr>
                    <th>Code Topics</th>
-                   <th>Last Updated</th>
-                   <th>Notes to Bro. James</th>
                </tr>
            </thead>
             <tbody>
                 <tr>
-
                    <td></td>
                 </tr>
                 <tr>
-
                    <td></td>
                 </tr>
                 <tr>
-
                    <td></td>
                 </tr>
                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
-                   <td></td>
-                </tr>
-                 <tr>
-
                    <td></td>
                 </tr>
                  <tr>
                    <td></td>
-
                 </tr>
                  <tr>
                    <td></td>
-
                 </tr>
                  <tr>
                    <td></td>
-
+                </tr>
+                 <tr>
+                   <td></td>
+                </tr>
+                 <tr>
+                   <td></td>
+                </tr>
+                 <tr>
+                   <td></td>
+                </tr>
+                 <tr>
+                   <td></td>
+                </tr>
+                 <tr>
+                   <td></td>
+                </tr>
+                 <tr>
+                   <td></td>
                 </tr>
 
            </tbody>
         </table>
-    </main>
-
-
-
     </body>
 </html>
