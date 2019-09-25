@@ -12,30 +12,23 @@ header img {
 }
 
 nav button {
-    display: flex;
+        display: block;
+        margin: 3px;
 }
-nav ul {
-    display: flex;
-    flex-direction: column;
+    nav ul {
+    display: block;
     list-style-type: none; /*removes bullets*/
     padding: 2px;
     margin: 2px;
 }
-nav ul li {
-    display: block;
+    nav ul li {
+    /*display: none;*/
     text-align: center; /*centers text to middle of li element*/
 }
-nav ul li a {
-    text-decoration: none; /*removes line under link*/
-    color: white; /* makes the words white*/
+    nav ul li a {
+        text-decoration: none; /*removes line under link*/
+        color: #262228; /* makes the words dark*/
 }
-nav ul li.active a {
-    background-color: #2B7A78; /*makes current page blue*/
-    color: #FFFFFF;
-}
-
-
-
 div:hover{
     font-weight: bold;
 }
