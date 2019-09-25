@@ -130,4 +130,7 @@ tr:nth-child(odd){
   background-color: #DEF2F1;
 }
 
+.home{/*home page*/
+        margin-top: 10px;
+    }
 
