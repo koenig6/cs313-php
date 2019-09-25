@@ -14,10 +14,9 @@
 
         <h1>Jody Koenig - CS 313 - Home Page</h1>
 
-        //<?php
-
-       // echo .date("l ") . date('F, d Y');
-       // ?>
+        <?php
+        echo "Today is " . date("l ") . date('F, d Y');
+        ?>
 
         <nav>
             <ul class="navigation">
@@ -25,6 +24,10 @@
             <li>  </li>
             </ul>
         </nav>
+
+        <p>
+        I am pretty much someone who loves to be home with my family.  I love going to Six Flags and river rafting and plan to do as much as I can of both!
+        </p>
 
 
 

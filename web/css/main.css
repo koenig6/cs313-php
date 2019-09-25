@@ -1,5 +1,11 @@
 /* CS 313 */
 
+header img {
+    width: 200px;
+    height: auto;
+    float: right;
+}
+
 div:hover{
     font-weight: bold;
 }
