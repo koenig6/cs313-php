@@ -1,6 +1,6 @@
 /* CS 313 */
 
-header, nav {
+header, nav, main {
     max-width: 1400px;
     margin: auto; /*centers on page*/
 }
@@ -22,7 +22,7 @@ nav ul {
     margin: 2px;
 }
 nav ul li {
-    display: none;
+    display: block;
     text-align: center; /*centers text to middle of li element*/
 }
 nav ul li a {

@@ -12,9 +12,9 @@
     </head>
     <body>
         <header>
-            <h1>Jody Koenig - CS 313 - Assignment Main Page</h1>
+            <h1>Jody Koenig CS 313 </h1>
+               <h2> Assignment Main Page</h2>
         </header>
-
 
         <nav>
             <ul class="navigation">
@@ -24,55 +24,58 @@
 
         </nav>
 
-       <table>
-           <caption>CS 313 Assignment Portal</caption>
-           <thead>
-               <tr>
-                   <th>Code Topics</th>
-               </tr>
-           </thead>
-            <tbody>
-                <tr>
-                   <td></td>
-                </tr>
-                <tr>
-                   <td></td>
-                </tr>
-                <tr>
-                   <td></td>
-                </tr>
-                <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
-                 <tr>
-                   <td></td>
-                </tr>
+        <main>
 
-           </tbody>
-        </table>
+           <table>
+               <caption>CS 313 Assignment Portal</caption>
+               <thead>
+                   <tr>
+                       <th>Code Topics</th>
+                   </tr>
+               </thead>
+                <tbody>
+                    <tr>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+
+               </tbody>
+            </table>
+        </main>
     </body>
 </html>

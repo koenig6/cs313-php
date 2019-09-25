@@ -28,10 +28,13 @@
             </ul>
         </nav>
 
-        <p>
-        I am pretty much someone who loves to be home with my family.  I love going to Six Flags and river rafting and plan to do as much as I can of both!
-        </p>
+        <main>
 
+            <p>
+            I am pretty much someone who loves to be home with my family.  I love going to Six Flags and river rafting and plan to do as much as I can of both!
+            </p>
+
+        </main>
 
 
         <script src="js/"></script>
