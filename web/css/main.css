@@ -18,6 +18,11 @@ nav ul {
     margin: 2px;
 }
 
+nav ul li {
+    display: none;
+    text-align: center; /*centers text to middle of li element*/
+}
+
 
 
 div:hover{
