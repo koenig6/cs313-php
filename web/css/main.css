@@ -11,24 +11,38 @@ header img {
     float: left;
 }
 
-nav button {
-        display: block;
-        margin: 3px;
-}
+
+ nav{
+        margin: 0 auto;
+        width: 870px;
+        clear: both;
+    }
     nav ul {
-    display: block;
-    list-style-type: none; /*removes bullets*/
-    padding: 2px;
-    margin: 2px;
-}
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    nav li{
+        display: inline; /*makes words horizontal since default is verticle*/
+        float: left; /*gets the blocks to float next to each other*/
+        background-color: #FFCE00;
+    }
     nav ul li {
-    /*display: none;*/
-    text-align: center; /*centers text to middle of li element*/
-}
+        display: block;
+    }
     nav ul li a {
-        text-decoration: none; /*removes line under link*/
-        color: #262228; /* makes the words dark*/
-}
+        display: block;/*makes whole link a box to click not just the word*/
+        padding: 10px 10px;
+        width: 128px;  /* makes link boxes larger to that they are centered*/
+        font-size: 85%;
+    }
+    nav ul li a:hover {
+        background-color: #007849; /*when mouse is on nav link it will be this color*/
+        color: #FFFFFF;
+    }
+    nav ul li.active a {
+        background-color: #0375B4; /*makes current page link blue*/
+        color: #FFFFFF;
 div:hover{
     font-weight: bold;
 }
