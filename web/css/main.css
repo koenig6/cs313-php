@@ -18,20 +18,7 @@ nav ul {
     margin: 2px;
 }
 
-nav ul li {
-    display: none;
-    text-align: center; /*centers text to middle of li element*/
-}
 
-nav ul li a {
-    text-decoration: none; /*removes line under link*/
-    color: #262228; /* makes the words dark*/
-}
-
-nav ul li.active a {
-    background-color: #2B7A78; /*makes current page blue*/
-    color: #FFFFFF;
-}
 
 div:hover{
     font-weight: bold;
