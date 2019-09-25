@@ -134,3 +134,14 @@ tr:nth-child(odd){
         margin-top: 10px;
     }
 
+.index{
+    display: flex;
+}
+
+.index > div {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
