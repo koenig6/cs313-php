@@ -14,10 +14,10 @@
 
         <h1>Jody Koenig - CS 313 - Home Page</h1>
 
-        <?php
+        //<?php
 
-        echo .date("l ") . date('F, d Y');
-        ?>
+       // echo .date("l ") . date('F, d Y');
+       // ?>
 
         <nav>
             <ul class="navigation">
