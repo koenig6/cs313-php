@@ -3,7 +3,7 @@
 header img {
     width: 200px;
     height: auto;
-    float: right;
+    float: left;
 }
 
 div:hover{

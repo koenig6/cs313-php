@@ -20,8 +20,8 @@
 
         <nav>
             <ul class="navigation">
-            <li>  </li>
-            <li>  </li>
+            <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/homePage.php">Home Page</a></li>
+            <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Assignments</a></li>
             </ul>
         </nav>
 
