@@ -17,13 +17,18 @@ nav button {
 }
 
 nav ul {
-    display: block;
+
     list-style-type: none; /*removes bullets*/
     padding: 2px;
     margin: 2px;
 }
 
+nav ul li {
+    display: inline; /*lays links side by side */
+}
+
 nav ul li a {
+    display: block; /*displays link as block making whole area clickable*/
     text-decoration: none; /*removes line under link*/
     color: #262228; /* makes the words dark*/
 }
