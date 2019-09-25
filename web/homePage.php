@@ -8,20 +8,25 @@
 
     </head>
     <body>
+        <header>
+        <img src="images/picOfMe.jpg" width="200" height="271" alt="My Picture">
+        </header>
+
         <h1>Jody Koenig - CS 313 - Home Page</h1>
+
+        <?php
+
+        echo .date("l ") . date('F, d Y');
+        ?>
 
         <nav>
             <ul class="navigation">
             <li>  </li>
             <li>  </li>
             </ul>
-
         </nav>
 
-    <?php
 
-        echo "<h1>test</h1>";
-    ?>
 
         <script src="js/"></script>
     </body>
