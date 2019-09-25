@@ -18,7 +18,6 @@ div:hover{
 #third{
     font-size: 15px;
      background-color: lightblue;
-
 }
 
 .firstBtn{
@@ -46,3 +45,40 @@ div:hover{
     background-color: #008CBA;
     color: white;
 }
+
+h1 {
+    text-align: center;
+    background-color: darkgreen;
+    color: ghostwhite;
+    font-size: 40px;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+caption {
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+thead {
+    border: 5px solid black;
+}
+
+th,tr,td {
+    text-align: left;
+    padding: 5px
+}
+
+tr:nth-child(odd){
+  background-color: darkseagreen;
+}
+
+tr:hover {
+    background-color: darkblue;
+    color: azure;
+}
+
