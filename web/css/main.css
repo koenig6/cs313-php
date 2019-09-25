@@ -23,6 +23,10 @@ nav ul li a {
     color: #262228; /* makes the words dark*/
 }
 
+nav ul li.active a {
+    background-color: #2B7A78; /*makes current page blue*/
+    color: #FFFFFF;
+}
 
 
 
