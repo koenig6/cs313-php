@@ -24,12 +24,7 @@
 
         </nav>
 
-    <?php
-
-        echo "<h1>coming soon</h1>";
-    ?>
-
-               <table>
+       <table>
            <caption>CS 313 Assignment Portal</caption>
            <thead>
                <tr>
