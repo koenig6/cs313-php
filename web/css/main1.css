@@ -53,3 +53,56 @@ nav ul li.active a {
     background-color: #17252A; /*makes current page link blue*/
     color: #FEFFFF;
 }
+
+h1 {
+    text-align: center;
+    background-color: #2B7A78;
+    color: #DEF2F1;
+    font-size: 40px;
+}
+
+h2  {
+    text-align: center;
+    background-color: #2B7A78;
+    color: DEF2F1;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+caption {
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+thead {
+    border: 5px solid black;
+}
+
+th,tr,td {
+    text-align: left;
+    padding: 5px
+}
+
+tr:nth-child(odd){
+  background-color: #DEF2F1;
+}
+
+.home{/*home page*/
+        margin-top: 10px;
+    }
+
+.index{
+    display: flex;
+}
+
+.index > div {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
