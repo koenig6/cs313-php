@@ -12,6 +12,10 @@ header img {
     padding: inherit;
 }
 
+.php {
+    text-align: center;
+}
+
  nav{
         margin: 0 auto;
         width: 870px;
@@ -95,14 +99,14 @@ header img {
 
 h1 {
     text-align: center;
-    background-color: 2B7A78;
-    color: DEF2F1;
+    background-color: #2B7A78;
+    color: #DEF2F1;
     font-size: 40px;
 }
 
 h2  {
     text-align: center;
-    background-color: 2B7A78;
+    background-color: #2B7A78;
     color: DEF2F1;
 }
 

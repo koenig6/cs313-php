@@ -17,9 +17,11 @@
 
         <h1>Jody Koenig - CS 313 - Home Page</h1>
 
-        <?php
-        echo "Today is " . date("l ") . date('F, d Y');
-        ?>
+            <div id="php">
+                <?php
+                echo "Today is " . date("l ") . date('F, d Y');
+                ?>
+            </div>
 
         <nav>
             <ul class="navigation">
@@ -30,11 +32,13 @@
 
         <main>
 
+            <h2> A little bit about me</h2>
+
             <div class="index">
                 <div>
                 <img class="home" src="images/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="people by the pool" width="400" height="266">
                 <h3>Time with family and friends</h3>
-                <p>I love spending time with my friends and family doing waht ever.  </p>
+                <p>I love spending time with my friends and family doing what ever.  </p>
                 </div>
 
                 <div>
@@ -46,7 +50,7 @@
 
                 <img class="home" src="images/matt-bowden-GZc4fnQsaWQ-unsplash.jpg" alt="roller coaster" width="400" height="266">
             <h3>Riding roller coasters</h3>
-            <p>.</p>
+            <p> As often as my husband and I can find free time we take our dates to six flags.</p>
 
 
 
