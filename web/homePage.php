@@ -25,7 +25,8 @@
 
         <nav>
             <ul class="navigation">
-                <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/homePage.php">Home Page</a></li>
+                <li class="active" onmouseover="bigNav(this)" onmouseout="normalNav(this)"><a href="https://morning-bastion-33855.herokuapp.com/homePage.php">Home Page</a></li>
+
                 <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Assignments</a></li>
             </ul>
         </nav>
@@ -56,7 +57,7 @@
 
         </main>
 
-
+        <script src="js/mouseOver.js"></script>
         <script src="js/"></script>
     </body>
 </html>
