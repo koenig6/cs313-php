@@ -25,7 +25,7 @@
 
         <nav>
             <ul class="navigation">
-                <li class="active" onmouseover="bigNav(this)" onmouseout="normalNav(this)"><a href="https://morning-bastion-33855.herokuapp.com/homePage.php">Home Page</a></li>
+                <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/homePage.php">Home Page</a></li>
 
                 <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Assignments</a></li>
             </ul>
@@ -37,13 +37,13 @@
 
             <div class="index">
                 <div>
-                <img class="home" src="images/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="people by the pool" width="400" height="266">
+                <img class="home"  onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="people by the pool" width="200" height="133">
                 <h3>Time with family and friends</h3>
                 <p>I love spending time with my friends and family doing what ever.  </p>
                 </div>
 
                 <div>
-                <img class="home" src="images/markus-spiske-AfKyYsE9j6w-unsplash.jpg" alt="lap top on desk" width="400" height="269">
+                <img class="home" src="images/markus-spiske-AfKyYsE9j6w-unsplash.jpg" alt="lap top on desk" width="200" height="133">
                 <h3>School</h3>
                 <p> I am about half way through my school career </p>
                 </div>
