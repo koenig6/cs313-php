@@ -58,6 +58,6 @@
         </main>
 
         <script src="js/mouseOver.js"></script>
-        <script src="js/"></script>
+
     </body>
 </html>
