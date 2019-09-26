@@ -43,13 +43,13 @@
                 </div>
 
                 <div>
-                <img class="home" src="images/markus-spiske-AfKyYsE9j6w-unsplash.jpg" alt="lap top on desk" width="200" height="133">
+                <img class="home" onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/markus-spiske-AfKyYsE9j6w-unsplash.jpg" alt="lap top on desk" width="200" height="133">
                 <h3>School</h3>
                 <p> I am about half way through my school career </p>
                 </div>
             </div>
 
-                <img class="home" src="images/matt-bowden-GZc4fnQsaWQ-unsplash.jpg" alt="roller coaster" width="400" height="266">
+                <img class="home" onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/matt-bowden-GZc4fnQsaWQ-unsplash.jpg" alt="roller coaster" width="200" height="133">
             <h3>Riding roller coasters</h3>
             <p> As often as my husband and I can find free time we take our dates to six flags.</p>
 
