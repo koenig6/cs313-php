@@ -12,16 +12,17 @@
     </head>
     <body>
         <header>
-        <img src="images/picOfMe.jpg" width="200" height="271" alt="My Picture">
+            <img src="images/picOfMe.jpg" width="200" height="271" alt="My Picture">
+
+
+            <h1>Jody Koenig - CS 313 - Home Page</h1>
+
+                <div id="php">
+                    <?php
+                    echo "Today is " . date("l ") . date('F, d Y');
+                    ?>
+                </div>
         </header>
-
-        <h1>Jody Koenig - CS 313 - Home Page</h1>
-
-            <div id="php">
-                <?php
-                echo "Today is " . date("l ") . date('F, d Y');
-                ?>
-            </div>
 
         <nav>
             <ul class="navigation">
