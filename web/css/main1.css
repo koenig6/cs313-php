@@ -4,3 +4,14 @@ header, nav, main, body{
     max-width: 1400px;
     margin: auto; /*centers on page*/
 }
+
+header img {
+    width: 200px;
+    height: auto;
+    float: left;
+    padding: inherit;
+}
+
+.php {
+    text-align: center;
+}
