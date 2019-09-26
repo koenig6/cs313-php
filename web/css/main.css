@@ -1,6 +1,6 @@
 /* CS 313 */
 
-header, nav, main {
+header, nav, main, body{
     max-width: 1400px;
     margin: auto; /*centers on page*/
 }

@@ -35,7 +35,7 @@
                </thead>
                 <tbody>
                     <tr>
-                       <td></td>
+                       <td>Coming Soon!</td>
                     </tr>
                     <tr>
                        <td></td>
