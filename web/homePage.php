@@ -46,7 +46,7 @@
                 <div>
                     <img class="home" onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/markus-spiske-AfKyYsE9j6w-unsplash.jpg" alt="lap top on desk" width="200" height="133">
                     <h3>School</h3>
-                    <p> I have always wanted to get my college education.  Now that my kids are in school I am taking advantage of the opportunity online education offers.  I am majoring in Software Engineering</p>
+                    <p> I have always wanted to get my college education.  Now that my kids are in school I am taking advantage of the opportunity online education offers.  I am majoring in Software Engineering.</p>
                 </div>
 
 
