@@ -15,9 +15,9 @@
             <ul class="navigation">
                 <li class="active">Browse Items</li>
 
-                <li>>View Cart</li>
-                <li>>Checkout</li>
-                <li>>Confirmation</li>
+                <li>View Cart</li>
+                <li>Checkout</li>
+                <li>Confirmation</li>
             </ul>
         </nav>
 
