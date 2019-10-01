@@ -51,46 +51,70 @@ echo "Session variables are set.";
 
                     <tr>
                          <td><input type="checkbox" name="food" value="andes"></td>
-                       <td><img src="img/andes.jpg" alt="cupcake" width="176" height="224"> </td>
-                        <td>andes mint cupcakes</td>
+                       <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
+                        <td>Andes Mint cupcakes</td>
 
                     </tr>
                     <tr>
-                       <td></td>
+                       <td><input type="checkbox" name="food" value="bear"></td>
+                       <td><img src="img/bear.jpg" alt="cupcake" width="120" height="160"> </td>
+                        <td>Bear cupcakes</td>
+
                     </tr>
                     <tr>
-                       <td></td>
+                        <td><input type="checkbox" name="food" value="smores"></td>
+                       <td><img src="img/smores.jpg" alt="cupcake" width="108" height="90"> </td>
+                        <td>Smores cupcakes</td>
+
                     </tr>
                     <tr>
-                       <td></td>
+                        <td><input type="checkbox" name="food" value="monster"></td>
+                       <td><img src="img/monster.jpg" alt="cupcake" width="102" height="73"> </td>
+                        <td>Monster cupcakes</td>
+
                     </tr>
                      <tr>
-                       <td></td>
+                         <td><input type="checkbox" name="food" value="hearts"></td>
+                       <td><img src="img/hearts.jpg" alt="cupcake" width="160" height="120"> </td>
+                        <td>Heart cookies</td>
+
                     </tr>
                      <tr>
-                       <td></td>
+                        <td><input type="checkbox" name="food" value="lightbult"></td>
+                       <td><img src="img/lightbulb.jpg" alt="cupcake" width="128" height="102"> </td>
+                        <td>Lightbulb cookies</td>
                     </tr>
                      <tr>
-                       <td></td>
+                       <td><input type="checkbox" name="food" value="onsie"></td>
+                       <td><img src="img/onsie.jpg" alt="cupcake" width="144" height="91"> </td>
+                        <td>Baby onsie cookies</td>
                     </tr>
                      <tr>
-                       <td></td>
+                      <td><input type="checkbox" name="food" value="paint"></td>
+                       <td><img src="img/paint.jpg" alt="cupcake" width="100" height="75"> </td>
+                        <td>Paint pallette cookies</td>
                     </tr>
                      <tr>
-                       <td></td>
+                       <td><input type="checkbox" name="food" value="ruffles"></td>
+                       <td><img src="img/ruffles.jpg" alt="cupcake" width="107" height="146"> </td>
+                        <td>Wedding cake with ruffles</td>
                     </tr>
                      <tr>
-                       <td></td>
+                        <td><input type="checkbox" name="food" value="marbeling"></td>
+                       <td><img src="img/marbeling.jpg" alt="cupcake" width="129" height="170"> </td>
+                        <td>Wedding cake with marbeling</td>
                     </tr>
                      <tr>
-                       <td></td>
+                       <td><input type="checkbox" name="food" value="topFlower"></td>
+                       <td><img src="img/topFlower.jpg" alt="cupcake" width="118" height="177"> </td>
+                        <td>Wedding cake with flower on top</td>
                     </tr>
                      <tr>
-                       <td></td>
+                       <td><input type="checkbox" name="food" value="trailingFlowers"></td>
+                       <td><img src="img/trailingFlowers.jpg" alt="cupcake" width="91" height="122"> </td>
+                        <td>Wedding cake with trailing flowers</td>
                     </tr>
-                     <tr>
-                       <td></td>
-                    </tr>
+
 
                </tbody>
             </table>
