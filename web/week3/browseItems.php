@@ -51,7 +51,7 @@ echo "Session variables are set.";
 
                     <tr>
                          <td><input type="checkbox" name="food" value="andes"></td>
-                       <td><img src="img/andes.jpg" alt="cupcake" width="200" height="200"> </td>
+                       <td><img src="img/andes.jpg" alt="cupcake" width="176" height="224"> </td>
                         <td>andes mint cupcakes</td>
 
                     </tr>
