@@ -48,11 +48,12 @@ echo "Session variables are set.";
                    </tr>
                </thead>
                 <tbody>
-                    <img class="home"  onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="people by the pool" width="200" height="133">
+
                     <tr>
-                       <td><img src="img/andes.jpg" alt="cupcake" width="200" height="133"> </td>
+                         <td><input type="checkbox" name="food" value="andes"></td>
+                       <td><img src="img/andes.jpg" alt="cupcake" width="200" height="200"> </td>
                         <td>andes mint cupcakes</td>
-                        <td><input type="checkbox" name="food" value="andes"> Do I need something here?</td>
+
                     </tr>
                     <tr>
                        <td></td>
