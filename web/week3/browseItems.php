@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -11,6 +15,12 @@
 
     </head>
     <body>
+        <?php
+// Set session variables
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+echo "Session variables are set.";
+?>
         <nav>
             <ul class="navigation">
                 <li class="active">Browse Items</li>
