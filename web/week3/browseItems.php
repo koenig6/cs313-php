@@ -17,19 +17,82 @@ session_start();
     <body>
         <?php
 // Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
+$_SESSION["andes"] = "andes";
+        $_SESSION["bear"] = "bear";
+        $_SESSION["hearts"] = "hearts";
+        $_SESSION["lightbulb"] = "lightbulb";
+        $_SESSION["marbeling"] = "marbeling";
+        $_SESSION["monster"] = "monster";
+        $_SESSION["onsie"] = "onsie";
+        $_SESSION["paint"] = "paint";
+        $_SESSION["ruffles"] = "ruffles";
+        $_SESSION["smores"] = "smores";
+        $_SESSION["topFlower"] = "topFlower";
+        $_SESSION["trailingFlowers"] = "trailingFlowers";
 echo "Session variables are set.";
 ?>
         <nav>
             <ul class="navigation">
-                <li class="active">Browse Items</li>
+                <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
 
-                <li>View Cart</li>
-                <li>Checkout</li>
-                <li>Confirmation</li>
+                <li><a href="https://morning-bastion-33855.herokuapp.com/week3/viewCart.php">View Cart</a></li>
+                <li><a href="https://morning-bastion-33855.herokuapp.com/week3/checkout.php">Check Out</a></li>
+                <li><a href="https://morning-bastion-33855.herokuapp.com/week3/confirmation.php">Confirmation</a></li>
             </ul>
         </nav>
+
+        <table>
+               <thead>
+                   <tr>
+                       <th>Code Topics</th>
+                   </tr>
+               </thead>
+                <tbody>
+                    <img class="home"  onmouseover="bigNav(this)" onmouseout="normalNav(this)" src="images/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="people by the pool" width="200" height="133">
+                    <tr>
+                       <td><img src="img/andes.jpg" alt="cupcake" width="200" height="133"> </td>
+                        <td>andes mint cupcakes</td>
+                        <td><input type="checkbox" name="food" value="andes"> Do I need something here?</td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+                     <tr>
+                       <td></td>
+                    </tr>
+
+               </tbody>
+            </table>
 
 
     </body>

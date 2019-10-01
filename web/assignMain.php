@@ -35,7 +35,7 @@
                </thead>
                 <tbody>
                     <tr>
-                       <td><a href="https://morning-bastion-33855.herokuapp.com/week3/shoppingCart.php">Shopping Cart</a></td>
+                       <td><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Shopping Cart</a></td>
                     </tr>
                     <tr>
                        <td></td>
