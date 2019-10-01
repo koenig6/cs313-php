@@ -1,23 +1,12 @@
-<?php
-
-?>
-
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-
-	   <meta charset="utf-8">
-	   <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/helloCss.css">
-        <title>Team</title>
-
-	</head>
-	<body>
 
 
+<html>
+<body>
 
+Welcome <?php echo $_POST["name"]; ?><br>
+Your email address is: <?php echo $_POST["email"]; ?>
 
-    </form>
-
-	</body>
+</body>
 </html>
+
+
