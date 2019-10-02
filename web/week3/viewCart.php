@@ -28,8 +28,10 @@ session_start();
 
 
 
-             <?php
-            if (isset($_SESSION["andes"])){
+            <?php
+
+            echo $_SESSION["andes"];
+           /* if (isset($_SESSION["andes"])){
             echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
             }
             if (isset($_SESSION["bear"])){
@@ -64,7 +66,7 @@ session_start();
             }
             if (isset($_SESSION["trailingFlowers"])){
             echo "Wedding cake with trailing flowers"; // Displays value of checked checkbox.
-            }
+            }*/
 
             ?>
 
