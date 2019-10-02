@@ -31,7 +31,7 @@ session_start();
 <body>
 
 
-You selected: <?php echo $_POST["continents"]; ?>
+
     <?php
 if (isset($_SESSION['andes'])){
 echo $_SESSION['andes']; // Displays value of checked checkbox.
