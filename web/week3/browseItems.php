@@ -17,7 +17,7 @@ session_start();
     <body>
         <?php
 // Set session variables
-        $_SESSION["andes"] = "andes";
+        $_SESSION["andes"] = "";
         $_SESSION["bear"] = "bear";
         $_SESSION["hearts"] = "hearts";
         $_SESSION["lightbulb"] = "lightbulb";
@@ -52,7 +52,7 @@ session_start();
                        <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                         <td>Andes Mint cupcakes</td>
                         <td><button type="button" name="andes">Add to cart</button></td>
-                         <td><a target="_blank" href="viewCart.php?andes='.$andes.'"></a></td>
+
 
 
                     </tr>
