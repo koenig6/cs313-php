@@ -48,10 +48,13 @@ session_start();
                </thead>
                 <tbody>
                     <tr>
+                        unset($_SESSION['Products']);
 
                        <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                         <td>Andes Mint cupcakes</td>
-                        <td><input type="button" name="andes" value="add" onclick="set('<?php (isset($_SESSION["andes"])?>');"/></td>
+                        <td>><button type="button" name="andes">Add to cart</button></td>
+                        <td>><input type="button" value="Add" onclick= "<?php isset($_SESSION["andes"]);?>" /></td>
+                        <input type="button">
 
 
 
