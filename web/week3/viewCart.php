@@ -32,11 +32,6 @@ session_start();
 
 
 
-    <?php
-if (isset($_SESSION['andes'])){
-echo $_SESSION['andes']; // Displays value of checked checkbox.
-
-?>
 
 </body>
 </html>
@@ -45,7 +40,7 @@ echo $_SESSION['andes']; // Displays value of checked checkbox.
 
     </body>
 
-    <script src="js/firstBtn.js"></script>
+    <script src=""></script>
 
 
 </html>
