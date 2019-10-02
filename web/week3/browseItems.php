@@ -19,7 +19,7 @@ session_start();
 // Set session variables
 $_SESSION["andes"] = "andes";
         $_SESSION["bear"] = "bear";
-        $_SESSION["treat"] = "hearts";
+        $_SESSION["hart"] = "hearts";
         $_SESSION["treat"] = "lightbulb";
         $_SESSION["marbeling"] = "marbeling";
         $_SESSION["monster"] = "monster";
