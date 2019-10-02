@@ -44,7 +44,7 @@ echo "Session variables are set.";
         <table>
                <thead>
                    <tr>
-                       <th>Code Topics</th>
+                       <th></th>
                    </tr>
                </thead>
                 <tbody>

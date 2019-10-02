@@ -17,8 +17,8 @@ session_start();
     <body>
         <?php
 // Set session variables
-$_SESSION["andes"] = "andes";
-        $_SESSION["treat"] = "bear";
+        $_SESSION["andes"] = "andes";
+        $_SESSION["bear"] = "bear";
         $_SESSION["treat"] = "hearts";
         $_SESSION["treat"] = "lightbulb";
         $_SESSION["treat"] = "marbeling";
@@ -48,8 +48,8 @@ echo "Session variables are set.";
 
 You selected: <?php echo $_POST["continents"]; ?>
     <?php
-if (isset($_POST['food'])){
-echo $_POST['food']; // Displays value of checked checkbox.
+if (isset($_SESSION['food'])){
+echo $_SESSION['food']; // Displays value of checked checkbox.
 }
 ?>
 
