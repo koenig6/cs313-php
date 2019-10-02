@@ -50,12 +50,7 @@ You selected: <?php echo $_POST["continents"]; ?>
     <?php
 if (isset($_SESSION['andes'])){
 echo $_SESSION['andes']; // Displays value of checked checkbox.
-    if (isset($_SESSION['bear'])){
-echo $_SESSION['bear']; // Displays value of checked checkbox.
-        if (isset($_SESSION['hearts'])){
-echo $_SESSION['hearts']; // Displays value of checked checkbox.
 
-}
 ?>
 
 </body>
