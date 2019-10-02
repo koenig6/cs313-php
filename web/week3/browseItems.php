@@ -58,6 +58,7 @@ session_start();
                        <td><input type="checkbox" name="food" value="bear"></td>
                        <td><img src="img/bear.jpg" alt="cupcake" width="120" height="160"> </td>
                         <td>Bear cupcakes</td>
+                        <td><button type="button" name="bear">Add to cart</button></td>
 
                     </tr>
                     <tr>

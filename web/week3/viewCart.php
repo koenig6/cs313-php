@@ -31,7 +31,10 @@ session_start();
 
              <?php
             if (isset($_SESSION["andes"])){
-            echo "andes"; // Displays value of checked checkbox.
+            echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
+            }
+            if (isset($_SESSION["bear"])){
+            echo "Bear cupcakes"; // Displays value of checked checkbox.
             }
             ?>
 
