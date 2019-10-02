@@ -26,7 +26,7 @@ session_start();
             </ul>
         </nav>
 
-            Thank your for your purchase <?php echo $_POST["name"]; ?><br>
+            Thank your for your purchase <?php echo $_POST["firstName"]; ?><br>
             Your delivery will be to: <?php echo $firstName; $lastName; $email;
 
 
