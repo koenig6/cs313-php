@@ -30,8 +30,8 @@ session_start();
 
 
              <?php
-            if (isset($_POST['andes'])){
-            echo $_POST['andes']; // Displays value of checked checkbox.
+            if (isset("andes")){
+            echo "andes"; // Displays value of checked checkbox.
             }
             ?>
 
