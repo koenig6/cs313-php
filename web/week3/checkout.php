@@ -17,18 +17,18 @@ session_start();
     <body>
         <?php
 // Set session variables
-        $_SESSION["andes"] = "andes";
-        $_SESSION["bear"] = "bear";
-        $_SESSION["hearts"] = "hearts";
-        $_SESSION["lightbulb"] = "lightbulb";
-        $_SESSION["marbeling"] = "marbeling";
-        $_SESSION["monster"] = "monster";
-        $_SESSION["onsie"] = "onsie";
-        $_SESSION["paint"] = "paint";
-        $_SESSION["ruffles"] = "ruffles";
-        $_SESSION["smores"] = "smores";
-        $_SESSION["topFlower"] = "topFlower";
-        $_SESSION["trailingFlowers"] = "trailingFlowers";
+        $_SESSION["treat"] = "andes";
+        $_SESSION["treat"] = "bear";
+        $_SESSION["treat"] = "hearts";
+        $_SESSION["treat"] = "lightbulb";
+        $_SESSION["treat"] = "marbeling";
+        $_SESSION["treat"] = "monster";
+        $_SESSION["treat"] = "onsie";
+        $_SESSION["treat"] = "paint";
+        $_SESSION["treat"] = "ruffles";
+        $_SESSION["treat"] = "smores";
+        $_SESSION["treat"] = "topFlower";
+        $_SESSION["treat"] = "trailingFlowers";
 echo "Session variables are set.";
 ?>
         <nav>
