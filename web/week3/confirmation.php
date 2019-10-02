@@ -29,7 +29,8 @@ session_start();
             Thank your for your purchase <?php echo $_POST["firstName"]; ?><br>
             Your delivery will be to: <?php echo $_POST["firstName"]; echo " "; echo $_POST["lastName"]; ?><br>
                                         <?php echo $_POST["email"]; ?><br>
-                                        <?php echo $_POST["street"]; echo $_POST["state"];echo $_POST["zip"];?><br>
+                                        <?php echo $_POST["street"]; echo " ";
+                                        echo $_POST["state"];echo " ";echo $_POST["zip"];?><br>
 
 
 
