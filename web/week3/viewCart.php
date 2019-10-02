@@ -30,7 +30,7 @@ session_start();
 
 
              <?php
-            if (isset("andes")){
+            if (isset($_SESSION["andes"])){
             echo "andes"; // Displays value of checked checkbox.
             }
             ?>
