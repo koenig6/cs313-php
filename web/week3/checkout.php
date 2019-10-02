@@ -26,7 +26,7 @@ session_start();
             </ul>
         </nav>
 
-        <form action="form.php" method="post">
+        <form action="confirmation.php" method="post">
             First Name: <input type="text" name="firstName"><br>
             Last Name: <input type="text" name="lastName"><br>
             E-mail: <input type="text" name="email"><br>
