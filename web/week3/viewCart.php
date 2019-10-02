@@ -27,15 +27,13 @@ session_start();
         </nav>
 
 
-        <html>
-<body>
 
 
-
-
-</body>
-</html>
-
+             <?php
+            if (isset($_POST['andes'])){
+            echo $_POST['andes']; // Displays value of checked checkbox.
+            }
+            ?>
 
 
     </body>
