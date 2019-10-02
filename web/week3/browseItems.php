@@ -48,6 +48,7 @@ echo "Session variables are set.";
                    </tr>
                </thead>
                 <tbody>
+                    <form action="viewCart.php" method="post">
 
                     <tr>
                          <td><input type="checkbox" name="food" value="andes"></td>
@@ -115,6 +116,8 @@ echo "Session variables are set.";
                         <td>Wedding cake with trailing flowers</td>
                     </tr>
 
+                        <input type="submit">
+                        </form>
 
                </tbody>
             </table>

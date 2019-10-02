@@ -48,8 +48,8 @@ echo "Session variables are set.";
 
 You selected: <?php echo $_POST["continents"]; ?>
     <?php
-if (isset($_POST['treat'])){
-echo $_POST['treat']; // Displays value of checked checkbox.
+if (isset($_POST['food'])){
+echo $_POST['food']; // Displays value of checked checkbox.
 }
 ?>
 
