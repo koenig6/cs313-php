@@ -52,6 +52,8 @@ session_start();
                        <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                         <td>Andes Mint cupcakes</td>
                         <td><button type="button" name="andes">Add to cart</button></td>
+                         <td><a target="_blank" href="viewCart.php?andes='.$andes.'"></a></td>
+
 
                     </tr>
                     <tr>
