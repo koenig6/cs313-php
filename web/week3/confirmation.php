@@ -17,7 +17,7 @@ session_start();
     <body>
         <?php
 // Set session variables
-$_SESSION["andes"] = "andes";
+        $_SESSION["andes"] = "andes";
         $_SESSION["bear"] = "bear";
         $_SESSION["hearts"] = "hearts";
         $_SESSION["lightbulb"] = "lightbulb";
