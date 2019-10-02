@@ -28,14 +28,44 @@ session_start();
 
 
 
-
              <?php
             if (isset($_SESSION["andes"])){
             echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
-            }
+            }<br>
             if (isset($_SESSION["bear"])){
             echo "Bear cupcakes"; // Displays value of checked checkbox.
             }
+            if (isset($_SESSION["hearts"])){
+            echo "Heart cookies"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["lightbulb"])){
+            echo "Lightbulb cookies"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["marbeling"])){
+            echo "Marbeled wedding cake"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["monster"])){
+            echo "Monster cupcakes"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["onsie"])){
+            echo "Onsie cookies"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["paint"])){
+            echo "Paint cookies"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["ruffles"])){
+            echo "Wedding cake with ruffles"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["smores"])){
+            echo "Smores cupcakes"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["topFlower"])){
+            echo "Wedding cake with flowers on top"; // Displays value of checked checkbox.
+            }<br>
+            if (isset($_SESSION["trailingFlowers"])){
+            echo "Wedding cake with trailing flowers"; // Displays value of checked checkbox.
+            }<br>
+
             ?>
 
 
