@@ -15,22 +15,7 @@ session_start();
 
     </head>
     <body>
-        <?php
-// Set session variables
-        $_SESSION["treat"] = "andes";
-        $_SESSION["treat"] = "bear";
-        $_SESSION["treat"] = "hearts";
-        $_SESSION["treat"] = "lightbulb";
-        $_SESSION["treat"] = "marbeling";
-        $_SESSION["treat"] = "monster";
-        $_SESSION["treat"] = "onsie";
-        $_SESSION["treat"] = "paint";
-        $_SESSION["treat"] = "ruffles";
-        $_SESSION["treat"] = "smores";
-        $_SESSION["treat"] = "topFlower";
-        $_SESSION["treat"] = "trailingFlowers";
-echo "Session variables are set.";
-?>
+
         <nav>
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
@@ -40,6 +25,17 @@ echo "Session variables are set.";
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/confirmation.php">Confirmation</a></li>
             </ul>
         </nav>
+
+        <form action="form.php" method="post">
+            First Name: <input type="text" name="firstName"><br>
+            Last Name: <input type="text" name="lastName"><br>
+            E-mail: <input type="text" name="email"><br>
+            Street Address: <input type="text" name="street"><br>
+            State: <input type="text" name="state"><br>
+            Zip Code: <input type="text" name="zip"><br>
+
+             <input type="submit">
+        </form>
 
 
     </body>

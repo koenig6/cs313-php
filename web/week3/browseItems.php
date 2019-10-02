@@ -29,7 +29,6 @@ session_start();
         $_SESSION["smores"] = "smores";
         $_SESSION["topFlower"] = "topFlower";
         $_SESSION["trailingFlowers"] = "trailingFlowers";
-echo "Session variables are set.";
 ?>
         <nav>
             <ul class="navigation">
@@ -48,8 +47,6 @@ echo "Session variables are set.";
                    </tr>
                </thead>
                 <tbody>
-                    <form action="viewCart.php" method="post">
-
                     <tr>
                          <td><input type="checkbox" name="food" value="andes"></td>
                        <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
@@ -115,9 +112,6 @@ echo "Session variables are set.";
                        <td><img src="img/trailingFlowers.jpg" alt="cupcake" width="91" height="122"> </td>
                         <td>Wedding cake with trailing flowers</td>
                     </tr>
-
-                        <input type="submit">
-                        </form>
 
                </tbody>
             </table>

@@ -15,22 +15,7 @@ session_start();
 
     </head>
     <body>
-        <?php
-// Set session variables
-        $_SESSION["andes"] = "andes";
-        $_SESSION["bear"] = "bear";
-        $_SESSION["hearts"] = "hearts";
-        $_SESSION["lightbulb"] = "lightbulb";
-        $_SESSION["marbeling"] = "marbeling";
-        $_SESSION["monster"] = "monster";
-        $_SESSION["onsie"] = "onsie";
-        $_SESSION["paint"] = "paint";
-        $_SESSION["ruffles"] = "ruffles";
-        $_SESSION["smores"] = "smores";
-        $_SESSION["topFlower"] = "topFlower";
-        $_SESSION["trailingFlowers"] = "trailingFlowers";
-echo "Session variables are set.";
-?>
+
         <nav>
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
