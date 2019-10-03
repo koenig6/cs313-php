@@ -28,7 +28,7 @@ session_start();
 
 
 
-            <?php
+
 
         <?php
 // Echo session variables that were set on previous page
@@ -36,6 +36,9 @@ echo "Favorite color is " . $_SESSION["andes"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["bear"] . ".";
 ?>
 
+
+
+          <?php
 
            if (isset($_SESSION["andes"])){
             echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
