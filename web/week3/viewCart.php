@@ -34,10 +34,10 @@ session_start();
            if (isset($_SESSION["andes"])){
             echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
             }
-           if (isset($_SESSION["bear"])){
+            /*if (isset($_SESSION["bear"])){
             echo "Bear cupcakes"; // Displays value of checked checkbox.
             }
-           /*   if (isset($_SESSION["hearts"])){
+             if (isset($_SESSION["hearts"])){
             echo "Heart cookies"; // Displays value of checked checkbox.
             }
             if (isset($_SESSION["lightbulb"])){
