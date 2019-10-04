@@ -27,11 +27,6 @@ session_start();
         </nav>
 
 
-          <?php
-        Your major is: <?php echo $_POST["andes"]; ?><br>
-        Your major is: <?php echo $_POST["bear"]; ?><br>
- ?>
-
 
     </body>
 </html>
