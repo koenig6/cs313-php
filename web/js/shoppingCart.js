@@ -1,7 +1,7 @@
 addItem(name)
 {
     switch(name){
-            case: "andes":
+        case "andes":
             &_Session["andes"] = "andes";
             break;
     }
