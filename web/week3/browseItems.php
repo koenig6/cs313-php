@@ -121,7 +121,7 @@ session_start();
 
     </body>
 
-    <script src="/js/shoppingCart.js"></script>
+    <script src="js/shoppingCart.js"></script>
 
 
 </html>
