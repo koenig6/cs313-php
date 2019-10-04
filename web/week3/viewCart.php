@@ -28,7 +28,11 @@ session_start();
 
 
           <?php
-        if (isset($_POST['continents'])){
+        Your major is: <?php echo $_POST["andes"]; ?><br>
+        Your major is: <?php echo $_POST["bear"]; ?><br>
+
+
+       /* if (isset($_POST['continents'])){
 echo $_POST['continents']; // Displays value of checked checkbox.
 }
 
@@ -36,7 +40,7 @@ echo $_POST['continents']; // Displays value of checked checkbox.
            echo $_POST["andes"];
        }
 
-        /*  if(empty($_SESSION['treat']))
+          if(empty($_SESSION['treat']))
         {
             $_SESSION['treat'] = array();
         }
