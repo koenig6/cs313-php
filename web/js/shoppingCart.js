@@ -2,7 +2,7 @@ addItem(name)
 {
     switch(name){
         case "andes":
-            &_Session["andes"] = "andes";
+            $_SESSION["andes"] = "andes";
             break;
     }
 }
