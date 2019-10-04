@@ -31,7 +31,7 @@ session_start();
                 <tbody>
                     <tr>
 
-                        <form method="post" action="browseItems.php">
+                        <form method="post" action="browseItems.php?action=add&item=andes">
                            <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                             <td>Andes Mint cupcakes</td>
                             <td><button type="button" name="andes">Add to cart</button></td>
@@ -40,7 +40,7 @@ session_start();
                     </tr>
                     <tr>
 
-                        <form method="post" action="browseItems.php">
+                        <form method="post" action="browseItems.php?action=add&item=bear">
                            <td><img src="img/bear.jpg" alt="cupcake" width="120" height="160"> </td>
                             <td>Bear cupcakes</td>
                             <td><button type="button" name="bear">Add to cart</button></td>

@@ -28,7 +28,7 @@ session_start();
 
         <?php
 
-        echo $_POST["andes"];
+        echo $_SESSIONS["an"];
 
         ?>
 
