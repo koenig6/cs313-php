@@ -16,20 +16,8 @@ session_start();
     </head>
     <body>
         <?php
-// Set session variables
-        $_SESSION["andes"] = "andes";
-        $_SESSION["bear"] = "";
-        $_SESSION["hearts"] = "hearts";
-        $_SESSION["lightbulb"] = "lightbulb";
-        $_SESSION["marbeling"] = "marbeling";
-        $_SESSION["monster"] = "monster";
-        $_SESSION["onsie"] = "onsie";
-        $_SESSION["paint"] = "paint";
-        $_SESSION["ruffles"] = "ruffles";
-        $_SESSION["smores"] = "smores";
-        $_SESSION["topFlower"] = "topFlower";
-        $_SESSION["trailingFlowers"] = "trailingFlowers";
-?>
+            $_SESSION["andes"] = "";
+        ?>
         <nav>
             <ul class="navigation">
                 <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
@@ -40,6 +28,8 @@ session_start();
             </ul>
         </nav>
 
+
+
         <table>
                <thead>
                    <tr>
@@ -48,13 +38,12 @@ session_start();
                </thead>
                 <tbody>
                     <tr>
-                        unset($_SESSION['Products']);
 
                        <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                         <td>Andes Mint cupcakes</td>
-                        <td>><button type="button" name="andes">Add to cart</button></td>
-                        <td>><input type="button" name="andes" value="Add"></td>
-                        <input type="button">
+                        <td>><button type="button" name="andes" onclick="addItem(andes)">Add to cart</button></td>
+                        <td><a href="viewCart.php?name=andes"></a></td>
+                      >
 
 
 
@@ -136,7 +125,7 @@ session_start();
 
     </body>
 
-    <script src=""></script>
+    <script src="/js/shoppingCart.js"></script>
 
 
 </html>

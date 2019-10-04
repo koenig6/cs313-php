@@ -27,23 +27,23 @@ session_start();
         </nav>
 
 
-
-
-
-        <?php
-// Echo session variables that were set on previous page
-echo "Favorite color is " . $_SESSION["andes"] . ".<br>";
-echo "Favorite animal is " . $_SESSION["bear"] . ".";
-?>
-
-
-
           <?php
+
+        echo $andes;
+
+        /*  if(empty($_SESSION['treat']))
+        {
+            $_SESSION['treat'] = array();
+        }
+        array_push($_SESSION['treat'], $_POST['name']);
+        }
+
+        var_dump($_SESSION)['treat']);
 
            if (isset($_SESSION["andes"])){
             echo "Andes Mint cupcakes"; // Displays value of checked checkbox.
             }
-          /* if (isset($_SESSION["bear"])){
+          if (isset($_SESSION["bear"])){
             echo "Bear cupcakes"; // Displays value of checked checkbox.
             }
              if (isset($_SESSION["hearts"])){
