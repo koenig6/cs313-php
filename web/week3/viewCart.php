@@ -30,6 +30,11 @@ session_start();
           <?php
         Your major is: <?php echo $_POST["andes"]; ?><br>
         Your major is: <?php echo $_POST["bear"]; ?><br>
+ ?>
+
+
+
+
 
 
        /* if (isset($_POST['continents'])){
@@ -86,12 +91,8 @@ echo $_POST['continents']; // Displays value of checked checkbox.
             echo "Wedding cake with trailing flowers"; // Displays value of checked checkbox.
             }*/
 
-            ?>
+
 
 
     </body>
-
-    <script src=""></script>
-
-
 </html>
