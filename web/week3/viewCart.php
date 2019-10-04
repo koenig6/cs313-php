@@ -28,8 +28,13 @@ session_start();
 
 
           <?php
+        if (isset($_POST['continents'])){
+echo $_POST['continents']; // Displays value of checked checkbox.
+}
 
-        echo $andes;
+       if(isset($_POST["andes"])){
+           echo $_POST["andes"];
+       }
 
         /*  if(empty($_SESSION['treat']))
         {
