@@ -15,9 +15,6 @@ session_start();
 
     </head>
     <body>
-        <?php
-            $_SESSION["andes"] = "";
-        ?>
         <nav>
             <ul class="navigation">
                 <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
@@ -31,11 +28,6 @@ session_start();
 
 
         <table>
-               <thead>
-                   <tr>
-                       <th></th>
-                   </tr>
-               </thead>
                 <tbody>
                     <tr>
 

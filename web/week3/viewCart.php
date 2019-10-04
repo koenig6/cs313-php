@@ -26,6 +26,11 @@ session_start();
             </ul>
         </nav>
 
+        <?php
+
+        echo $_POST["andes"];
+
+        ?>
 
 
     </body>
