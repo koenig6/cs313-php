@@ -94,12 +94,12 @@ if(!empty($_GET["action"]))
         <?php
         }
 
-        if(!empty($_SESSION["heart"]))
+        if(!empty($_SESSION["hearts"]))
         {
             echo "Heart Cookies: ";
-            echo $_SESSION["heart"] . " ";
+            echo $_SESSION["hearts"] . " ";
         ?>
-            <a href="viewCart.php?action=delete&item=heart">Remove</a><br>
+            <a href="viewCart.php?action=delete&item=hearts">Remove</a><br>
         <?php
         }
 
