@@ -28,7 +28,7 @@ session_start();
 
         <?php
 
-        echo $_SESSIONS["an"];
+        echo $_SESSION["andes"];
 
         ?>
 
