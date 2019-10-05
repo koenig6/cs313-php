@@ -31,8 +31,10 @@ session_start();
         if(!empty($_SESSION["andes"]))
         {
             echo "Andes Mint Cupcake: ";
-            echo $_SESSION["andes"];
-
+            echo $_SESSION["andes"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=andes">Remove</a>
+        <?php
         }
 
         ?>
