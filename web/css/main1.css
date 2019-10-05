@@ -2,7 +2,7 @@
 
 header, nav, main, body{
     max-width: 1400px;
-    margin: auto; /*centers on page*/
+    margin: 0 auto; /*centers on page*/
 }
 
 header img {
@@ -16,8 +16,11 @@ header img {
     float: right;
 }
 
+#shop{
+    width: auto;
+}
+
 nav{
-    margin: 0 auto;
     width: 300px;
     clear: both;
     padding-bottom: 20px;
