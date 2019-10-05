@@ -1,6 +1,18 @@
 <?php
 // Start the session
 session_start();
+
+if(!empty($_GET["action"]))
+{
+    if($_GET["action"] == "add")
+    {
+
+        echo "andes";
+    }//end if
+
+
+
+}//end if
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -43,72 +55,92 @@ session_start();
                         <form method="post" action="browseItems.php?action=add&item=bear">
                            <td><img src="img/bear.jpg" alt="cupcake" width="120" height="160"> </td>
                             <td>Bear cupcakes</td>
-                            <td><button type="button" name="bear">Add to cart</button></td>
+                            <td><button type="submit" name="bear">Add to cart</button></td>
                         </form>
 
                     </tr>
                     <tr>
 
+                        <form method="post" action="browseItems.php?action=add&item=smores">
                        <td><img src="img/smores.jpg" alt="cupcake" width="108" height="90"> </td>
                         <td>Smores cupcakes</td>
-                        <td><button type="button" name="smores">Add to cart</button></td>
+                        <td><button type="submit" name="smores">Add to cart</button></td>
+                            </form>
 
                     </tr>
                     <tr>
 
+                        <form method="post" action="browseItems.php?action=add&item=monster">
                        <td><img src="img/monster.jpg" alt="cupcake" width="102" height="73"> </td>
                         <td>Monster cupcakes</td>
-                        <td><button type="button" name="monster">Add to cart</button></td>
+                        <td><button type="submit" name="monster">Add to cart</button></td>
+                            </form>
 
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=hearts">
                        <td><img src="img/hearts.jpg" alt="cupcake" width="160" height="120"> </td>
                         <td>Heart cookies</td>
-                         <td><button type="button" name="hearts">Add to cart</button></td>
+                         <td><button type="submit" name="hearts">Add to cart</button></td>
+                             </form>
 
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=lightbulb">
                        <td><img src="img/lightbulb.jpg" alt="cupcake" width="128" height="102"> </td>
                         <td>Lightbulb cookies</td>
-                         <td><button type="button" name="lightbulb">Add to cart</button></td>
+                         <td><button type="submit" name="lightbulb">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=onsie">
                        <td><img src="img/onsie.jpg" alt="cupcake" width="144" height="91"> </td>
                         <td>Baby onsie cookies</td>
-                         <td><button type="button" name="onsie">Add to cart</button></td>
+                         <td><button type="submit" name="onsie">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=paint">
                        <td><img src="img/paint.jpg" alt="cupcake" width="100" height="75"> </td>
                         <td>Paint pallette cookies</td>
-                         <td><button type="button" name="paint">Add to cart</button></td>
+                         <td><button type="submit" name="paint">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=ruffles">
                        <td><img src="img/ruffles.jpg" alt="cupcake" width="107" height="146"> </td>
                         <td>Wedding cake with ruffles</td>
-                         <td><button type="button" name="ruffles">Add to cart</button></td>
+                         <td><button type="submit" name="ruffles">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=marbeling">
                        <td><img src="img/marbeling.jpg" alt="cupcake" width="129" height="170"> </td>
                         <td>Wedding cake with marbeling</td>
-                         <td><button type="button" name="marbeling">Add to cart</button></td>
+                         <td><button type="submit" name="marbeling">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=topFlower">
                        <td><img src="img/topFlower.jpg" alt="cupcake" width="118" height="177"> </td>
                         <td>Wedding cake with flower on top</td>
-                         <td><button type="button" name="topFlower">Add to cart</button></td>
+                         <td><button type="submit" name="topFlower">Add to cart</button></td>
+                             </form>
                     </tr>
                      <tr>
 
+                         <form method="post" action="browseItems.php?action=add&item=trailingFlowers">
                        <td><img src="img/trailingFlowers.jpg" alt="cupcake" width="91" height="122"> </td>
                         <td>Wedding cake with trailing flowers</td>
-                         <td><button type="button" name="trailingFlowers">Add to cart</button></td>
+                         <td><button type="submit" name="trailingFlowers">Add to cart</button></td>
+                             </form>
                     </tr>
 
                </tbody>
