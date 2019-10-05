@@ -30,7 +30,7 @@ session_start();
 
         if(!empty($_SESSION["andes"]))
         {
-            echo "Andes Mint Cupcake"
+            echo "Andes Mint Cupcake: ";
             echo $_SESSION["andes"];
 
         }
