@@ -33,7 +33,7 @@ session_start();
                 First Name: <input type="text" name="firstName" pattern="[A-Za-z]+"><br><br>
                 Last Name: <input type="text" name="lastName" pattern="[A-Za-z]+"><br><br>
                 E-mail: <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
-                Street Address: <input type="text" name="street" pattern="[A-Za-z0-9\s]+"><br><br>
+                Street Address: <input type="text" name="street" pattern="[A-Za-z0-9 ]+"><br><br>
                 City: <input type="text" name="city" pattern="[A-Za-z]"><br><br>
                 State: <input type="text" name="state" pattern="[A-Za-z]"><br><br>
                 Zip Code: <input type="text" name="zip" pattern="[0-9]{5}"><br><br><br>
