@@ -3,7 +3,7 @@
 session_start();
 if(!empty($_GET["action"]))
 {
-    if($_GET["action"] == "remove")
+    if($_GET["action"] == "delete")
     {
         if(!empty($_GET["item"]))
         {
