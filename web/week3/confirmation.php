@@ -27,94 +27,97 @@ session_start();
         </nav>
 
             Thank your for your purchase <?php echo $_POST["firstName"]; ?><br><br>
-            Your delivery will be to: <br><?php echo $_POST["firstName"]; echo " "; echo $_POST["lastName"]; ?><br>
-                                        <?php echo $_POST["email"]; ?><br>
-                                        <?php echo $_POST["street"]; echo " ";
-                                        echo $_POST["state"];echo " ";echo $_POST["zip"];?><br><br>
+
+            Your delivery will be to: <br>
+            <?php echo $_POST["firstName"] . " " . $_POST["lastName"]; ?><br>
+
+            <?php echo $_POST["email"]; ?><br>
+            <?php echo $_POST["street"] . " ";?>
+            <?php echo $_POST["state"]; echo " ";echo $_POST["zip"];?><br><br>
 
         <?php
         if(!empty($_SESSION["andes"]))
         {
             echo "Andes Mint Cupcakes: ";
             echo $_SESSION["andes"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["bear"]))
         {
             echo "Bear Cupcakes: ";
             echo $_SESSION["bear"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["smores"]))
         {
             echo "Smores Cupcakes: ";
             echo $_SESSION["smores"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["monster"]))
         {
             echo "Monster Cupcakes: ";
             echo $_SESSION["monster"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["hearts"]))
         {
             echo "Heart Cookies: ";
             echo $_SESSION["hearts"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["lightbulb"]))
         {
             echo "Lightbulb Cookies: ";
             echo $_SESSION["lightbulb"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["onsie"]))
         {
             echo "Baby Onsie Cookies: ";
             echo $_SESSION["onsie"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["paint"]))
         {
             echo "Paint Pallette Cookies: ";
             echo $_SESSION["paint"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["ruffles"]))
         {
             echo "Wedding Cake with Ruffles: ";
             echo $_SESSION["ruffles"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["marbeling"]))
         {
             echo "Wdding Cake with Marbeling: ";
             echo $_SESSION["marbeling"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["topFlower"]))
         {
             echo "Wedding Cake with Flower on Top: ";
             echo $_SESSION["topFlower"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
 
         if(!empty($_SESSION["trailingFlowers"]))
         {
             echo "Wedding Cake with Trailing Flowers: ";
             echo $_SESSION["trailingFlowers"] . " ";
-            echo "<br>"
+            echo "<br>";
         }
         ?>
     </body>
