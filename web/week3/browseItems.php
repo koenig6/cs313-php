@@ -59,7 +59,6 @@ if(!empty($_GET["action"]))
         <nav>
             <ul class="navigation">
                 <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
-
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/viewCart.php">View Cart</a></li>
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/checkout.php">Check Out</a></li>
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/confirmation.php">Confirmation</a></li>
