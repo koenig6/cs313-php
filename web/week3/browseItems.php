@@ -6,8 +6,36 @@ if(!empty($_GET["action"]))
 {
     if($_GET["action"] == "add")
     {
-
-        echo "andes";
+        if(!empty($_GET["item"]))
+        {
+            switch($_GET["item"])
+            {
+                case "andes":
+                case "bear":
+                case "smores":
+                case "hearts":
+                case "lightbulb":
+                case "onsie":
+                case "paint":
+                case "ruffles":
+                case "marbeling":
+                case "topFlower":
+                case "trailingFlowers":
+                    if(empty($_SESSION[$_GET["item"]]))
+                    {
+                        //first time clicking this item
+                        $_SESSION[$_GET["item"]] = 1;
+                    }
+                    else
+                    {
+                        //second or later time clicking this item
+                        $_SESSION[$_GET["item"]] += 1;
+                    }
+                    echo $_GET["item"];
+                    echo $_SESSION[$_GET["item"]];
+                break;
+            }//end switch
+        }//end if
     }//end if
 
 
