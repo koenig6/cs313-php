@@ -26,21 +26,20 @@ session_start();
             </ul>
         </nav>
 
-        <form action="confirmation.php" method="post">
-            First Name: <input type="text" name="firstName"><br>
-            Last Name: <input type="text" name="lastName"><br>
-            E-mail: <input type="text" name="email"><br>
-            Street Address: <input type="text" name="street"><br>
-            State: <input type="text" name="state"><br>
-            Zip Code: <input type="text" name="zip"><br>
 
-             <input type="submit">
-        </form>
+        <div id="cart">
+            <form action="confirmation.php" method="post">
+                First Name: <input type="text" name="firstName"><br>
+                Last Name: <input type="text" name="lastName"><br>
+                E-mail: <input type="text" name="email"><br>
+                Street Address: <input type="text" name="street"><br>
+                City: <input type="test" name="city"><br>
+                State: <input type="text" name="state"><br>
+                Zip Code: <input type="text" name="zip"><br>
 
+                 <input type="submit">
+            </form>
+        </div>
 
     </body>
-
-    <script src="js/firstBtn.js"></script>
-
-
 </html>
