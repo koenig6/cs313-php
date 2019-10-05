@@ -30,8 +30,9 @@ session_start();
 
         if(!empty($_SESSION["andes"]))
         {
-            echo $_GET["andes"];
-            echo $_SESSION[$_GET["andes"]];
+            echo "Andes Mint Cupcake"
+            echo $_SESSION["andes"];
+
         }
 
         ?>
