@@ -157,12 +157,12 @@ if(!empty($_GET["action"]))
         <?php
         }
 
-        if(!empty($_SESSION["tainlingFlowers"]))
+        if(!empty($_SESSION["trailingFlowers"]))
         {
             echo "Wedding Cake with Trailing Flowers: ";
-            echo $_SESSION["tainlingFlowers"] . " ";
+            echo $_SESSION["trailingFlowers"] . " ";
         ?>
-            <a href="viewCart.php?action=delete&item=tainlingFlowers">Remove</a><br>
+            <a href="viewCart.php?action=delete&item=trailingFlowers">Remove</a><br>
         <?php
         }
 
