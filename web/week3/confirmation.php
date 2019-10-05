@@ -37,17 +37,18 @@ session_start();
         {
             echo "Andes Mint Cupcakes: ";
             echo $_SESSION["andes"] . " ";
+            echo "<br>"
         ?>
-            <a href="viewCart.php?action=delete&item=andes">Remove</a><br>
+
         <?php
         }
 
         if(!empty($_SESSION["bear"]))
         {
             echo "Bear Cupcakes: ";
-            echo $_SESSION["bear"] . " ";
+            echo $_SESSION["bear"] . " \n";
         ?>
-            <a href="viewCart.php?action=delete&item=bear">Remove</a><br>
+
         <?php
         }
 
@@ -56,7 +57,7 @@ session_start();
             echo "Smores Cupcakes: ";
             echo $_SESSION["smores"] . " ";
         ?>
-            <a href="viewCart.php?action=delete&item=smores">Remove</a><br>
+            <br>
         <?php
         }
 
@@ -137,7 +138,7 @@ session_start();
             echo "Wedding Cake with Trailing Flowers: ";
             echo $_SESSION["trailingFlowers"] . " \n";
         ?>
-            ><br>
+            <br>
         <?php
         }
 

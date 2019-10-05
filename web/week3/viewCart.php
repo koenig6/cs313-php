@@ -142,7 +142,7 @@ if(!empty($_GET["action"]))
 
         if(!empty($_SESSION["marbeling"]))
         {
-            echo "Wdding Cake with Marbeling: ";
+            echo "Wedding Cake with Marbeling: ";
             echo $_SESSION["marbeling"] . " ";
         ?>
             <a href="viewCart.php?action=delete&item=marbeling">Remove</a><br>
