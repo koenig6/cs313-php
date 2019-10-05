@@ -16,7 +16,7 @@ session_start();
     </head>
     <body>
 
-        <nav>
+        <nav id="shop">
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Browse Items</a></li>
 
