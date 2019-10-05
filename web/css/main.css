@@ -2,7 +2,7 @@
 
 header, nav, main, body{
     max-width: 1400px;
-    margin: auto; /*centers on page*/
+    margin: 0 auto; /*centers on page*/
 }
 
 header img {
