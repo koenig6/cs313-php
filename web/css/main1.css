@@ -20,6 +20,7 @@ nav{
     margin: 0 auto;
     width: 300px;
     clear: both;
+    padding-bottom: 20px;
     }
 
 nav ul {
@@ -34,10 +35,12 @@ nav li{
     background-color: #3AAFA9;
     color: #FEFFFF;
 }
+
 nav ul li {
     display: block;
     text-align: center; /*centers text to middle of li element*/
 }
+
 nav ul li a {
     display: block;/*makes whole link a box to click not just the word*/
     padding: 10px 10px;
@@ -50,7 +53,7 @@ nav ul li a:hover {
     color: #17252A;
 }
 nav ul li.active a {
-    background-color: #17252A; /*makes current page link blue*/
+    background-color: #17252A; /*makes current page link color*/
     color: #FEFFFF;
 }
 
