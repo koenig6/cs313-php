@@ -32,8 +32,6 @@ if(!empty($_GET["action"]))
                         //second or later time clicking this item
                         $_SESSION[$_GET["item"]] += 1;
                     }
-                    echo $_GET["item"];
-                    echo $_SESSION[$_GET["item"]];
                 break;
             }//end switch
         }//end if
