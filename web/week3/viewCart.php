@@ -1,6 +1,36 @@
 <?php
 // Start the session
 session_start();
+if(!empty($_GET["action"]))
+{
+    if($_GET["action"] == "remove")
+    {
+        if(!empty($_GET["item"]))
+        {
+            switch($_GET["item"])
+            {
+                case "andes":
+                case "bear":
+                case "smores":
+                case "hearts":
+                case "lightbulb":
+                case "onsie":
+                case "paint":
+                case "ruffles":
+                case "marbeling":
+                case "topFlower":
+                case "trailingFlowers":
+                if(!empty($_SESSION[$_GET["item"]]))
+                {
+                    unset($_SESSION[$_GET["item"]]);
+                }
+                break;
+            }//end switch
+        }//end if
+    }//end if
+
+}//end if
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
