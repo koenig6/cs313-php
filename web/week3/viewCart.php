@@ -12,6 +12,7 @@ if(!empty($_GET["action"]))
                 case "andes":
                 case "bear":
                 case "smores":
+                case "monster":
                 case "hearts":
                 case "lightbulb":
                 case "onsie":

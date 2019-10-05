@@ -32,6 +32,119 @@ session_start();
                                         <?php echo $_POST["street"]; echo " ";
                                         echo $_POST["state"];echo " ";echo $_POST["zip"];?><br>
 
+        <?php
+        if(!empty($_SESSION["andes"]))
+        {
+            echo "Andes Mint Cupcakes: ";
+            echo $_SESSION["andes"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=andes">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["bear"]))
+        {
+            echo "Bear Cupcakes: ";
+            echo $_SESSION["bear"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=bear">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["smores"]))
+        {
+            echo "Smores Cupcakes: ";
+            echo $_SESSION["smores"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=smores">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["monster"]))
+        {
+            echo "Monster Cupcakes: ";
+            echo $_SESSION["monster"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=monster">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["hearts"]))
+        {
+            echo "Heart Cookies: ";
+            echo $_SESSION["hearts"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=hearts">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["lightbulb"]))
+        {
+            echo "Lightbulb Cookies: ";
+            echo $_SESSION["lightbulb"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=lightbulb">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["onsie"]))
+        {
+            echo "Baby Onsie Cookies: ";
+            echo $_SESSION["onsie"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=onsie">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["paint"]))
+        {
+            echo "Paint Pallette Cookies: ";
+            echo $_SESSION["paint"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=paint">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["ruffles"]))
+        {
+            echo "Wedding Cake with Ruffles: ";
+            echo $_SESSION["ruffles"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=ruffles">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["marbeling"]))
+        {
+            echo "Wdding Cake with Marbeling: ";
+            echo $_SESSION["marbeling"] . " ";
+        ?>
+            <a href="viewCart.php?action=delete&item=marbeling">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["topFlower"]))
+        {
+            echo "Wedding Cake with Flower on Top: ";
+            echo $_SESSION["topFlower"] . " \n";
+        ?>
+            <a href="viewCart.php?action=delete&item=topFlower">Remove</a><br>
+        <?php
+        }
+
+        if(!empty($_SESSION["trailingFlowers"]))
+        {
+            echo "Wedding Cake with Trailing Flowers: ";
+            echo $_SESSION["trailingFlowers"] . " \n";
+        ?>
+            ><br>
+        <?php
+        }
+
+        ?>
+
+
+
 
 
 
@@ -39,8 +152,4 @@ session_start();
 
 
     </body>
-
-    <script src=""></script>
-
-
 </html>
