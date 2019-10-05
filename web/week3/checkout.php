@@ -29,15 +29,15 @@ session_start();
 
         <div id="cart">
             <form action="confirmation.php" method="post">
-                First Name: <input type="text" name="firstName"><br>
-                Last Name: <input type="text" name="lastName"><br>
-                E-mail: <input type="text" name="email"><br>
-                Street Address: <input type="text" name="street"><br>
-                City: <input type="test" name="city"><br>
-                State: <input type="text" name="state"><br>
-                Zip Code: <input type="text" name="zip"><br>
+                First Name: <input type="text" name="firstName"><br><br>
+                Last Name: <input type="text" name="lastName"><br><br>
+                E-mail: <input type="text" name="email"><br><br>
+                Street Address: <input type="text" name="street"><br><br>
+                City: <input type="test" name="city"><br><br>
+                State: <input type="text" name="state"><br><br>
+                Zip Code: <input type="text" name="zip"><br><br><br>
 
-                 <input type="submit">
+                 <input type="submit" name="Submit Your Order">
             </form>
         </div>
 
