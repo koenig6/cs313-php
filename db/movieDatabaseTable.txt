@@ -3,38 +3,38 @@
 CREATE TABLE actors (
 	actorsId	  		int						PRIMARY KEY,
 	actorsFirstName 	varchar(500),
-	actorsLastName		varchar(500),
+	actorsLastName		varchar(500)
 );
 
 CREATE TABLE genre (
 	genreId				int						PRIMARY KEY,
 	genre				varchar(20),
-	genreDesc			varchar(500),
+	genreDesc			varchar(500)
 );
 
 CREATE TABLE rating (
 	ratingId 			int						PRIMARY KEY,
 	rating				char,
-	ratingDesc			varchar(500),
+	ratingDesc			varchar(500)
 );
 
 CREATE TABLE studio (
 	studioId			int						PRIMARY KEY,
-	studioName			varchar(500),
-);
-
-CREATE TABLE movieToActor (
-	movieId				int						REFERENCES movie,
-	actorsId			int						REFERENCES actors,
-	PRIMARY KEY (movieId, actorsId)
+	studioName			varchar(500)
 );
 
 CREATE TABLE movie (
 	movieId				int						PRIMARY KEY,
 	title				varchar(200),
 	year				int,
-	desc				varchar(500),
+	description			varchar(500),
 	studioId			int						REFERENCES studio,
 	genreId				int						REFERENCES genre,
-	ratingId			int						REFERENCES rating,
+	ratingId			int						REFERENCES rating
+);
+
+CREATE TABLE movieToActor (
+	movieId				int						REFERENCES movie,
+	actorsId			int						REFERENCES actors,
+	PRIMARY KEY (movieId, actorsId)
 );
