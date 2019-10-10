@@ -69,6 +69,7 @@ if(!empty($_GET["action"]))
                 <tbody>
                     <tr>
 
+
                         <form method="post" action="browseItems.php?action=add&item=andes">
                            <td><img src="img/andes.jpg" alt="cupcake" width="133" height="168"> </td>
                             <td>Andes Mint Cupcakes</td>
