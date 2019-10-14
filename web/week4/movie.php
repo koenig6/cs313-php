@@ -36,7 +36,18 @@ session_start();
 
             <form action="movie.php" method="post">
                 Movie Title: <input type="text" name="title"><br>
-                Rating: <input type="text" name="rating"><br>
+                Rating: <input type="text" name="rating">    <br>
+                <select name="rating">
+                        <option value="selectRegion" disabled>Select Rating</option>
+                        <option value="g">G</option>
+                        <option value="pg">PG</option>
+                        <option value="pg-13">PG-13</option>
+                        <option value="r">R</option>
+                        <option value="nc-17">NC-17</option>
+                    </select>
+
+
+
                 Actors First Name: <input type="text" name="fname"><br>
                 Actor's Last Name: <input type="text" name="lname"><br>
                 Genre: <input type="text" name="genre"><br>
