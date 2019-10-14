@@ -36,14 +36,14 @@ session_start();
 
             <form action="movie.php" method="post">
                 Movie Title: <input type="text" name="title"><br>
-                Rating: <select name="rating"  required placeholder="Select Rating"><br>
-                        <option value="selectRegion"></option>
+                Rating: <select name="rating">
+                        <option value="" disabled selected>Select Rating</option>
                         <option value="g">G</option>
                         <option value="pg">PG</option>
                         <option value="pg-13">PG-13</option>
                         <option value="r">R</option>
                         <option value="nc-17">NC-17</option>
-                    </select>
+                    </select><br>
 
 
 
