@@ -3,22 +3,6 @@ header, nav, main, body{
     margin: 0 auto; /*centers on page*/
 }
 
-header img {
-    width: 200px;
-    height: auto;
-    float: left;
-    padding: inherit;
-}
-
-#php {
-    float: right;
-}
-
-#shop{
-    padding-top: 20px;
-    width: 525px;
-}
-
 nav{
     width: 300px;
     clear: both;
@@ -34,8 +18,8 @@ nav ul {
 nav li{
     display: inline; /*makes words horizontal since default is verticle*/
     float: left; /*gets the blocks to float next to each other*/
-    background-color: #464866;
-    color: #AAABB8;
+    background-color: #AAABB8;
+    color: #464866;
 }
 
 nav ul li {
@@ -50,8 +34,9 @@ nav ul li a {
     font-size: 85%;
     text-decoration: none; /*removes line under link*/
 }
+
 nav ul li a:hover {
-    background-color: #AAABB8; /*when mouse is on nav link it will be this color*/
+    background-color: #2E9CCA; /*when mouse is on nav link it will be this color*/
     color: #25274D;
 }
 nav ul li.active a {
