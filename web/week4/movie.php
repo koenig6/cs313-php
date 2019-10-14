@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -27,6 +32,19 @@
 
         <main>
 
+            <TITLE>Your Personal Movie Database</TITLE>
+
+            <form action="movie.php" method="post">
+                Movie Title: <input type="text" name="title"><br>
+                Rating: <input type="text" name="rating"><br>
+                Actors First Name: <input type="text" name="fname"><br>
+                Actor's Last Name: <input type="text" name="lname"><br>
+                Genre: <input type="text" name="genre"><br>
+                Studio: <input type="text" name="studio"><br>
+
+
+                <input type="submit">
+            </form>
 
         </main>
         <script src="jsMovie.js"></script>
