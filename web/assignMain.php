@@ -38,7 +38,7 @@
                        <td><a href="https://morning-bastion-33855.herokuapp.com/week3/browseItems.php">Shopping Cart</a></td>
                     </tr>
                     <tr>
-                       <td></td>
+                       <td><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></td>
                     </tr>
                     <tr>
                        <td></td>
