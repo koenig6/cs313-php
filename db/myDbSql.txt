@@ -1,30 +1,31 @@
 
 
 CREATE TABLE actors (
-	actorsId	  		int						PRIMARY KEY,
+	actorsId	  		serial						PRIMARY KEY,
 	actorsFirstName 	varchar(500),
 	actorsLastName		varchar(500)
 );
 
 CREATE TABLE genre (
-	genreId				int						PRIMARY KEY,
-	genre				varchar(20),
+	genreId				serial						PRIMARY KEY,
+	genreName			varchar(20),
 	genreDesc			varchar(500)
 );
 
 CREATE TABLE rating (
-	ratingId 			int						PRIMARY KEY,
-	rating				char,
+	ratingId 			serial						PRIMARY KEY,
+	rating				varchar(5),
+	ratingName			varchar(30),
 	ratingDesc			varchar(500)
 );
 
 CREATE TABLE studio (
-	studioId			int						PRIMARY KEY,
+	studioId			serial						PRIMARY KEY,
 	studioName			varchar(500)
 );
 
 CREATE TABLE movie (
-	movieId				int						PRIMARY KEY,
+	movieId				serial						PRIMARY KEY,
 	title				varchar(200),
 	year				int,
 	description			varchar(500),
