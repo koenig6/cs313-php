@@ -48,6 +48,12 @@
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
+
+            foreach ($db->query('SELECT * FROM movie')as $row) {
+                echo $row['title'] . ' ';
+
+            }
+
             ?>
 
 
@@ -71,14 +77,30 @@
                 Studio: <input type="text" name="studio"><br>
 
 
-                <input type="submit">
+                <input type="submit" value="Search">
             </form>
 
             <table>
-	<tr><th>Results</th></tr>
-	<tr><td>Book</td><td>Chapter</td><td>Verse</td><td>Content</td></tr>
+                <tr><th>Results</th></tr>
+                <tr><td>Book</td><td>Chapter</td><td>Verse</td><td>Content</td></tr>
+
+                <?php
 
 
+                    $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
+       $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
+
+         foreach ($db->query("SELECT * FROM movie WHERE title='".$title."'") as $row) {
+            //echo "<a href=\"detail.php\">";
+                echo $row['book'] . ' ';
+               // echo $row['chapter'] . ':';
+                //echo $row['verse'] . ' - "';
+               // echo "</a>";
+               // echo '<br>';
+       }
+
+
+                ?>
             </table>
         </main>
         <script src="jsMovie.js"></script>
