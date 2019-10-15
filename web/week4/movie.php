@@ -58,7 +58,7 @@
 
 
 
-            <form action="movie.php" method="post">
+            <form action='' method="post">
                 Movie Title: <input type="text" name="title"><br>
                 Rating: <select name="rating">
                         <option value="" disabled selected>Select Rating</option>
@@ -68,9 +68,6 @@
                         <option value="r">R</option>
                         <option value="nc-17">NC-17</option>
                     </select><br>
-
-
-
                 Actors First Name: <input type="text" name="fname"><br>
                 Actor's Last Name: <input type="text" name="lname"><br>
                 Genre: <input type="text" name="genre"><br>
@@ -90,15 +87,15 @@
                     $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
        $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
 
-         foreach ($db->query("SELECT * FROM movie WHERE title='".$title."'") as $row) {
+         foreach ($db->query("SELECT * FROM movie WHERE title='".$title."'") as $row)
+         {
             //echo "<a href=\"detail.php\">";
                 echo $row['book'] . ' ';
                 echo $row['rating'] . ' ';
                 //echo $row['verse'] . ' - "';
                // echo "</a>";
                // echo '<br>';
-       }
-
+        }
 
                 ?>
             </table>
