@@ -56,20 +56,7 @@
             <table>
 	<tr><th>Results</th></tr>
 	<tr><td>Book</td><td>Chapter</td><td>Verse</td><td>Content</td></tr>
-	<?php
-    	$book = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
-        foreach ($db->query(“SELECT * FROM scriptures WHERE book='”.$book.”'”) as $row) {
-	    //echo “<a href=\”detail.php\” >;
-        echo $row[‘title’] . ‘ ‘;
-        echo $row[‘fname’] . ‘ ’;
-        echo $row[‘sname’] . ‘ ‘;
-        echo $row[‘genre’] . ‘ ‘;
-        echo $row[‘rating’] . ‘ ‘;
-        echo $row[‘studio’] . ‘ ‘;
-        //echo “</a>”;
-        echo ‘<br>’;
-}
-	?>
+
 
             </table>
         </main>
