@@ -84,7 +84,7 @@
                 <?php
 
 
-                   // $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
+                    $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
                    // $title = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
 
          foreach ($db->query("SELECT * FROM movie WHERE title='".$title."'") as $row)
