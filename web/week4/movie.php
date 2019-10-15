@@ -1,8 +1,3 @@
-<?php
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -34,20 +29,6 @@ session_start();
 
             <TITLE>Your Personal Movie Database</TITLE>
 
-            <?php
-
-
-
-              foreach ($db->query(‘SELECT * FROM scriptures’) as $row) {
-                echo $row[‘title’] . ‘ ‘;
-                echo $row[‘fname’] . ‘ ’;
-                  echo $row[‘sname’] . ‘ ’;
-                  echo $row[‘genre’] . ‘ ’;
-                echo $row[‘rating’] . ‘  “‘;
-                  echo $row[‘studio’] . ‘ ’;
-                echo ‘<br>’;
-
-            ?>
 
 
             <form action="movie.php" method="post">
