@@ -34,6 +34,42 @@ session_start();
 
             <TITLE>Your Personal Movie Database</TITLE>
 
+            <?php
+            try
+{
+                  $dbUrl = getenv('DATABASE_URL');
+
+                  $dbOpts = parse_url($dbUrl);
+
+                  $dbHost = $dbOpts["host"];
+                  $dbPort = $dbOpts["port"];
+                  $dbUser = $dbOpts["user"];
+                  $dbPassword = $dbOpts["pass"];
+                  $dbName = ltrim($dbOpts["path"],'/');
+
+                  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+                  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                }
+                catch (PDOException $ex)
+                {
+                  echo 'Error!: ' . $ex->getMessage();
+                  die();
+                }
+
+
+              foreach ($db->query(‘SELECT * FROM scriptures’) as $row) {
+                echo $row[‘title’] . ‘ ‘;
+                echo $row[‘fname’] . ‘ ’;
+                  echo $row[‘sname’] . ‘ ’;
+                  echo $row[‘genre’] . ‘ ’;
+                echo $row[‘rating’] . ‘  “‘;
+                  echo $row[‘studio’] . ‘ ’;
+                echo ‘<br>’;
+
+            ?>
+
+
             <form action="movie.php" method="post">
                 Movie Title: <input type="text" name="title"><br>
                 Rating: <select name="rating">
@@ -56,6 +92,25 @@ session_start();
                 <input type="submit">
             </form>
 
+            <table>
+	<tr><th>Results</th></tr>
+	<tr><td>Book</td><td>Chapter</td><td>Verse</td><td>Content</td></tr>
+	<?php
+    	$book = filter_var($_POST["search"], FILTER_SANITIZE_STRING);
+        foreach ($db->query(“SELECT * FROM scriptures WHERE book='”.$book.”'”) as $row) {
+	    //echo “<a href=\”detail.php\” >;
+        echo $row[‘title’] . ‘ ‘;
+        echo $row[‘fname’] . ‘ ’;
+        echo $row[‘sname’] . ‘ ‘;
+        echo $row[‘genre’] . ‘ ‘;
+        echo $row[‘rating’] . ‘ ‘;
+        echo $row[‘studio’] . ‘ ‘;
+        //echo “</a>”;
+        echo ‘<br>’;
+}
+	?>
+
+            </table>
         </main>
         <script src="jsMovie.js"></script>
     </body>
