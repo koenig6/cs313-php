@@ -93,7 +93,7 @@
          foreach ($db->query("SELECT * FROM movie WHERE title='".$title."'") as $row) {
             //echo "<a href=\"detail.php\">";
                 echo $row['book'] . ' ';
-               // echo $row['chapter'] . ':';
+                echo $row['rating'] . ' ';
                 //echo $row['verse'] . ' - "';
                // echo "</a>";
                // echo '<br>';
