@@ -1,3 +1,9 @@
+<?php
+// Start the session
+session_start();
+$_POST["title"];
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
