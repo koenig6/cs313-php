@@ -51,6 +51,7 @@ session_start();
             }
 
              echo $_SESSION["query"] . " from sessions";
+            echo $_POST['query']
 
              $query = 'SELECT * FROM movie';
 
