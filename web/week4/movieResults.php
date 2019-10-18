@@ -88,6 +88,14 @@ WHERE
             {
                $query = $query . ' AND a.actorslastname=:lname';
             }
+            if(!empty($_POST["lname"]))
+            {
+               $query = $query . ' AND a.actorslastname=:lname';
+            }
+            if(!empty($_POST["rating"]))
+            {
+               $query = $query . ' AND r.rating=:rating';
+            }
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
@@ -101,6 +109,10 @@ WHERE
             if(!empty($_POST["lname"]))
             {
                 $stmt->bindValue(':lname', $_POST["lname"], PDO::PARAM_STR);
+            }
+            if(!empty($_POST["rating"]))
+            {
+                $stmt->bindValue(':rating', $_POST["rating"], PDO::PARAM_STR);
             }
 
 echo $query;
