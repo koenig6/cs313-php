@@ -86,6 +86,7 @@ session_start();
 
             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
 
+            echo "Position number 2";///////////////////
             //sends query to database and returns results
             $stmt->execute();
             $actorStmt->execute();

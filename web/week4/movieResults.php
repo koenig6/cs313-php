@@ -146,10 +146,6 @@ WHERE
             }
             ?>
 
-
-
-
-
         </main>
     </body>
 </html>
