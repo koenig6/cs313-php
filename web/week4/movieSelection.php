@@ -26,7 +26,7 @@ session_start();
          <?php
         if(!empty($_GET["title"]))
         {
-            echo "hi Douglas!";
+            echo "hi Douglas!";/////////////////////////////
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
@@ -76,7 +76,7 @@ session_start();
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
-
+            echo "Position number 1";///////////////////
             //prepare query to go to the database
             $stmt = $db->prepare($query);
             $actorStmt = $db->prepare($actorQuery);
