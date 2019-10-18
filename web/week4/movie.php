@@ -62,7 +62,7 @@ session_start();
                 Actor's Last Name: <input type="text" name="lname"><br><br>
                 Studio: <input type="text" name="studio"><br><br>
                 Genre: <select name="genre">
-                        <option value="" disabled selected>Select Rating</option>
+                        <option value="" disabled selected>Select Genre</option>
                         <option value="adventure">adventure</option>
                         <option value="comedy">comedy</option>
                         <option value="crime">crime</option>

@@ -89,9 +89,23 @@ echo $query;
 
             $stmt->execute();
 
+            if(!empty($_POST["fname"]))
+            {
+               $query = $query . ' AND a.actorsfirstname=:fname';
+            }
+echo $query;
+
+            $stmt = $db->prepare($query);
+            if(!empty($_POST["fname"]))
+            {
+                $stmt->bindValue(':fname', $_POST["fname"], PDO::PARAM_STR);
+            }
+
+            $stmt->execute();
+
             //foreach ($db->query($query)as $row)
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
-                echo $row['movie_title'] . ', ' . $row['year'] . ', ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
+                echo $row['movie_title'] . ', ' . $row['movie_year'] . ', ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
 
             }
 
