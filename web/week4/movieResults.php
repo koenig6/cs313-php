@@ -43,12 +43,7 @@ session_start();
 
                 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
+
 
             //echo $_POST["title"];
 
@@ -75,9 +70,30 @@ FROM
 WHERE
     1=1';
 
-                    foreach ($db->query($query)as $row) {
+            if(!empty($_POST["title"]))
+            {
+                $query += ' AND m.title=:title';
+            }
+
+
+            $stmt = $db->prepare($query);
+            if(!empty($_POST["title"]))
+            {
+                $stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
+            }
+
+
+                    //foreach ($db->query($query)as $row) {
+                foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                         echo $row['title'] . ', ' . $row['year'] . ', ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
 
+            }
+
+            }//end try
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
             }
 
             ?>
