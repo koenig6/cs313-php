@@ -64,6 +64,24 @@ session_start();
 
             <form action='' method="post">
                 Movie Title: <input type="text" name="title"><br>
+                Actors First Name: <input type="text" name="fname"><br>
+                Actor's Last Name: <input type="text" name="lname"><br>
+                Studio: <input type="text" name="studio"><br>
+                Genre: <select name="genre">
+                        <option value="" disabled selected>Select Rating</option>
+                        <option value="adventure">adventure</option>
+                        <option value="comedy">comedy</option>
+                        <option value="crime">crime</option>
+                        <option value="docudrama">docudrama</option>
+                        <option value="drama">drama</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="historical">historical</option>
+                        <option value="historical fiction">historical fiction</option>
+                        <option value="horror">horror</option>
+                        <option value="mystery">mystery</option>
+                        <option value="romance">romance</option>
+                        <option value="science fiction">science fiction</option>
+                    </select><br>
                 Rating: <select name="rating">
                         <option value="" disabled selected>Select Rating</option>
                         <option value="g">G</option>
@@ -72,11 +90,6 @@ session_start();
                         <option value="r">R</option>
                         <option value="nc-17">NC-17</option>
                     </select><br>
-                Actors First Name: <input type="text" name="fname"><br>
-                Actor's Last Name: <input type="text" name="lname"><br>
-                Genre: <input type="text" name="genre"><br>
-                Studio: <input type="text" name="studio"><br>
-
 
                 <input type="submit" value="Search">
             </form>

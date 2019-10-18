@@ -1,6 +1,13 @@
 SELECT
 	m.title as movie_title,
 	m.year as movie_year,
+	m.description as movie_desc,
+	a.actorsfirstname as fname,
+	a.actorslastname as lname,
+	g.genrename as genre,
+	r.rating as rating,
+	s.studioname as studio,
+
 	*
 FROM
 	movie as m
