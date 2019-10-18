@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-$_POST["title"];
+
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +54,9 @@ $_POST["title"];
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
+
+            $_POST["title"]
+
             ?>
 
 
