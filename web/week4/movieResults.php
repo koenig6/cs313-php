@@ -79,27 +79,33 @@ WHERE
             {
                $query = $query . ' AND m.title=:title';
             }
-echo $query;
+
+            if(!empty($_POST["fname"]))
+            {
+               $query = $query . ' AND a.actorsfirstname=:fname';
+            }
+              if(!empty($_POST["lname"]))
+            {
+               $query = $query . ' AND a.actorslastname=:lname';
+            }
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
                 $stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
             }
-
-            $stmt->execute();
-
-            if(!empty($_POST["fname"]))
-            {
-               $query = $query . ' AND a.actorsfirstname=:fname';
-            }
-echo $query;
-
-            $stmt = $db->prepare($query);
             if(!empty($_POST["fname"]))
             {
                 $stmt->bindValue(':fname', $_POST["fname"], PDO::PARAM_STR);
             }
+            if(!empty($_POST["lname"]))
+            {
+                $stmt->bindValue(':lname', $_POST["lname"], PDO::PARAM_STR);
+            }
+
+echo $query;
+
+
 
             $stmt->execute();
 
