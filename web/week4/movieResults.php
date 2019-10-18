@@ -76,7 +76,7 @@ WHERE
     1=1';
 
                     foreach ($db->query($query)as $row) {
-                        echo $row['title'] . ',' . $row['year'] . '<br>';
+                        echo $row['title'] . ', ' . $row['year'] . ', ' . $row['movie_desc'] . '<br>';
 
             }
 
