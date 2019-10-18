@@ -52,6 +52,8 @@ session_start();
 
             $_POST['query'];
 
+            $_SESSION[$_POST["query"]]
+
             ?>
 
 
