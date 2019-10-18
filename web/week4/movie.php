@@ -93,7 +93,7 @@ session_start();
 
                 <?php
 
-                var query = 'SELECT * FROM movie';
+                $query = 'SELECT * FROM movie';
 
                     foreach ($db->query(query)as $row) {
                         echo $row['title'] . ', <br>';
