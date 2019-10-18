@@ -57,9 +57,7 @@ session_start();
 	a.actorslastname as lname,
 	g.genrename as genre,
 	r.rating as rating,
-	s.studioname as studio,
-
-	*
+	s.studioname as studio
 FROM
 	movie as m
 	left join studio as s on m.studioid = s.studioid
@@ -70,17 +68,24 @@ FROM
 WHERE
     1=1';
 
-           // if(!empty($_POST["title"]))
-            //{
-               // $query += ' AND m.title=:title';
-           // }
+            }//end try
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
+            }
+
+           if(!empty($_POST["title"]))
+            {
+               $query += ' AND m.title=:title';
+            }
 echo $query;
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
                 //$stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
-                $stmt->execute(array(':m.title' => $POST["title"]));
+                $stmt->execute(array(':m.title' => $_POST["title"]));
             }
 
 
@@ -90,12 +95,7 @@ echo $query;
 
             }
 
-            }//end try
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
+
 
             ?>
 
