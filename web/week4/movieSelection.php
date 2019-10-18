@@ -26,6 +26,7 @@ session_start();
          <?php
         if(!empty($_GET["title"]))
         {
+            echo "hi Douglas!";
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
