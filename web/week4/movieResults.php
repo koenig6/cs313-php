@@ -79,7 +79,8 @@ echo $query;
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
-                $stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
+                //$stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
+                $stmt->execute(array(':title' => $POST["title"]));
             }
 
 
