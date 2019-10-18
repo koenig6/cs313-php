@@ -50,7 +50,13 @@ session_start();
                 die();
             }
 
-             echo $_SESSION["query"] . " ";
+             echo $_SESSION["query"] . " from sessions";
+
+             $query = 'SELECT * FROM movie';
+
+                    foreach ($db->query($query)as $row) {
+                        echo $row['title'] . ', <br> for loop';
+
 
 
             ?>
