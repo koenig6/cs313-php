@@ -133,15 +133,15 @@ WHERE
                 $stmt->bindValue(':studio', strtolower($_POST["studio"]), PDO::PARAM_STR);
             }
 
-echo $query;
-
 
 
             $stmt->execute();
 
             //foreach ($db->query($query)as $row)
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
-                echo $row['movie_title'] . ', ' . $row['movie_year'] . ', ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
+                echo $row['movie_title'] . ', ' . $row['movie_year'] . '
+            <a href="https://morning-bastion-33855.herokuapp.com/week4/movieSelection.php">Select</a><br>
+         ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
 
             }
 
