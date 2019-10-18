@@ -50,11 +50,16 @@ session_start();
                 die();
             }
 
-            $_POST['query'];
+            echo $_POST["title"];
 
-            $_SESSION[$_POST["query"]];
 
-            $SESSION['query'];
+
+            $query = 'SELECT * FROM movie';
+
+                    foreach ($db->query($query)as $row) {
+                        echo $row['title'] . ', <br>';
+
+            }
 
             ?>
 
