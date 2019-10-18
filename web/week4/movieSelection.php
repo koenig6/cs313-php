@@ -1,10 +1,6 @@
 <?php
 // Start the session
 session_start();
-if(!empty($_GET["title"]))
-{
-
-    }
 
 ?>
 
@@ -20,8 +16,93 @@ if(!empty($_GET["title"]))
         <link href="cssMovie.css" rel="stylesheet">
     </head>
 <body>
+    <nav>
+            <ul class="navigation">
+                <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Back</a></li>
+
+            </ul>
+        </nav>
+    <main>
+         <?php
+        if(!empty($_GET["title"]))
+        {
+            try
+            {
+                $dbUrl = getenv('DATABASE_URL');
+                $dbOpts = parse_url($dbUrl);
+                $dbHost = $dbOpts["host"];
+                $dbPort = $dbOpts["port"];
+                $dbUser = $dbOpts["user"];
+                $dbPassword = $dbOpts["pass"];
+                $dbName = ltrim($dbOpts["path"],'/');
+
+                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
+                $query = 'SELECT
+                    m.title as movie_title,
+                    m.year as movie_year,
+                    m.description as movie_desc,
+                    g.genrename as genre,
+                    r.rating as rating,
+                    s.studioname as studio
+                FROM
+                    movie as m
+                    left join studio as s on m.studioid = s.studioid
+                    left join genre as g on m.genreid = g.genreid
+                    left join rating as r on m.ratingid = r.ratingid
 
+                WHERE
+                    1=1
+                    AND m.title=:title';
+
+                $actorQuery= 'SELECT
+                    a.actorsfirstname as fname,
+                    a.actorslastname as lname,
+                FROM
+                    movie as m
+                    left join movietoactor as ma on m.movieid = ma.movieid
+                    left join actors as a on ma.actorsid = a.actorsid
+                WHERE
+                    1=1
+                    AND m.title=:title';
+
+
+            }//end try
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
+            }
+
+            //prepare query to go to the database
+            $stmt = $db->prepare($query);
+            $actorStmt = $db->prepare($actorQuery);
+
+
+            $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+
+            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+
+            //sends query to database and returns results
+            $stmt->execute();
+            $actorStmt->execute();
+
+
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+            {
+             echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
+            }
+
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+            {
+            echo $row['fname'] . ' ' . $row['lname']. '<br>';
+            }
+
+        }//end of if statement
+             ?>
+
+</main>
 </body>
 </html>
