@@ -77,7 +77,7 @@ WHERE
 
            if(!empty($_POST["title"]))
             {
-               $query += ' AND m.title=:title';
+               $query = $query . ' AND m.title=:title';
             }
 echo $query;
 
