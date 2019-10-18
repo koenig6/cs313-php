@@ -55,7 +55,7 @@ session_start();
                 die();
             }
 
-            $_POST["title"]
+            $_POST["title"];
 
             ?>
 
