@@ -84,7 +84,7 @@ WHERE
             {
                $query = $query . ' AND a.actorsfirstname=:fname';
             }
-              if(!empty($_POST["lname"]))
+            if(!empty($_POST["lname"]))
             {
                $query = $query . ' AND a.actorslastname=:lname';
             }
@@ -96,6 +96,16 @@ WHERE
             {
                $query = $query . ' AND r.rating=:rating';
             }
+            if(!empty($_POST["genre"]))
+            {
+               $query = $query . ' AND g.genrename=:genre';
+            }
+            if(!empty($_POST["studio"]))
+            {
+               $query = $query . ' AND s.studioname=:studio';
+            }
+
+
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
@@ -113,6 +123,14 @@ WHERE
             if(!empty($_POST["rating"]))
             {
                 $stmt->bindValue(':rating', $_POST["rating"], PDO::PARAM_STR);
+            }
+            if(!empty($_POST["genre"]))
+            {
+                $stmt->bindValue(':genre', $_POST["genre"], PDO::PARAM_STR);
+            }
+            if(!empty($_POST["studio"]))
+            {
+                $stmt->bindValue(':studio', $_POST["studio"], PDO::PARAM_STR);
             }
 
 echo $query;
