@@ -34,8 +34,7 @@ session_start();
         <main>
 
             <TITLE>Your Personal Movie Database</TITLE>
-
-            <?php
+             <?php
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
@@ -54,13 +53,7 @@ session_start();
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
-
-            echo "Test";
-            echo $_POST["title"];
-
             ?>
-
-
 
             <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
                 Movie Title: <input type="text" name="title"><br><br>
@@ -100,8 +93,9 @@ session_start();
 
                 <?php
 
+                var query = 'SELECT * FROM movie';
 
-                    foreach ($db->query('SELECT * FROM movie')as $row) {
+                    foreach ($db->query(query)as $row) {
                         echo $row['title'] . ', <br>';
 
             }
