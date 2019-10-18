@@ -62,7 +62,7 @@ session_start();
 
 
 
-            <form action='' method="post">
+            <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
                 Movie Title: <input type="text" name="title"><br><br>
                 Actors First Name: <input type="text" name="fname"><br>
                 Actor's Last Name: <input type="text" name="lname"><br><br>
@@ -91,7 +91,7 @@ session_start();
                         <option value="nc-17">NC-17</option>
                     </select><br><br>
 
-                <input type="submit" value="Search" onclick="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php"><br><br>
+                <input type="submit" value="Search" ><br><br>
             </form>
 
             <table>
