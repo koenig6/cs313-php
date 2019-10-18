@@ -91,7 +91,7 @@ session_start();
                         <option value="nc-17">NC-17</option>
                     </select><br><br>
 
-                <input type="submit" value="Search"><br><br>
+                <input type="submit" value="Search" onclick="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php"><br><br>
             </form>
 
             <table>
