@@ -83,8 +83,8 @@ echo $query;
             }
 
 
-                    //foreach ($db->query($query)as $row) {
-                foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
+                    //foreach ($db->query($query)as $row)
+                    foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                         echo $row['title'] . ', ' . $row['year'] . ', ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
 
             }
