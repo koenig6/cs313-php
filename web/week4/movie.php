@@ -55,8 +55,8 @@ session_start();
                 die();
             }
 
-            Test
-            $_POST["title"];
+            echo Test
+            echo $_POST["title"];
 
             ?>
 
