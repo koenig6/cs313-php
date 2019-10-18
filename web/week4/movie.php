@@ -63,10 +63,10 @@ session_start();
 
 
             <form action='' method="post">
-                Movie Title: <input type="text" name="title"><br>
+                Movie Title: <input type="text" name="title"><br><br>
                 Actors First Name: <input type="text" name="fname"><br>
-                Actor's Last Name: <input type="text" name="lname"><br>
-                Studio: <input type="text" name="studio"><br>
+                Actor's Last Name: <input type="text" name="lname"><br><br>
+                Studio: <input type="text" name="studio"><br><br>
                 Genre: <select name="genre">
                         <option value="" disabled selected>Select Rating</option>
                         <option value="adventure">adventure</option>
@@ -81,7 +81,7 @@ session_start();
                         <option value="mystery">mystery</option>
                         <option value="romance">romance</option>
                         <option value="science fiction">science fiction</option>
-                    </select><br>
+                    </select><br><br>
                 Rating: <select name="rating">
                         <option value="" disabled selected>Select Rating</option>
                         <option value="g">G</option>
@@ -89,9 +89,9 @@ session_start();
                         <option value="pg-13">PG-13</option>
                         <option value="r">R</option>
                         <option value="nc-17">NC-17</option>
-                    </select><br>
+                    </select><br><br>
 
-                <input type="submit" value="Search">
+                <input type="submit" value="Search"><br>
             </form>
 
             <table>
