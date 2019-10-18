@@ -3,8 +3,7 @@
 session_start();
 if(!empty($_GET["title"]))
 {
-    if($_GET["action"] == "delete")
-    {
+
     }
 
 ?>

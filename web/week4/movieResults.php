@@ -140,7 +140,7 @@ WHERE
             //foreach ($db->query($query)as $row)
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                 echo $row['movie_title'] . ', ' . $row['movie_year'] . '
-            <a href="https://morning-bastion-33855.herokuapp.com/week4/movieSelection.php">Select</a><br>
+            <a href="movieSelection.php?title=' . urlencode($row['movie_title']) . '">Select</a><br>
          ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
 
             }
