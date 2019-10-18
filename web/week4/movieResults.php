@@ -70,17 +70,17 @@ FROM
 WHERE
     1=1';
 
-            if(!empty($_POST["title"]))
-            {
-                $query += ' AND m.title=:title';
-            }
+           // if(!empty($_POST["title"]))
+            //{
+               // $query += ' AND m.title=:title';
+           // }
 echo $query;
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
                 //$stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
-                $stmt->execute(array(':title' => $POST["title"]));
+                $stmt->execute(array(':m.title' => $POST["title"]));
             }
 
 
