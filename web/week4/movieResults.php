@@ -110,27 +110,27 @@ WHERE
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
-                $stmt->bindValue(':title', $_POST["title"], PDO::PARAM_STR);
+                $stmt->bindValue(':title', strtolower($_POST["title"]), PDO::PARAM_STR);
             }
             if(!empty($_POST["fname"]))
             {
-                $stmt->bindValue(':fname', $_POST["fname"], PDO::PARAM_STR);
+                $stmt->bindValue(':fname', strtolower($_POST["fname"]), PDO::PARAM_STR);
             }
             if(!empty($_POST["lname"]))
             {
-                $stmt->bindValue(':lname', $_POST["lname"], PDO::PARAM_STR);
+                $stmt->bindValue(':lname', strtolower($_POST["lname"]), PDO::PARAM_STR);
             }
             if(!empty($_POST["rating"]))
             {
-                $stmt->bindValue(':rating', $_POST["rating"], PDO::PARAM_STR);
+                $stmt->bindValue(':rating', strtolower($_POST["rating"]), PDO::PARAM_STR);
             }
             if(!empty($_POST["genre"]))
             {
-                $stmt->bindValue(':genre', $_POST["genre"], PDO::PARAM_STR);
+                $stmt->bindValue(':genre', strtolower($_POST["genre"]), PDO::PARAM_STR);
             }
             if(!empty($_POST["studio"]))
             {
-                $stmt->bindValue(':studio', $_POST["studio"], PDO::PARAM_STR);
+                $stmt->bindValue(':studio', strtolower($_POST["studio"]), PDO::PARAM_STR);
             }
 
 echo $query;
