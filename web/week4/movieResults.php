@@ -50,6 +50,8 @@ session_start();
                 die();
             }
 
+            $_POST['query'];
+
             ?>
 
 
