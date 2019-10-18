@@ -50,7 +50,7 @@ session_start();
                 die();
             }
 
-            echo $_POST["title"];
+            //echo $_POST["title"];
 
 
 
@@ -76,7 +76,7 @@ WHERE
     1=1';
 
                     foreach ($db->query($query)as $row) {
-                        echo $row['title'] . ', <br>';
+                        echo $row['title'] . ',' . $row['year'] . '<br>';
 
             }
 
