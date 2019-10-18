@@ -91,21 +91,21 @@ session_start();
                         <option value="nc-17">NC-17</option>
                     </select><br><br>
 
-                <input type="submit" value="Search"><br>
+                <input type="submit" value="Search"><br><br>
             </form>
 
             <table>
                 <tr><th>Results</th></tr>
-                <tr><td>Book</td><td>Chapter</td><td>Verse</td><td>Content</td></tr>
+                <tr><td>Movie</td><td>Actor's Name</td><td>Rating</td><td>Studio</td></tr>
 
                 <?php
 
 
                     foreach ($db->query('SELECT * FROM movie')as $row) {
-                        echo $row['title'] . ' ';
+                        echo $row['title'] . ', ';
 
             }
-                ?>
+                ?><br>
             </table>
         </main>
         <script src="jsMovie.js"></script>
