@@ -102,10 +102,10 @@ session_start();
 
 
                     foreach ($db->query('SELECT * FROM movie')as $row) {
-                        echo $row['title'] . ', ';
+                        echo $row['title'] . ', <br>';
 
             }
-                ?><br>
+                ?>
             </table>
         </main>
         <script src="jsMovie.js"></script>
