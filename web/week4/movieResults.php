@@ -74,7 +74,7 @@ WHERE
             {
                 $query += ' AND m.title=:title';
             }
-
+echo $query;
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
