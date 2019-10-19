@@ -88,6 +88,8 @@ session_start();
              echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
             }
 
+            $dbActor = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                $dbActor->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
              $actorQuery= 'SELECT
                     a.actorsfirstname as fname,
@@ -100,7 +102,7 @@ session_start();
                     1=1
                     AND m.title=:title';
 
-            $actorStmt = $db->prepare($actorQuery);
+            $actorStmt = $dbActor->prepare($actorQuery);
             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
             $actorStmt->execute();
 
