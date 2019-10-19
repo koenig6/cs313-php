@@ -89,7 +89,7 @@ session_start();
             echo "Position number 2";///////////////////
             //sends query to database and returns results
             $stmt->execute();
-            //$actorStmt->execute();
+            $actorStmt->execute();
 
 
             echo "Position number 3";///////////////////
