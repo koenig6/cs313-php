@@ -52,8 +52,6 @@ session_start();
 	m.title as movie_title,
 	m.year as movie_year,
 	m.description as movie_desc,
-	a.actorsfirstname as fname,
-	a.actorslastname as lname,
 	g.genrename as genre,
 	r.rating as rating,
 	s.studioname as studio
@@ -104,6 +102,8 @@ WHERE
                $query = $query . ' AND s.studioname=:studio';
             }
 
+
+            $query = $query . ' GROUP BY m.title, m.year, m.description, g.genrename, r.rating, s.studioname';
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
