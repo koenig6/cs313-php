@@ -93,7 +93,7 @@ session_start();
 
              $actorQuery= 'SELECT
                     a.actorsfirstname as fname,
-                    a.actorslastname as lname,
+                    a.actorslastname as lname
                 FROM
                     movie as m
                     left join movietoactor as ma on m.movieid = ma.movieid
