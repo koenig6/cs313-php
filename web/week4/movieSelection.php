@@ -99,13 +99,13 @@ session_start();
             //displays info from database
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
             {
-             echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
+             echo '<div class="grid-item">' . $row['movie_title'] . '<br>' . $row['movie_year'] .  '<br>' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . '<br><br>' .$row['movie_desc'] . '<br><br></div>';
             }
 
 
            foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $actorRow)
             {
-            echo $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
+            echo '<div class="grid-item">' . $actorRow['fname'] . ' ' . $actorRow['lname']. '<br></div>';
             }
 
 
