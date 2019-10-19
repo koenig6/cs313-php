@@ -70,7 +70,7 @@ session_start();
             echo "Position number 1";///////////////////
             //prepare query to go to the database
             $stmt = $db->prepare($query);
-            $actorStmt = $db->prepare($actorQuery);
+
 
 
             $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
@@ -100,14 +100,14 @@ session_start();
                     1=1
                     AND m.title=:title';
 
+            $actorStmt = $db->prepare($actorQuery);
+            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
             $actorStmt->execute();
 
-             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
-
             echo "Position number 4";///////////////////
-           foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+           foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $actorRow)
             {
-            echo $row['fname'] . ' ' . $row['lname']. '<br>';
+            echo $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
             }
             echo "Position number 5";///////////////////
 
