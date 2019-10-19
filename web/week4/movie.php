@@ -28,33 +28,10 @@ session_start();
                 <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></li>
 
             </ul>
-
         </nav>
 
         <main>
-
             <TITLE>Your Personal Movie Database</TITLE>
-
-            <?php
-            try
-            {
-                $dbUrl = getenv('DATABASE_URL');
-                $dbOpts = parse_url($dbUrl);
-                $dbHost = $dbOpts["host"];
-                $dbPort = $dbOpts["port"];
-                $dbUser = $dbOpts["user"];
-                $dbPassword = $dbOpts["pass"];
-                $dbName = ltrim($dbOpts["path"],'/');
-
-                $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
-            ?>
 
             <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
                 Movie Title: <input type="text" name="title"><br><br>
@@ -88,15 +65,6 @@ session_start();
                 <input type="submit" value="Search" ><br><br>
             </form>
 
-            <table>
-                <tr><th>Results</th></tr>
-                <tr><td>Movie</td><td>Actor's Name</td><td>Rating</td><td>Studio</td></tr>
-
-                <?php
-
-
-                ?>
-            </table>
         </main>
         <script src="jsMovie.js"></script>
     </body>
