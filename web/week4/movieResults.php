@@ -136,21 +136,11 @@ WHERE
             $stmt->execute();
 
 
-            ?>
-            <div class="grid-container">
-
-
-            <?php
-
-                foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                     echo '<div class="grid-item">' . $row['movie_title'] . ' - ' . $row['movie_year'] . '
                 <a href="movieSelection.php?title=' . urlencode($row['movie_title']) . '">Select</a><br>
              ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . '<br>' .$row['movie_desc'] . '<br><br></div>';
-
-             ?>
-            </div>
-            <?php
-            }
+            }//foreach loop
             ?>
 
         </main>
