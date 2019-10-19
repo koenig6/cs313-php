@@ -103,12 +103,12 @@ session_start();
             }
 
 
-            echo '<div class="grid-item">' . 'Actors';
+            echo '<div class="grid-item">' . 'Actors<br>';
            foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $actorRow)
             {
             echo  $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
             }
-            echo '</div>'
+            echo '</div>';
 
 
         }//end of if statement
