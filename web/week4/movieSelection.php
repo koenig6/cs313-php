@@ -16,6 +16,11 @@ session_start();
         <link href="cssMovie.css" rel="stylesheet">
     </head>
 <body>
+     <header>
+            <h1>Jody Koenig CS 313 </h1>
+               <h2>Movie Database Details</h2>
+        </header>
+
     <nav>
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Back</a></li>
@@ -26,7 +31,6 @@ session_start();
          <?php
         if(!empty($_GET["title"]))
         {
-            echo "hi Douglas!";/////////////////////////////
             try
             {
                 $dbUrl = getenv('DATABASE_URL');
@@ -80,27 +84,22 @@ session_start();
 
             //prepare query to go to the database
             $stmt = $db->prepare($query);
+            $actorStmt = $db->prepare($actorQuery);
+
 
             $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
-
+            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
 
             //sends query to database and returns results
             $stmt->execute();
+            $actorStmt->execute();
 
 
-
+            //displays info from database
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
             {
              echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
             }
-
-
-
-            $actorStmt = $db->prepare($actorQuery);
-
-            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
-
-            $actorStmt->execute();
 
 
            foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $actorRow)
