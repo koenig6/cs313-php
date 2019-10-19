@@ -66,6 +66,5 @@ session_start();
                 </form>
             </div>
         </main>
-        <script src="jsMovie.js"></script>
     </body>
 </html>
