@@ -58,16 +58,7 @@ session_start();
                     1=1
                     AND m.title=:title';
 
-                $actorQuery= 'SELECT
-                    a.actorsfirstname as fname,
-                    a.actorslastname as lname,
-                FROM
-                    movie as m
-                    left join movietoactor as ma on m.movieid = ma.movieid
-                    left join actors as a on ma.actorsid = a.actorsid
-                WHERE
-                    1=1
-                    AND m.title=:title';
+
 
 
             }//end try
@@ -84,12 +75,11 @@ session_start();
 
             $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
 
-            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+
 
             echo "Position number 2";///////////////////
             //sends query to database and returns results
             $stmt->execute();
-            $actorStmt->execute();
 
 
             echo "Position number 3";///////////////////
@@ -98,11 +88,27 @@ session_start();
              echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
             }
 
+
+             $actorQuery= 'SELECT
+                    a.actorsfirstname as fname,
+                    a.actorslastname as lname,
+                FROM
+                    movie as m
+                    left join movietoactor as ma on m.movieid = ma.movieid
+                    left join actors as a on ma.actorsid = a.actorsid
+                WHERE
+                    1=1
+                    AND m.title=:title';
+
+            $actorStmt->execute();
+
+             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+
             echo "Position number 4";///////////////////
-           // foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $row)
-            //{
-            //echo $row['fname'] . ' ' . $row['lname']. '<br>';
-           // }
+           foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+            {
+            echo $row['fname'] . ' ' . $row['lname']. '<br>';
+            }
             echo "Position number 5";///////////////////
 
         }//end of if statement
