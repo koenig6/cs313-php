@@ -67,29 +67,25 @@ session_start();
                 echo 'Error!: ' . $ex->getMessage();
                 die();
             }
-            echo "Position number 1";///////////////////
+
             //prepare query to go to the database
             $stmt = $db->prepare($query);
-
-
 
             $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
 
 
-
-            echo "Position number 2";///////////////////
             //sends query to database and returns results
             $stmt->execute();
 
 
-            echo "Position number 3";///////////////////
+
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
             {
              echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
             }
 
-            $dbActor = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-                $dbActor->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //$dbActor = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                //$dbActor->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
              $actorQuery= 'SELECT
                     a.actorsfirstname as fname,
@@ -102,18 +98,18 @@ session_start();
                     1=1
                     AND m.title=:title';
 
-            $actorStmt = $dbActor->prepare($actorQuery);
-            echo "Position number 3.1";///////////////////
+            $actorStmt = $db->prepare($actorQuery);
+
             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
-            echo "Position number 3.2";///////////////////
+
             $actorStmt->execute();
 
-            echo "Position number 4";///////////////////
+
            foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $actorRow)
             {
             echo $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
             }
-            echo "Position number 5";///////////////////
+
 
         }//end of if statement
              ?>
