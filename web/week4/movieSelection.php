@@ -59,6 +59,16 @@ session_start();
                     AND m.title=:title';
 
 
+             $actorQuery= 'SELECT
+                    a.actorsfirstname as fname,
+                    a.actorslastname as lname
+                FROM
+                    movie as m
+                    left join movietoactor as ma on m.movieid = ma.movieid
+                    left join actors as a on ma.actorsid = a.actorsid
+                WHERE
+                    1=1
+                    AND m.title=:title';
 
 
             }//end try
@@ -84,19 +94,7 @@ session_start();
              echo $row['movie_title'] . ', ' . $row['movie_year'] .  ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
             }
 
-            //$dbActor = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-                //$dbActor->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-             $actorQuery= 'SELECT
-                    a.actorsfirstname as fname,
-                    a.actorslastname as lname
-                FROM
-                    movie as m
-                    left join movietoactor as ma on m.movieid = ma.movieid
-                    left join actors as a on ma.actorsid = a.actorsid
-                WHERE
-                    1=1
-                    AND m.title=:title';
 
             $actorStmt = $db->prepare($actorQuery);
 
