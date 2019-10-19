@@ -24,7 +24,6 @@ session_start();
 
         <nav>
             <ul class="navigation">
-                <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Home Page</a></li>
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">New Search</a></li>
 
             </ul>
@@ -106,7 +105,6 @@ WHERE
             }
 
 
-
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
             {
@@ -134,14 +132,13 @@ WHERE
             }
 
 
-
             //sends query to database and returns results
             $stmt->execute();
 
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
-                echo $row['movie_title'] . ', ' . $row['movie_year'] . '
+                echo $row['movie_title'] . ' - ' . $row['movie_year'] . '
             <a href="movieSelection.php?title=' . urlencode($row['movie_title']) . '">Select</a><br>
-         ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . ', ' .$row['movie_desc'] . '<br>';
+         ' . $row['fname'] . ' ' . $row['lname'] . ', ' . $row['rating'] . ', ' . $row['genre'] . ', ' . $row['studio'] . '<br>' .$row['movie_desc'] . '<br><br>';
 
             }
             ?>
