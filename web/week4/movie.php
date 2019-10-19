@@ -31,40 +31,40 @@ session_start();
         </nav>
 
         <main>
-            <TITLE>Your Personal Movie Database</TITLE>
 
-            <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
-                Movie Title: <input type="text" name="title"><br><br>
-                Actors First Name: <input type="text" name="fname"><br>
-                Actor's Last Name: <input type="text" name="lname"><br><br>
-                Studio: <input type="text" name="studio"><br><br>
-                Genre: <select name="genre">
-                        <option value="" disabled selected>Select Genre</option>
-                        <option value="adventure">adventure</option>
-                        <option value="comedy">comedy</option>
-                        <option value="crime">crime</option>
-                        <option value="docudrama">docudrama</option>
-                        <option value="drama">drama</option>
-                        <option value="fantasy">fantasy</option>
-                        <option value="historical">historical</option>
-                        <option value="historical fiction">historical fiction</option>
-                        <option value="horror">horror</option>
-                        <option value="mystery">mystery</option>
-                        <option value="romance">romance</option>
-                        <option value="science fiction">science fiction</option>
-                    </select><br><br>
-                Rating: <select name="rating">
-                        <option value="" disabled selected>Select Rating</option>
-                        <option value="g">G</option>
-                        <option value="pg">PG</option>
-                        <option value="pg-13">PG-13</option>
-                        <option value="r">R</option>
-                        <option value="nc-17">NC-17</option>
-                    </select><br><br>
+            <div>
+                <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
+                    Movie Title: <input type="text" name="title"><br><br>
+                    Actors First Name: <input type="text" name="fname"><br>
+                    Actor's Last Name: <input type="text" name="lname"><br><br>
+                    Studio: <input type="text" name="studio"><br><br>
+                    Genre: <select name="genre">
+                            <option value="" disabled selected>Select Genre</option>
+                            <option value="adventure">adventure</option>
+                            <option value="comedy">comedy</option>
+                            <option value="crime">crime</option>
+                            <option value="docudrama">docudrama</option>
+                            <option value="drama">drama</option>
+                            <option value="fantasy">fantasy</option>
+                            <option value="historical">historical</option>
+                            <option value="historical fiction">historical fiction</option>
+                            <option value="horror">horror</option>
+                            <option value="mystery">mystery</option>
+                            <option value="romance">romance</option>
+                            <option value="science fiction">science fiction</option>
+                        </select><br><br>
+                    Rating: <select name="rating">
+                            <option value="" disabled selected>Select Rating</option>
+                            <option value="g">G</option>
+                            <option value="pg">PG</option>
+                            <option value="pg-13">PG-13</option>
+                            <option value="r">R</option>
+                            <option value="nc-17">NC-17</option>
+                        </select><br><br>
 
-                <input type="submit" value="Search" ><br><br>
-            </form>
-
+                    <input type="submit" value="Search" ><br><br>
+                </form>
+            </div>
         </main>
         <script src="jsMovie.js"></script>
     </body>
