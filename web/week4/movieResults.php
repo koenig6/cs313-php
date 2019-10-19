@@ -137,7 +137,7 @@ WHERE
 
 
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
-                    echo '<div class="grid-item">' . $row['movie_title'] . ' - ' . $row['movie_year'] . '
+                    echo '<div class="grid-item">' . $row['movie_title'] . ' - ' . $row['movie_year'] . '<br>
                 <a href="movieSelection.php?title=' . urlencode($row['movie_title']) . '">Select</a><br>'  . '<br><br></div>';
             }//foreach loop
             ?>
