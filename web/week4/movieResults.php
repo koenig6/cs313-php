@@ -44,10 +44,6 @@ session_start();
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-            //echo $_POST["title"];
-
-
-
             $query = 'SELECT
 	m.title as movie_title,
 	m.year as movie_year,

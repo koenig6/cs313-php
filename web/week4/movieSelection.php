@@ -23,7 +23,7 @@ session_start();
 
     <nav>
             <ul class="navigation">
-                <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php">Back to Results</a></li>
+
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">New Search</a></li>
 
             </ul>
