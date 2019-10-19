@@ -89,7 +89,7 @@ session_start();
             echo "Position number 2";///////////////////
             //sends query to database and returns results
             $stmt->execute();
-            $actorStmt->execute();
+            //$actorStmt->execute();
 
 
             echo "Position number 3";///////////////////
@@ -99,10 +99,10 @@ session_start();
             }
 
             echo "Position number 4";///////////////////
-            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
-            {
-            echo $row['fname'] . ' ' . $row['lname']. '<br>';
-            }
+           // foreach($actorStmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+            //{
+            //echo $row['fname'] . ' ' . $row['lname']. '<br>';
+           // }
             echo "Position number 5";///////////////////
 
         }//end of if statement
