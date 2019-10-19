@@ -103,7 +103,9 @@ session_start();
                     AND m.title=:title';
 
             $actorStmt = $dbActor->prepare($actorQuery);
+            echo "Position number 3.1";///////////////////
             $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+            echo "Position number 3.2";///////////////////
             $actorStmt->execute();
 
             echo "Position number 4";///////////////////
