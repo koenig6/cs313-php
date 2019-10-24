@@ -3,7 +3,7 @@ function addItem(){
     var newItem = document.getElementById("lname"); //get text from box
     var li = document.createElement("li"); // create li
     li.setAttribute('id',lname.value); //connect li and word from text box
-    li.appendChild(document.createTextNode(item.value)); // add to list
+    li.appendChild(document.createTextNode(lname.value)); // add to list
     ul.appendChild(li); // add to list
 }
 
