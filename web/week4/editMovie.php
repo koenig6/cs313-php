@@ -63,7 +63,7 @@
 
 
 
-                    Actors First Name: <input type="text" id="fname"/><br>
+                    Actors First Name: <input type="text" id="fname"/><br><br>
                     Actor's Last Name: <input type="text" id="lname"/><br><br>
                     <button onclick="addItem()">add item</button>
                     <button onclick="removeItem()">remove item</button>
@@ -73,8 +73,8 @@
 
 
 
-               first <input type="text" id="fname"/><br><br>
-    last <input type="text" id="lname"/><br><br>
+               first
+    last
 
 
 
