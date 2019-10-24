@@ -98,7 +98,8 @@ div {
 }
 
 #myList{
-    height: 100px;
+    height: 50px;
     overflow: auto;
+    list-style-type: none; /*removes bullets associated with ul*/
 
 }

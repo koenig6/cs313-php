@@ -13,7 +13,7 @@
     <body>
         <header>
             <h1>Jody Koenig CS 313 </h1>
-               <h2>Movie Database Page</h2>
+               <h2>Add Movie To Database Page</h2>
         </header>
 
         <nav>
@@ -55,15 +55,17 @@
                             <option value="nc-17">NC-17</option>
                         </select><br><br>
 
-                    <ul id="myList">Adding things here </ul>
-
-                    <input type="submit" value="Search" ><br><br>
-                </form>
-
                     Actor's First Name: <input type="text" id="fname"/><br><br>
                     Actor's Last Name: <input type="text" id="lname"/><br><br>
                     <button onclick="addItem()">add item</button>
                     <button onclick="removeItem()">remove item</button>
+
+                    <ul id="myList">Actor's To Be Added</ul>
+
+                    <input type="submit" value="Search" ><br><br>
+                </form>
+
+
 
 
             </div>
