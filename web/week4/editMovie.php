@@ -30,6 +30,7 @@
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
                     Movie Title: <input type="text" name="title"><br><br>
 
+                     <textarea rows="20" cols="55" id="div2" >Add your movie description here.</textarea><br>
                     Studio: <input type="text" name="studio"><br><br>
                     Genre: <select name="genre">
                             <option value="" disabled selected>Select Genre</option>
@@ -55,10 +56,12 @@
                             <option value="nc-17">NC-17</option>
                         </select><br><br>
 
+
+
                     Actor's First Name: <input type="text" id="fname"/><br><br>
                     Actor's Last Name: <input type="text" id="lname"/><br><br>
-                    <button onclick="addItem()">add item</button>
-                    <button onclick="removeItem()">remove item</button>
+                    <button type="button" onclick="addItem()">add item</button>
+                    <button type="button" onclick="removeItem()">remove item</button>
 
                     <ul id="myList">Actor's To Be Added</ul>
 
