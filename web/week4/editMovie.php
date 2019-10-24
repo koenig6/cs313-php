@@ -62,7 +62,7 @@
 
 
 
-                <form onsubmit="addItem()">
+                <form onsubmit="addItem()" method="post">
                     Actors First Name: <input type="text" name="fname"><br>
                     Actor's Last Name: <input type="text" name="lname"><br><br>
                     <input type="submit" value="Add Name to List" ><br><br>
