@@ -63,13 +63,13 @@
 
 
                 <form onsubmit="addItem()" method="post">
-                    Actors First Name: <input type="text" name="fname"><br>
-                    Actor's Last Name: <input type="text" name="lname"><br><br>
+                    Actors First Name: <input type="text" id="fname"><br>
+                    Actor's Last Name: <input type="text" id="lname"><br><br>
                     <input type="submit" value="Add Name to List" ><br><br>
                 </form>
 
 
-               <input type="text" name="lname"/><br><br>
+               <input type="text" id="lname"/><br><br>
 
     <button onclick="addItem()">add item</button>
     <button onclick="removeItem()">remove item</button>
