@@ -12,7 +12,7 @@ function removeItem(){
     var ul = document.getElementById("myList");
     var fname = document.getElementById("fname");
     var lname = document.getElementById("lname");
-    var li = document.getElementById(fname.value + lname.value);
+    var li = document.getElementById(lname.value + ", " + fname.value);
     ul.removeChild(li);
 }
 
