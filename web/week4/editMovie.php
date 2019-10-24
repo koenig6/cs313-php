@@ -70,12 +70,13 @@
 
 
                <input type="text" id="item"/><br><br>
+
     <button onclick="addItem()">add item</button>
     <button onclick="removeItem()">remove item</button>
     <button onclick="importantItem()">Important item</button>
 
 
-    <ul id="myList" contenteditable="true"></ul>
+
 
 
 
