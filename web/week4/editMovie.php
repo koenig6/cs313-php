@@ -71,7 +71,8 @@
 
 
 
-     <input type="text" id="lname"/><br><br>
+               first <input type="text" id="fname"/><br><br>
+    last <input type="text" id="lname"/><br><br>
     <button onclick="addItem()">add item</button>
     <button onclick="removeItem()">remove item</button>
 

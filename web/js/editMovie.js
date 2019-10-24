@@ -1,9 +1,10 @@
 function addItem(){
     var ul = document.getElementById("myList");
     var newItem = document.getElementById("lname"); //get text from box
+    var newItem2 = document.getElementById("fname"); //get text from box
     var li = document.createElement("li"); // create li
-    li.setAttribute('id',lname.value); //connect li and word from text box
-    li.appendChild(document.createTextNode(lname.value)); // add to list
+    li.setAttribute('id',lname.value + 'id',fname.value); //connect li and word from text box
+    li.appendChild(document.createTextNode(lname.value + fname.value)); // add to list
     ul.appendChild(li); // add to list
 }
 
