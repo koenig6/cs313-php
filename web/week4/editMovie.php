@@ -19,7 +19,7 @@
         <nav>
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Home Page</a></li>
-                <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></li>
+                <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></li>
                 <li  class="active"><a href="https://morning-bastion-33855.herokuapp.com/week4/editMovie.php">Add Movie</a></li>
             </ul>
         </nav>
@@ -29,6 +29,7 @@
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
                     Movie Title: <input type="text" name="title"><br><br>
+                    Year: <input type="text" name="title"><br><br>
 
                      <textarea rows="20" cols="55" id="div2" >Add your movie description here.</textarea><br>
                     Studio: <input type="text" name="studio"><br><br>
