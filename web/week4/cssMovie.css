@@ -96,3 +96,9 @@ div {
   font-size: 30px;
   text-align: center;
 }
+
+#myList{
+    height: 100px;
+    overflow: auto;
+
+}

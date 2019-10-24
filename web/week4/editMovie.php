@@ -60,26 +60,10 @@
                     <input type="submit" value="Search" ><br><br>
                 </form>
 
-
-
-
                     Actor's First Name: <input type="text" id="fname"/><br><br>
                     Actor's Last Name: <input type="text" id="lname"/><br><br>
                     <button onclick="addItem()">add item</button>
                     <button onclick="removeItem()">remove item</button>
-
-
-
-
-
-
-               first
-    last
-
-
-
-
-
 
 
             </div>
