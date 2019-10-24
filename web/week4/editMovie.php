@@ -65,13 +65,17 @@
                 <form onsubmit="addItem()">
                     Actors First Name: <input type="text" name="fname"><br>
                     Actor's Last Name: <input type="text" name="lname"><br><br>
-                    <input type="submit" value="Search" ><br><br>
+                    <input type="submit" value="Add Name to List" ><br><br>
                 </form>
 
 
-                <input type="text" id="item"/><br><br>
-                <button onclick="addItem()">Add Item To List</button>
-                        <button onclick="removeItem()">remove item</button>
+               <input type="text" id="item"/><br><br>
+    <button onclick="addItem()">add item</button>
+    <button onclick="removeItem()">remove item</button>
+    <button onclick="importantItem()">Important item</button>
+
+
+    <ul id="myList" contenteditable="true"></ul>
 
 
 
