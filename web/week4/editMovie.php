@@ -55,7 +55,7 @@
                             <option value="nc-17">NC-17</option>
                         </select><br><br>
 
-                    <ul id="myList"></ul>
+                    <ul id="myList">Adding things here </ul>
 
                     <input type="submit" value="Search" ><br><br>
                 </form>
