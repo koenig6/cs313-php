@@ -69,7 +69,7 @@
                 </form>
 
 
-               <input type="text" id="item"/><br><br>
+               <input type="text" name="lname"/><br><br>
 
     <button onclick="addItem()">add item</button>
     <button onclick="removeItem()">remove item</button>
