@@ -10,12 +10,9 @@ function addItem(){
 
 function removeItem(){
     var ul = document.getElementById("myList");
-    var fname = document.getElementById("fname");
-    var lname = document.getElementById("lname");
+    var item = document.getElementById("lname");
     var li = document.getElementById(lname.value);
-    var li2 = document.getElementById(fname.value);
     ul.removeChild(li);
-    ul.removeChild(li2);
 }
 
 
