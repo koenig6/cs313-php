@@ -56,6 +56,7 @@
 
                         $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
                         print_r($genreRowSet);
+                        echo $genreRowSet[0]["genreid"]
 
                          //********THIS IS FOR DELETING MOVIE*****
                         //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
