@@ -70,7 +70,7 @@
                 }//end of if!empty statement
                 else
                 {
-                   echo 'Could not delete.  Movie not found';
+                   echo 'Could not delete.  Movie not found.';
 
                 }
                    ?>

@@ -45,6 +45,7 @@ session_start();
 
 
             $query = 'SELECT
+    m.movieid as movie_id,
 	m.title as movie_title,
 	m.year as movie_year,
 	m.description as movie_desc,
@@ -134,7 +135,7 @@ WHERE
 
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                     echo '<div class="grid-item">' . $row['movie_title'] . ' - ' . $row['movie_year'] . '<br>
-                <a href="movieSelection.php?title=' . urlencode($row['movie_title']) . '">Select</a><br>'  . '<br><br></div>';
+                <a href="movieSelection.php?movieId=' . urlencode($row['movie_id']) . '">Select</a><br>'  . '<br><br></div>';
             }//foreach loop
             ?>
 

@@ -30,7 +30,8 @@ session_start();
         </nav>
     <main>
          <?php
-        if(!empty($_GET["title"]))
+        //movieId is parameter after ? from prev page
+        if(!empty($_GET["movieId"]))
         {
             try
             {
@@ -61,7 +62,7 @@ session_start();
 
                 WHERE
                     1=1
-                    AND m.title=:title';
+                    AND m.movieid=:movieIDENT';
 
 
              $actorQuery= 'SELECT
@@ -73,7 +74,7 @@ session_start();
                     left join actors as a on ma.actorsid = a.actorsid
                 WHERE
                     1=1
-                    AND m.title=:title';
+                    AND m.movieid=:movieIDENT';
 
 
             }//end try
@@ -88,8 +89,8 @@ session_start();
             $actorStmt = $db->prepare($actorQuery);
 
 
-            $stmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
-            $actorStmt->bindValue(':title', urldecode(strtolower($_GET["title"])), PDO::PARAM_STR);
+            $stmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieId"])), PDO::PARAM_STR);
+            $actorStmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieId"])), PDO::PARAM_STR);
 
             //sends query to database and returns results
             $stmt->execute();
@@ -109,6 +110,7 @@ session_start();
             echo  $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
             }
             echo '</div>';
+            echo '<br><a href="removeMovie.php?movieId=' . urlencode($row['movie_id']) . '">Delete Movie</a><br>'  . '<br><br></div>';
 
 
         }//end of if statement
