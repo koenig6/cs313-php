@@ -71,7 +71,7 @@
                         echo $genreid;
 
                         //********THIS IS FOR ADDING A RATING TO A MOVIE*****
-                        $queryRating = 'SELECT ratingid FROM rating WHERE  rating = :ratingid LIMIT 1';
+                        $queryRating = 'SELECT ratingid FROM rating WHERE ratingname = :ratingid LIMIT 1';
                         //prepare query to go to the database
                         $stmtRating = $db->prepare($queryRating);
                         $stmtRating->bindValue(':ratingid', urldecode(strtolower($_GET["rating"])), PDO::PARAM_STR);
