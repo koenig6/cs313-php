@@ -84,6 +84,11 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
+                    catch (Exception $ex)
+                    {
+                        echo 'Error!: ' . $ex->getMessage();
+                        die();
+                    }
 
                }//end of if isset statement
                 else
