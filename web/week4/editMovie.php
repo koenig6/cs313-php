@@ -61,8 +61,8 @@
 
                     Actor's First Name: <input type="text" id="fname"/><br><br>
                     Actor's Last Name: <input type="text" id="lname"/><br><br>
-                    <button type="button" onclick="addItem()">add item</button>
-                    <button type="button" onclick="removeItem()">remove item</button>
+                    <button type="button" onclick="addItem()">Add Actor To List</button>
+                    <button type="button" onclick="removeItem()">Remove Actor From List</button>
 
                     <ul id="myList">Actor's To Be Added</ul>
 
