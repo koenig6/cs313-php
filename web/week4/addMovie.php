@@ -136,7 +136,7 @@
                             }
                             else
                             {
-                                throw new Exception("Could not add studio to database")
+                                throw new Exception("Could not add studio to database");
                             }
                         }
 
