@@ -33,7 +33,7 @@
                if(isset($_POST['btnSubmit']))
                {
 
-                   /* try
+                    try
                     {
                         $dbUrl = getenv('DATABASE_URL');
                         $dbOpts = parse_url($dbUrl);
@@ -71,13 +71,13 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-                    else
-                    {
-                       echo 'Could not add movie.';
-
-                    }*/
 
                }//end of if isset statement
+                else
+                {
+                   echo 'Could not add movie.';
+
+                }
             }//end if SERVER statement
             else
             {
