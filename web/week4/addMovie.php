@@ -94,6 +94,31 @@
 
                         echo $ratingid;
 
+                        //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
+                        $queryStudio = 'SELECT studioid FROM studio WHERE studioname = :studioid LIMIT 1';
+                        //prepare query to go to the database
+                        $stmtStudio = $db->prepare($queryStudio);
+                        $stmtStudio->bindValue(':studioid', urldecode(strtolower($_POST["studio"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        $stmtStudio->execute();
+
+                        $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($studioRowSet);
+                        echo $studioRowSet[0]["ratingid"];
+
+                        $studioid = -1;
+                        if(!empty($studiogRowSet))
+                        {
+                            $studioid = $studioRowSet[0]["studioid"];
+                        }
+                        else
+                        {
+                            throw new Exception("Please select a valid studio.");
+                        }
+
+                        echo $studioid;
+
+
                     }//end try
                     catch (PDOException $ex)
                     {
