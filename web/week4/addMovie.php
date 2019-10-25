@@ -58,6 +58,18 @@
                         print_r($genreRowSet);
                         echo $genreRowSet[0]["genreid"];
 
+                        $genreid = -1;
+                        if(!empty($genreRowSet))
+                        {
+                            $genreid = $genreRowSet[0]["genreid"];
+                        }
+                        else
+                        {
+                            throw new Exception("Please select a valid genre.");
+                        }
+
+                        echo $genreid;
+
                          //********THIS IS FOR DELETING MOVIE*****
                         //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
                         //prepare query to go to the database
