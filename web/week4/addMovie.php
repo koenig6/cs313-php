@@ -33,7 +33,7 @@
                if(isset($_POST['btnSubmit']))
                {
 
-                    try
+                   /* try
                     {
                         $dbUrl = getenv('DATABASE_URL');
                         $dbOpts = parse_url($dbUrl);
@@ -75,7 +75,7 @@
                     {
                        echo 'Could not add movie.';
 
-                    }
+                    }*/
 
                }//end of if isset statement
             }//end if SERVER statement
