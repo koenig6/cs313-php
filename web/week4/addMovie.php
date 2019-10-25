@@ -97,7 +97,7 @@
                         //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
                         if(empty($_POST["studio"]) || $_POST["studio"] === "studioid")
                         {
-                            throw new Exception("Studio entry is empty.  Please add the studio.")
+                            throw new Exception("Studio entry is empty.  Please add the studio.");
                         }
                         $queryStudio = 'SELECT studioid FROM studio WHERE studioname = :studioid LIMIT 1';
                         //prepare query to go to the database
