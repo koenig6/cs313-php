@@ -71,7 +71,6 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-                    }//end of if!empty statement
                     else
                     {
                        echo 'Could not add movie.';
