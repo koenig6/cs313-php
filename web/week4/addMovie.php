@@ -92,7 +92,7 @@
                             throw new Exception("Please select a valid rating.");
                         }
 
-                        echo $ratingid;
+                        echo $ratingid . '<br>';
 
                         //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
                         $queryStudio = 'SELECT studioid FROM studio WHERE studioname = :studioid LIMIT 1';
@@ -116,7 +116,7 @@
                             throw new Exception("Please select a valid studio.");
                         }
 
-                        echo $studioid;
+                        echo $studioid . '<br>';
 
 
                     }//end try
