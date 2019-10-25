@@ -110,7 +110,7 @@ session_start();
             echo  $actorRow['fname'] . ' ' . $actorRow['lname']. '<br>';
             }
             echo '</div>';
-            echo '<br><a href="removeMovie.php?movieId=' . urlencode($row['movie_id']) . '">Delete Movie</a><br>'  . '<br><br></div>';
+            echo '<br><a href="removeMovie.php?movieId=' . urlencode($_GET["movieId"]) . '">Delete Movie</a><br>'  . '<br><br></div>';
 
 
         }//end of if statement
