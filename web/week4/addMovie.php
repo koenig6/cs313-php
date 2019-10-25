@@ -68,7 +68,7 @@
                             throw new Exception("Please select a valid genre.");
                         }
 
-                        echo $genreid;
+                        echo $genreid . '<br>';
 
                         //********THIS IS FOR ADDING A RATING TO A MOVIE*****
                         $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
