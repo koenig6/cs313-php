@@ -32,6 +32,49 @@
                if(isset($_POST['btnSubmit']))
                {
 
+                    try
+                    {
+                        $dbUrl = getenv('DATABASE_URL');
+                        $dbOpts = parse_url($dbUrl);
+                        $dbHost = $dbOpts["host"];
+                        $dbPort = $dbOpts["port"];
+                        $dbUser = $dbOpts["user"];
+                        $dbPassword = $dbOpts["pass"];
+                        $dbName = ltrim($dbOpts["path"],'/');
+
+                        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
+            $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid';
+            //prepare query to go to the database
+            $stmt = $db->prepare($queryGenre);
+            $stmt->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
+            //sends query to database and returns results
+            $stmt->execute();
+
+             //********THIS IS FOR DELETING MOVIE*****
+            $queryM = 'DELETE FROM movie WHERE movieid = :movieID';
+            //prepare query to go to the database
+            $stmtM = $db->prepare($queryM);
+            $stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+            //sends query to database and returns results
+            $stmtM->execute();
+
+            }//end try
+            catch (PDOException $ex)
+            {
+                echo 'Error!: ' . $ex->getMessage();
+                die();
+            }
+                }//end of if!empty statement
+                else
+                {
+                   echo 'Could not add movie.';
+
+                }
+                   ?>
+
                }//end of if isset statement
             }//end if SERVER statement
             else
