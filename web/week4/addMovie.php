@@ -119,7 +119,25 @@
                         else
                         {
                             //add studio
-                            throw new Exception("Please select a valid studio.");
+                            $queryStudio ='INSERT INTO studio (studioname) VALUES (:studioid) RETURNING studioid';
+                            $stmtStudio = $db->prepare($queryStudio);
+                            $stmtStudio->bindValue(':studioid', urldecode(strtolower($_POST["studio"])), PDO::PARAM_STR);
+                            //sends query to database and returns results
+                            $stmtStudio->execute();
+
+                            $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
+                            print_r($studioRowSet);
+                            echo $studioRowSet[0]["studioid"];
+
+                            if(!empty($studioRowSet))
+                            {
+                                //does studio exist
+                                $studioid = $studioRowSet[0]["studioid"];
+                            }
+                            else
+                            {
+                                throw new Exception("Could not add studio to database")
+                            }
                         }
 
                         echo $studioid . '<br>';
