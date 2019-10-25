@@ -48,7 +48,7 @@
             //********THIS IS FOR DELETING MOVIE TO ACTOR*****
             $queryMA = 'DELETE FROM movietoactor WHERE movieid = :movieID';
             //prepare query to go to the database
-            $stmt = $db->prepare($queryMA)
+            $stmt = $db->prepare($queryMA);
             $stmt->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
             //sends query to database and returns results
             $stmt->execute();
