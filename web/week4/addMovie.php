@@ -46,38 +46,37 @@
                         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
-            $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
-            //prepare query to go to the database
-            $stmtGenre = $db->prepare($queryGenre);
-            $stmtGenre->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
-            //sends query to database and returns results
-            $stmtGenre->execute();
+                        //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
+                        $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
+                        //prepare query to go to the database
+                        $stmtGenre = $db->prepare($queryGenre);
+                        $stmtGenre->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        $stmtGenre->execute();
 
-            $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
-            print_r($genreRowSet);
+                        $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($genreRowSet);
 
-             //********THIS IS FOR DELETING MOVIE*****
-            //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
-            //prepare query to go to the database
-            //$stmtM = $db->prepare($queryM);
-            //$stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
-            //sends query to database and returns results
-            //$stmtM->execute();
+                         //********THIS IS FOR DELETING MOVIE*****
+                        //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
+                        //prepare query to go to the database
+                        //$stmtM = $db->prepare($queryM);
+                        //$stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        //$stmtM->execute();
 
-            }//end try
-            catch (PDOException $ex)
-            {
-                echo 'Error!: ' . $ex->getMessage();
-                die();
-            }
-                }//end of if!empty statement
-                else
-                {
-                   echo 'Could not add movie.';
+                    }//end try
+                    catch (PDOException $ex)
+                    {
+                        echo 'Error!: ' . $ex->getMessage();
+                        die();
+                    }
+                    }//end of if!empty statement
+                    else
+                    {
+                       echo 'Could not add movie.';
 
-                }
-                   ?>
+                    }
 
                }//end of if isset statement
             }//end if SERVER statement
