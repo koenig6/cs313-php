@@ -70,13 +70,29 @@
 
                         echo $genreid;
 
-                         //********THIS IS FOR DELETING MOVIE*****
-                        //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
+                        //********THIS IS FOR ADDING A RATING TO A MOVIE*****
+                        $queryRating = 'SELECT ratingid FROM rating WHERE  rating = :ratingid LIMIT 1';
                         //prepare query to go to the database
-                        //$stmtM = $db->prepare($queryM);
-                        //$stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+                        $stmtRating = $db->prepare($queryRating);
+                        $stmtRating->bindValue(':ratingid', urldecode(strtolower($_GET["rating"])), PDO::PARAM_STR);
                         //sends query to database and returns results
-                        //$stmtM->execute();
+                        $stmtRating->execute();
+
+                        $ratingRowSet = $stmtRating->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($ratingRowSet);
+                        echo $ratingRowSet[0]["ratingid"];
+
+                        $ratingid = -1;
+                        if(!empty($ratingRowSet))
+                        {
+                            $ratingid = $ratingRowSet[0]["ratingid"];
+                        }
+                        else
+                        {
+                            throw new Exception("Please select a valid rating.");
+                        }
+
+                        echo $ratingid;
 
                     }//end try
                     catch (PDOException $ex)
