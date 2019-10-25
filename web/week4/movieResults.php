@@ -100,7 +100,7 @@ WHERE
             }
 
             // removed dublicates since actors and movies can have mutliples of each
-            $query = $query . ' GROUP BY m.title, m.year, m.description, g.genrename, r.rating, s.studioname';
+            $query = $query . ' GROUP BY m.movieid, m.title, m.year, m.description, g.genrename, r.rating, s.studioname';
 
             $stmt = $db->prepare($query);
             if(!empty($_POST["title"]))
