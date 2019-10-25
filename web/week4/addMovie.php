@@ -74,7 +74,7 @@
                         $queryRating = 'SELECT ratingid FROM rating WHERE ratingname = :ratingid LIMIT 1';
                         //prepare query to go to the database
                         $stmtRating = $db->prepare($queryRating);
-                        $stmtRating->bindValue(':ratingid', urldecode(strtolower($_GET["rating"])), PDO::PARAM_STR);
+                        $stmtRating->bindValue(':ratingid', urldecode(strtolower($_POST["rating"])), PDO::PARAM_STR);
                         //sends query to database and returns results
                         $stmtRating->execute();
 
