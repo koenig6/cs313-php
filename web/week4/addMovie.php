@@ -25,6 +25,19 @@
         </nav>
 
         <main>
+            <?php
+
+            if($_SERVER['REQUEST_METHOD'] === 'POST')
+            {
+               if(isset($_POST['btnSubmit']))
+               {
+
+               }//end of if isset statement
+            }//end if SERVER statement
+            else
+            {
+
+            ?>
 
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
@@ -66,10 +79,13 @@
 
                     <ul id="myList">Actor's To Be Added</ul>
 
-                    <input type="submit" value="Add Movie" ><br><br>
+                    <input type="submit" value="Add Movie" name="btnSubmit" ><br><br>
                 </form>
+                <?php
 
+                }//end else
 
+                ?>
 
 
             </div>

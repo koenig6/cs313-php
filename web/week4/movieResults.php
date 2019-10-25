@@ -128,8 +128,6 @@ WHERE
                 $stmt->bindValue(':studio', strtolower($_POST["studio"]), PDO::PARAM_STR);
             }
 
-            echo $_POST["title"];
-            echo $query;
 
             //sends query to database and returns results
             $stmt->execute();
