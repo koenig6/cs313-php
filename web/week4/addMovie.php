@@ -111,7 +111,7 @@
                         echo $studioRowSet[0]["studioid"];
 
                         $studioid = -1;
-                        if(!empty($studiogRowSet))
+                        if(!empty($studioRowSet))
                         {
                             //does studio exist
                             $studioid = $studioRowSet[0]["studioid"];
