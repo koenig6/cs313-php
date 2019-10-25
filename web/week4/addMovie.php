@@ -46,20 +46,23 @@
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
-            $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid';
+            $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
             //prepare query to go to the database
-            $stmt = $db->prepare($queryGenre);
-            $stmt->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
+            $stmtGenre = $db->prepare($queryGenre);
+            $stmtGenre->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
             //sends query to database and returns results
-            $stmt->execute();
+            $stmtGenre->execute();
+
+            $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
+            print_r($genreRowSet);
 
              //********THIS IS FOR DELETING MOVIE*****
-            $queryM = 'DELETE FROM movie WHERE movieid = :movieID';
+            //$queryM = 'DELETE FROM movie WHERE movieid = :movieID';
             //prepare query to go to the database
-            $stmtM = $db->prepare($queryM);
-            $stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+            //$stmtM = $db->prepare($queryM);
+            //$stmtM->bindValue(':movieID', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
             //sends query to database and returns results
-            $stmtM->execute();
+            //$stmtM->execute();
 
             }//end try
             catch (PDOException $ex)
