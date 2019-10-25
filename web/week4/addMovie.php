@@ -95,6 +95,10 @@
                         echo $ratingid . '<br>';
 
                         //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
+                        if(empty($_POST["studio"]) || $_POST["studio"] === "studioid")
+                        {
+                            throw new Exception("Studio entry is empty.  Please add the studio.")
+                        }
                         $queryStudio = 'SELECT studioid FROM studio WHERE studioname = :studioid LIMIT 1';
                         //prepare query to go to the database
                         $stmtStudio = $db->prepare($queryStudio);
@@ -104,15 +108,17 @@
 
                         $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
                         print_r($studioRowSet);
-                        echo $studioRowSet[0]["ratingid"];
+                        echo $studioRowSet[0]["studioid"];
 
                         $studioid = -1;
                         if(!empty($studiogRowSet))
                         {
+                            //does studio exist
                             $studioid = $studioRowSet[0]["studioid"];
                         }
                         else
                         {
+                            //add studio
                             throw new Exception("Please select a valid studio.");
                         }
 
