@@ -129,6 +129,8 @@ WHERE
             }
 
 
+            echo $query;
+
             //sends query to database and returns results
             $stmt->execute();
 
