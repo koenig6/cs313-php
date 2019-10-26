@@ -35,6 +35,7 @@
 
                     try
                     {
+                        //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
                         $dbOpts = parse_url($dbUrl);
                         $dbHost = $dbOpts["host"];
@@ -45,6 +46,13 @@
 
                         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                        //check that year is a number
+                        if(!is_numeric($_POST[year]))
+                        {
+                            throw new Exception("Year has to be a number");
+                        }
+
 
                         //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
                         $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
@@ -70,6 +78,7 @@
 
                         echo $genreid . '<br>';
 
+
                         //********THIS IS FOR ADDING A RATING TO A NEW MOVIE*****
                         $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
                         //prepare query to go to the database
@@ -93,6 +102,7 @@
                         }
 
                         echo $ratingid . '<br>';
+
 
                         //********THIS IS FOR ADDING A STUDIO TO A NEW MOVIE*****
                         if(empty($_POST["studio"]) || $_POST["studio"] === "")
@@ -142,11 +152,6 @@
 
                         echo $studioid . '<br>';
 
-                        //check that year is a number
-                        if(!is_numeric($_POST[year]))
-                        {
-                            throw new Exception("Year has to be a number");
-                        }
 
 
 
