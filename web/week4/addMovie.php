@@ -142,6 +142,12 @@
 
                         echo $studioid . '<br>';
 
+                        //check that year is a number
+                        if(!is_numeric($_POST[year]))
+                        {
+                            throw new Exception("Year has to be a number");
+                        }
+
 
 
                          //********THIS IS FOR ADDING A NEW MOVIE TO THE DATABASE*****
