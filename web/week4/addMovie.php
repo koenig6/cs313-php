@@ -274,9 +274,22 @@
                         }
 
 
-                        echo $movieid . '<br>';
+                        echo "New Movie: " . $movieid . '<br>';
 
 
+                        //****************ASSOCIATE MOVIE TO ACTORS********************
+                        foreach($actorids as $actorid)
+                        {
+                            $queryAM = 'INSERT INTO movietoactor (movieid, actorsid) VALUE (:movieid, :actorsid)';
+                            //prepare query to go to the database
+                            $stmtAM = $db->prepare($queryAM);
+                            $stmtAM->bindValue(':movieid', $movieid, PDO::PARAM_INT);
+                            $stmtAM->bindValue(':actorsid', $actorid, PDO::PARAM_INT);
+                            //sends query to database and returns results
+                            $stmtAM->execute();
+                        }
+
+                        echo "Movie added successfully!<br>";
 
                     }//end try
                     catch (PDOException $ex)
