@@ -278,7 +278,7 @@
                             $stmtAM->execute();
                         }
 
-                        echo "Movie added successfully!<br>";
+                        echo "Movie edited successfully!<br>";
 
 
 
