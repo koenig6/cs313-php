@@ -31,7 +31,7 @@
                 {
                     //Do modify in database
                     print_r($_POST);
-                    echo "<br>";
+                    echo "TOP OF THE PAGE<br>";
                     try
                     {
                         //connecting to database

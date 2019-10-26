@@ -3,10 +3,7 @@ function addItem(){
     var newItem = document.getElementById("lname"); //get text from box
     var newItem2 = document.getElementById("fname"); //get text from box
     var li = document.createElement("li"); // create li
-   // li.setAttribute('id',lname.value); //gives the li an id
-   // li.setAttribute('type','hidden');
     li.setAttribute('id', lname.value + ", " + fname.value);
-   // li.setAttribute('value',lname.value + ", " + fname.value); //gives li an id of the item
     li.appendChild(document.createTextNode(lname.value + ", " + fname.value)); // add to list
     var input = document.createElement("input");
     input.setAttribute('type', 'hidden');
