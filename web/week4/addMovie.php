@@ -36,7 +36,7 @@
                     try
                     {
 
-                        print_r($_POST["actors"][0]);
+                        print_r($_POST);
 
                         //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
