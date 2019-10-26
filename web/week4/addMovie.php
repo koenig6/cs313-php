@@ -67,6 +67,8 @@
                             $LastName = rtrim(ltrim(strtok($actor, ",")));
                             $FirstName = rtrim(ltrim(strtok(",")));
 
+                            echo "<br>" . $FirstName . " " . $LastName . "<br>";
+
                             if($FirstName === "")
                             {
                                 throw new Exception("Actor's mama gave them a first name, please enter it.");
@@ -76,7 +78,7 @@
                                 throw new Exception("Actor's papa gave them a last name (or papa and mama, we're modern people here), please enter it.");
                             }
 
-                            echo "<br>" . $FirstName . " " . $LastName . "<br>";
+
                             /*$queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname';
                             $stmtActors = $db->prepare($queryActors);
                             $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
