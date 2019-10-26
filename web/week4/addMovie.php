@@ -86,12 +86,18 @@
 
                             echo $actorRowSet . "<br>";
 
+                            echo "Find Actor <br>";
+                            print_r($actorRowSet);
+                            echo $actorRowSet[0]["actorsid"];
+
                             if(!empty(actorRowSet))
                             {
                                 $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
                             }
                             else
                             {
+
+                                echo "Entered Insert Actor<br>";
                                 $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
                                 $stmtActors = $db->prepare($queryActors);
                                 $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
