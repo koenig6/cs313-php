@@ -133,9 +133,9 @@
                     Year: <input type="text" name="year" value="<?php echo $stmtRowSet[0]["movie_year"];?>"><br><br>
 
                      <textarea rows="20" cols="55" id="div2" name="description"><?php echo $stmtRowSet[0]["movie_desc"];?></textarea><br>
-                    Studio: <input type="text" name="studio"><br><br>
+                    Studio: <input type="text" name="studio" value="<?php echo $stmtRowSet[0]["studio"];?>"><br><br>
                     Genre: <select name="genre">
-                            <option value="" disabled selected>Select Genre</option>
+                            <option value="" disabled>Select Genre</option>
                             <option value="adventure">adventure</option>
                             <option value="comedy">comedy</option>
                             <option value="crime">crime</option>
@@ -146,7 +146,7 @@
                             <option value="historical fiction">historical fiction</option>
                             <option value="horror">horror</option>
                             <option value="mystery">mystery</option>
-                            <option value="romance">romance</option>
+                            <option value="romance" <?php if($stmtRowSet[0]["genre"] === "romance"){echo "selected";}?>">romance</option>
                             <option value="science fiction">science fiction</option>
                         </select><br><br>
                     Rating: <select name="rating">
