@@ -59,7 +59,7 @@
                             $LastName = rtrim(ltrim(strtok($actor, ",")));
                             $FirstName = rtrim(ltrim(strtok(",")));
 
-                            echo "<br>" . $FirstName . " + line 62 " . $LastName . "<br>";
+                            //echo "<br>" . $FirstName . " + " . $LastName . "<br>"; testing
 
                             if($FirstName === "" || $LastName === "")
                             {
