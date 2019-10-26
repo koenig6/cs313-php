@@ -5,7 +5,7 @@ function addItem(){
     var li = document.createElement("li"); // create li
    // li.setAttribute('id',lname.value); //gives the li an id
    // li.setAttribute('type','hidden');
-   // li.setAttribute('name','actors[]');
+    li.setAttribute('name', lname.value + ", " + fname.value);
    // li.setAttribute('value',lname.value + ", " + fname.value); //gives li an id of the item
     li.appendChild(document.createTextNode(lname.value + ", " + fname.value)); // add to list
     var input = document.createElement("input");
@@ -19,7 +19,7 @@ function addItem(){
 function removeItem(){
     var ul = document.getElementById("myList");
     var lname = document.getElementById("lname");
-    var li = document.getElementById(lname.value + ", " + fname.value);
+    var li = document.getElementByName(lname.value + ", " + fname.value);
     ul.removeChild(li);
 }
 
