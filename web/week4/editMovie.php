@@ -55,7 +55,7 @@
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-                        $query = 'SELECT
+                        $query = "SELECT
                                 m.title as movie_title,
                                 m.year as movie_year,
                                 m.description as movie_desc,
@@ -73,10 +73,10 @@
 
                             WHERE
                                 1=1
-                                AND m.movieid=:movieIDENT';
+                                AND m.movieid=:movieIDENT";
 
 
-                        $actorQuery= 'SELECT
+                        $actorQuery= "SELECT
                                 a.actorslastname || ', ' || a.actorsfirstname as actorname
                             FROM
                                 movie as m
@@ -84,7 +84,7 @@
                                 left join actors as a on ma.actorsid = a.actorsid
                             WHERE
                                 1=1
-                                AND m.movieid=:movieIDENT';
+                                AND m.movieid=:movieIDENT";
 
 
 
