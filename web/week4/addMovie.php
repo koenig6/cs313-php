@@ -149,10 +149,19 @@
                         {
                             throw new Exception("Title entry is empty.  Please add the title of your movie.");
                         }
-                        $queryTitle = 'SELECT movieid FROM movie WHERE title = :movieid LIMIT 1';
-                        //prepare query to go to the database
+
+                        //add movie
+                        $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:title, :year, :description, :studioid, :genreid, :ratingid)RETURNING :movieid LIMIT 1';
                         $stmtTitle = $db->prepare($queryTitle);
-                        $stmtTitle->bindValue(':movieid', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
+
+                        $stmtTile->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
+                        $stmtTile->bindValue(':year', urldecode(strtolower($_POST["year"])), PDO::PARAM_STR);
+                        $stmtTile->bindValue(':descritpion', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
+                        //this one is different becauase I am getting the id from the variable declared earlier
+                        $stmtTile->bindValue(':studioid', $studioid, PDO::PARAM_INT);
+                        $stmtTile->bindValue(':genreid', $genreid, PDO::PARAM_INT);
+                        $stmtTile->bindValue(':ratingid', $ratingid, PDO::PARAM_INT);
+
                         //sends query to database and returns results
                         $stmtTitle->execute();
 
@@ -163,32 +172,14 @@
                         $movieid = -1;
                         if(!empty($titleRowSet))
                         {
-                            //does studio exist
+                            //does movie exist
                             $movieid = $titleRowSet[0]["movieid"];
                         }
                         else
                         {
-                            //add movie
-                            $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:movieid, 1999, :description, :studioid, :genreid, :ratingid)RETURNING movieid LIMIT 1';
-                            $stmtTitle = $db->prepare($queryTitle);
-                            $stmtTile->bindValue(':movieid', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
-                            //sends query to database and returns results
-                            $stmtTitle->execute();
-
-                            $titleRowSet = $stmtTitle->fetchAll(PDO::FETCH_ASSOC);
-                            print_r($titleRowSet);
-                            echo $titleRowSet[0]["movieid"];
-
-                            if(!empty($titleRowSet))
-                            {
-                                //does movie exist
-                                $movieid = $titleRowSet[0]["movieid"];
-                            }
-                            else
-                            {
-                                throw new Exception("Could not add movie to database");
-                            }
+                            throw new Exception("Could not add movie to database");
                         }
+
 
                         echo $movieid . '<br>';
 
@@ -221,9 +212,9 @@
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
                     Movie Title: <input type="text" name="title"><br><br>
-                    Year: <input type="text" name="title"><br><br>
+                    Year: <input type="text" name="year"><br><br>
 
-                     <textarea rows="20" cols="55" id="div2" >Add your movie description here.</textarea><br>
+                     <textarea rows="20" cols="55" id="div2" name="description">Add your movie description here.</textarea><br>
                     Studio: <input type="text" name="studio"><br><br>
                     Genre: <select name="genre">
                             <option value="" disabled selected>Select Genre</option>
