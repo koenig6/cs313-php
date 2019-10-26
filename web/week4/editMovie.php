@@ -46,6 +46,219 @@
                         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+                        //********ADDING ACTORS TO THE DATABASE************************
+                        //fetch the actor array. Each item in the array will be "last_name, first_name"
+                        $actors = $_POST["actors"];
+                        $actorids = array();
+                        $actorCount = 0;
+
+                        foreach($actors as $actor)
+                        {
+                            //break the string apart using strtok. This will return everything before the next comma for
+                            //the string passed in on the first call. Each next call will return everything after the last
+                            //comma but before the next comma until there is nothing left in the string.
+                            $LastName = rtrim(ltrim(strtok($actor, ",")));
+                            $FirstName = rtrim(ltrim(strtok(",")));
+
+                            echo "<br>" . $FirstName . " + " . $LastName . "<br>";
+
+                            if($FirstName === "" || $LastName === "")
+                            {
+                                throw new Exception("Actor's mama gave them a full name, please enter it.");
+                            }
+
+
+                            $queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname LIMIT 1';
+                            $stmtActors = $db->prepare($queryActors);
+                            $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
+                            $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);
+                            $stmtActors->execute();
+
+                            $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
+
+                            echo $actorRowSet . "<br>";
+
+                            echo "Find Actor <br>";
+                            print_r($actorRowSet);
+                            echo $actorRowSet[0]["actorsid"];
+
+                            if(!empty($actorRowSet))
+                            {
+                                $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
+                            }
+                            else
+                            {
+
+                                echo "Entered Insert Actor<br>";
+                                $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
+                                $stmtActors = $db->prepare($queryActors);
+                                $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
+                                $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);
+                                $stmtActors->execute();
+
+                                $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
+
+                                echo "Add Actor <br>";
+                                print_r($actorRowSet);
+                                echo $actorRowSet[0]["actorsid"];
+
+                                if(!empty($actorRowSet))
+                                {
+                                    $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
+                                }
+                                else
+                                {
+                                    throw new Exception("Could not insert actor " . $FirstName . " "  . $LastName);
+                                }
+                            }
+
+
+                            echo "Actor: " . $actorids[$actorCount] . "<br>";
+                            $actorCount = $actorCount + 1;
+                        }
+
+                        foreach($actorids as $actorid)
+                        {
+                            echo "Actorid: " . $actorid . "<br>";
+                        }
+
+                        //**********check that year is a number
+                        if(!is_numeric($_POST[year]))
+                        {
+                            throw new Exception("Year has to be a number");
+                        }
+
+                        //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
+                        $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
+                        //prepare query to go to the database
+                        $stmtGenre = $db->prepare($queryGenre);
+                        $stmtGenre->bindValue(':genreid', urldecode(strtolower($_POST["genre"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        $stmtGenre->execute();
+
+                        $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($genreRowSet);
+                        echo $genreRowSet[0]["genreid"];
+
+                        $genreid = -1;
+                        if(!empty($genreRowSet))
+                        {
+                            $genreid = $genreRowSet[0]["genreid"];
+                        }
+                        else
+                        {
+                            throw new Exception("Please select a valid genre.");
+                        }
+
+                        echo $genreid . '<br>';
+
+                        //********THIS IS FOR ADDING A RATING TO A MOVIE*****
+                        $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
+                        //prepare query to go to the database
+                        $stmtRating = $db->prepare($queryRating);
+                        $stmtRating->bindValue(':ratingid', urldecode(strtolower($_POST["rating"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        $stmtRating->execute();
+
+                        $ratingRowSet = $stmtRating->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($ratingRowSet);
+                        echo $ratingRowSet[0]["ratingid"];
+
+                        $ratingid = -1;
+                        if(!empty($ratingRowSet))
+                        {
+                            $ratingid = $ratingRowSet[0]["ratingid"];
+                        }
+                        else
+                        {
+                            throw new Exception("Please select a valid rating.");
+                        }
+
+                        echo $ratingid . '<br>';
+
+
+                        //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
+                        if(empty($_POST["studio"]) || $_POST["studio"] === "")
+                        {
+                            throw new Exception("Studio entry is empty.  Please add the studio.");
+                        }
+                        $queryStudio = 'SELECT studioid FROM studio WHERE studioname = :studioid LIMIT 1';
+                        //prepare query to go to the database
+                        $stmtStudio = $db->prepare($queryStudio);
+                        $stmtStudio->bindValue(':studioid', urldecode(strtolower($_POST["studio"])), PDO::PARAM_STR);
+                        //sends query to database and returns results
+                        $stmtStudio->execute();
+
+                        $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($studioRowSet);
+                        echo $studioRowSet[0]["studioid"];
+
+                        $studioid = -1;
+                        if(!empty($studioRowSet))
+                        {
+                            //does studio exist
+                            $studioid = $studioRowSet[0]["studioid"];
+                        }
+                        else
+                        {
+                            //add studio
+                            $queryStudio ='INSERT INTO studio (studioname) VALUES (:studioid) RETURNING studioid';
+                            $stmtStudio = $db->prepare($queryStudio);
+                            $stmtStudio->bindValue(':studioid', urldecode(strtolower($_POST["studio"])), PDO::PARAM_STR);
+                            //sends query to database and returns results
+                            $stmtStudio->execute();
+
+                            $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
+                            print_r($studioRowSet);
+                            echo $studioRowSet[0]["studioid"];
+
+                            if(!empty($studioRowSet))
+                            {
+                                //does studio exist
+                                $studioid = $studioRowSet[0]["studioid"];
+                            }
+                            else
+                            {
+                                throw new Exception("Could not add studio to database");
+                            }
+                        }
+
+                        echo $studioid . '<br>';
+
+
+                        //********THIS IS FOR UPDATING A MOVIE IN THE DATABASE*****
+                        if(empty($_POST["title"]) || $_POST["title"] === "")
+                        {
+                            throw new Exception("Title entry is empty.  Please add the title of your movie.");
+                        }
+
+                        //add movie
+                        $queryTitle = 'UPDATE
+                                            movie
+                                        SET
+                                            title = :title,
+                                            year = :year,
+                                            description = :description,
+                                            studioid = :studioid,
+                                            genreid = :genreid,
+                                            ratingid = :ratingid
+                                        WHERE
+                                            movieid = :movieIdent';
+                        $stmtTitle = $db->prepare($queryTitle);
+
+                        $stmtTitle->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
+                        $stmtTitle->bindValue(':year', urldecode(strtolower($_POST["year"])), PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':description', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
+                        //this one is different becauase I am getting the id from the variable declared earlier
+                        $stmtTitle->bindValue(':studioid', $studioid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':genreid', $genreid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':ratingid', $ratingid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':movieid', $_POST["movieIdent"], PDO::PARAM_INT);
+
+                        //sends query to database and returns results
+                        $stmtTitle->execute();
+
+
 
                     }//end try
                     catch (PDOException $ex)
