@@ -100,7 +100,7 @@
 
                                 $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
-                                echo "Add Actor <br>"
+                                echo "Add Actor <br>";
                                 print_r($actorRowSet);
                                 echo $actorRowSet[0]["actorsid"];
 
