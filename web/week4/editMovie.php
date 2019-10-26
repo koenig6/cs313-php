@@ -59,7 +59,7 @@
                             $LastName = rtrim(ltrim(strtok($actor, ",")));
                             $FirstName = rtrim(ltrim(strtok(",")));
 
-                            echo "<br TOP OF THE>" . $FirstName . " + " . $LastName . "<br>";
+                            echo "<br>" . $FirstName . " + " . $LastName . "<br>";
 
                             if($FirstName === "" || $LastName === "")
                             {
@@ -77,7 +77,7 @@
 
                             echo $actorRowSet . "<br>";
 
-                            echo "Find Actor <br>";
+                            //echo "Find Actor <br>"; for testing
                             //print_r($actorRowSet); for testing
                             echo $actorRowSet[0]["actorsid"];
 
@@ -112,7 +112,7 @@
                             }
 
 
-                            echo "Actor: " . $actorids[$actorCount] . "<br>";
+                            //echo "Actor: " . $actorids[$actorCount] . "<br>"; testing
                             $actorCount = $actorCount + 1;
                         }
 
@@ -149,7 +149,7 @@
                             throw new Exception("Please select a valid genre.");
                         }
 
-                        echo $genreid . '<br>';
+                        echo $genreid . '<br line 152>';
 
                         //********THIS IS FOR ADDING A RATING TO A MOVIE*****
                         $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
@@ -173,7 +173,7 @@
                             throw new Exception("Please select a valid rating.");
                         }
 
-                        echo $ratingid . '<br>';
+                        echo $ratingid . '<br line 176>';
 
 
                         //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
@@ -222,7 +222,7 @@
                             }
                         }
 
-                        echo $studioid . '<br>';
+                        echo $studioid . '<br line 225>';
 
 
                         //********THIS IS FOR UPDATING A MOVIE IN THE DATABASE*****
