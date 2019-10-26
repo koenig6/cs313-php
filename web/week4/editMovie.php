@@ -146,7 +146,7 @@
                             <option value="historical fiction">historical fiction</option>
                             <option value="horror">horror</option>
                             <option value="mystery">mystery</option>
-                            <option value="romance" <?php if($stmtRowSet[0]["genre"] === "romance"){echo "selected";}?>">romance</option>
+                            <option value="romance" <?php if($stmtRowSet[0]["genre"] === "romance"){echo "selected";}?>>romance</option>
                             <option value="science fiction">science fiction</option>
                         </select><br><br>
                     Rating: <select name="rating">
