@@ -171,7 +171,7 @@
                     <?php
                     foreach ($actorRowSet as $row)
                     {
-                        echo '<li>' . $row[$actorRowSet] . '<input type=\'hidden\' name=\'actors[]\' value=\'' . $row[$actorRowSet] . '\'></li>';
+                        echo '<li>' . $row["actorname"] . '<input type=\'hidden\' name=\'actors[]\' value=\'' . $row["actorname"] . '\'></li>';
                     }
 
                     ?>
