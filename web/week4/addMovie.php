@@ -39,7 +39,9 @@
                         print_r($_POST);
                         echo "<br>";
 
-                        $LastName = strtok(&_POST['actors'][0], ",");
+                        $actors = &_POST['actors'];
+
+                        //$LastName = strtok(&_POST['actors'][0], ",");
                         /*$FirstName =strtok(",");
 
                         echo $LastName . " " . $FirstName;*/
