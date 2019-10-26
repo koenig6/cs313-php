@@ -75,11 +75,11 @@
 
                             $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
-                            echo $actorRowSet . "<br>";
+                            //echo $actorRowSet . "<br>";
 
                             //echo "Find Actor <br>"; for testing
                             //print_r($actorRowSet); for testing
-                            echo $actorRowSet[0]["actorsid"];
+                            //echo $actorRowSet[0]["actorsid"];
 
                             if(!empty($actorRowSet))
                             {
@@ -88,7 +88,7 @@
                             else
                             {
 
-                                echo "Entered Insert Actor<br>";
+                                //echo "Entered Insert Actor<br>";
                                 $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
                                 $stmtActors = $db->prepare($queryActors);
                                 $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
@@ -97,7 +97,7 @@
 
                                 $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
-                                echo "Add Actor <br>";
+                                //echo "Add Actor <br>";
                                 //print_r($actorRowSet); for testing
                                 //echo $actorRowSet[0]["actorsid"];
 
@@ -137,7 +137,7 @@
 
                         $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
                         //print_r($genreRowSet); for testing
-                        echo $genreRowSet[0]["genreid"];
+                        //echo $genreRowSet[0]["genreid"];
 
                         $genreid = -1;
                         if(!empty($genreRowSet))
@@ -149,7 +149,7 @@
                             throw new Exception("Please select a valid genre.");
                         }
 
-                        echo $genreid . '<br line 152>';
+                        //echo $genreid . '<br line 152>';
 
                         //********THIS IS FOR ADDING A RATING TO A MOVIE*****
                         $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
@@ -161,7 +161,7 @@
 
                         $ratingRowSet = $stmtRating->fetchAll(PDO::FETCH_ASSOC);
                         //print_r($ratingRowSet); for testing
-                        echo $ratingRowSet[0]["ratingid"];
+                        //echo $ratingRowSet[0]["ratingid"];
 
                         $ratingid = -1;
                         if(!empty($ratingRowSet))
@@ -173,7 +173,7 @@
                             throw new Exception("Please select a valid rating.");
                         }
 
-                        echo $ratingid . '<br line 176>';
+                        //echo $ratingid . '<br line 176>';
 
 
                         //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
@@ -190,7 +190,7 @@
 
                         $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
                         //print_r($studioRowSet); for testing
-                        echo $studioRowSet[0]["studioid"];
+                        //echo $studioRowSet[0]["studioid"];
 
                         $studioid = -1;
                         if(!empty($studioRowSet))
@@ -209,7 +209,7 @@
 
                             $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
                             //print_r($studioRowSet); for testing
-                            echo $studioRowSet[0]["studioid"];
+                            //echo $studioRowSet[0]["studioid"];
 
                             if(!empty($studioRowSet))
                             {
@@ -222,7 +222,7 @@
                             }
                         }
 
-                        echo $studioid . '<br line 225>';
+                       // echo $studioid . '<br line 225>';
 
 
                         //********THIS IS FOR UPDATING A MOVIE IN THE DATABASE*****
