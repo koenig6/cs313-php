@@ -116,10 +116,10 @@
                             $actorCount = $actorCount + 1;
                         }
 
-                        foreach($actorids as $actorid)
-                        {
-                            echo "Actorid: " . $actorid . "<br>";
-                        }
+                       // foreach($actorids as $actorid) testing
+                       // {
+                           // echo "Actorid: " . $actorid . "<br>";
+                       // }
 
                         //**********check that year is a number
                         if(!is_numeric($_POST[year]))
