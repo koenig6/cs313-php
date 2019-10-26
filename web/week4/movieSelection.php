@@ -111,6 +111,7 @@ session_start();
             }
             echo '</div>';
             echo '<br><a href="removeMovie.php?movieIdent=' . urlencode($_GET["movieId"]) . '">Delete Movie</a><br>'  . '<br><br></div>';
+            echo '<br><a href="editMovie.php?movieIdent=' . urlencode($_GET["movieId"]) . '">Edit Movie</a><br>'  . '<br><br></div>';
 
 
         }//end of if statement

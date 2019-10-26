@@ -28,11 +28,12 @@
         <main>
 
             <div>
-                <form action="https://morning-bastion-33855.herokuapp.com/week4/movieResults.php" method="post">
+                <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
+                    <input type="hidden" name="movieIdent" value="<?php $_GET["movieIdent"]>">
                     Movie Title: <input type="text" name="title"><br><br>
-                    Year: <input type="text" name="title"><br><br>
+                    Year: <input type="text" name="year"><br><br>
 
-                     <textarea rows="20" cols="55" id="div2" >Add your movie description here.</textarea><br>
+                     <textarea rows="20" cols="55" id="div2" name="description">Add your movie description here.</textarea><br>
                     Studio: <input type="text" name="studio"><br><br>
                     Genre: <select name="genre">
                             <option value="" disabled selected>Select Genre</option>
@@ -65,9 +66,9 @@
                     <button type="button" onclick="addItem()">Add Actor To List</button>
                     <button type="button" onclick="removeItem()">Remove Actor From List</button>
 
-                    <ul id="myList">Actor's To Be Added</ul>
+                    <ul id="myList"></ul>
 
-                    <input type="submit" value="Add Movie" ><br><br>
+                    <input type="submit" value="Add Movie" name="btnSubmit" ><br><br>
                 </form>
 
 
