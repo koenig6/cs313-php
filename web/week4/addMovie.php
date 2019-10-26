@@ -280,7 +280,7 @@
                         //****************ASSOCIATE MOVIE TO ACTORS********************
                         foreach($actorids as $actorid)
                         {
-                            $queryAM = 'INSERT INTO movietoactor (movieid, actorsid) VALUE (:movieid, :actorsid)';
+                            $queryAM = 'INSERT INTO movietoactor (movieid, actorsid) VALUES (:movieid, :actorsid)';
                             //prepare query to go to the database
                             $stmtAM = $db->prepare($queryAM);
                             $stmtAM->bindValue(':movieid', $movieid, PDO::PARAM_INT);
