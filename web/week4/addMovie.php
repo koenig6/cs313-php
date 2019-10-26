@@ -154,13 +154,13 @@
                         $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:title, :year, :description, :studioid, :genreid, :ratingid)RETURNING movieid';
                         $stmtTitle = $db->prepare($queryTitle);
 
-                        $stmtTile->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
-                        $stmtTile->bindValue(':year', urldecode(strtolower($_POST["year"])), PDO::PARAM_INT);
-                        $stmtTile->bindValue(':description', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
+                        $stmtTitle->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
+                        $stmtTitle->bindValue(':year', urldecode(strtolower($_POST["year"])), PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':description', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
                         //this one is different becauase I am getting the id from the variable declared earlier
-                        $stmtTile->bindValue(':studioid', $studioid, PDO::PARAM_INT);
-                        $stmtTile->bindValue(':genreid', $genreid, PDO::PARAM_INT);
-                        $stmtTile->bindValue(':ratingid', $ratingid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':studioid', $studioid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':genreid', $genreid, PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':ratingid', $ratingid, PDO::PARAM_INT);
 
                         //sends query to database and returns results
                         $stmtTitle->execute();
