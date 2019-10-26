@@ -70,7 +70,7 @@
 
                         echo $genreid . '<br>';
 
-                        //********THIS IS FOR ADDING A RATING TO A MOVIE*****
+                        //********THIS IS FOR ADDING A RATING TO A NEW MOVIE*****
                         $queryRating = 'SELECT ratingid FROM rating WHERE rating = :ratingid LIMIT 1';
                         //prepare query to go to the database
                         $stmtRating = $db->prepare($queryRating);
@@ -94,7 +94,7 @@
 
                         echo $ratingid . '<br>';
 
-                        //********THIS IS FOR ADDING A STUDIO TO A MOVIE*****
+                        //********THIS IS FOR ADDING A STUDIO TO A NEW MOVIE*****
                         if(empty($_POST["studio"]) || $_POST["studio"] === "")
                         {
                             throw new Exception("Studio entry is empty.  Please add the studio.");
@@ -142,21 +142,55 @@
 
                         echo $studioid . '<br>';
 
-                         //********THIS IS FOR ADDING A MOVIE TO THE DATABASE*****
+
+
+                         //********THIS IS FOR ADDING A NEW MOVIE TO THE DATABASE*****
                         if(empty($_POST["title"]) || $_POST["title"] === "")
                         {
                             throw new Exception("Title entry is empty.  Please add the title of your movie.");
                         }
-                        $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (':titleid', 1999, 'testy mctesty pants', 3,3,3)RETURNING movieid; = :studioid LIMIT 1';
+                        $queryTitle = 'SELECT movieid FROM movie WHERE title = :movieid LIMIT 1';
                         //prepare query to go to the database
-                        $stmtStudio = $db->prepare($queryStudio);
-                        $stmtStudio->bindValue(':studioid', urldecode(strtolower($_POST["studio"])), PDO::PARAM_STR);
+                        $stmtTitle = $db->prepare($queryTitle);
+                        $stmtTitle->bindValue(':movieid', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
                         //sends query to database and returns results
-                        $stmtStudio->execute();
+                        $stmtTitle->execute();
 
-                        $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($studioRowSet);
-                        echo $studioRowSet[0]["studioid"];
+                        $titleRowSet = $stmtTitle->fetchAll(PDO::FETCH_ASSOC);
+                        print_r($titleRowSet);
+                        echo $titleRowSet[0]["movieid"];
+
+                        $movieid = -1;
+                        if(!empty($titleRowSet))
+                        {
+                            //does studio exist
+                            $movieid = $titleRowSet[0]["movieid"];
+                        }
+                        else
+                        {
+                            //add movie
+                            $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:movieid, 1999, :description, :studioid, :genreid, :ratingid)RETURNING movieid LIMIT 1';
+                            $stmtTitle = $db->prepare($queryTitle);
+                            $stmtTile->bindValue(':movieid', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
+                            //sends query to database and returns results
+                            $stmtTitle->execute();
+
+                            $titleRowSet = $stmtTitle->fetchAll(PDO::FETCH_ASSOC);
+                            print_r($titleRowSet);
+                            echo $titleRowSet[0]["movieid"];
+
+                            if(!empty($titleRowSet))
+                            {
+                                //does movie exist
+                                $movieid = $titleRowSet[0]["movieid"];
+                            }
+                            else
+                            {
+                                throw new Exception("Could not add movie to database");
+                            }
+                        }
+
+                        echo $movieid . '<br>';
 
 
 
