@@ -104,7 +104,9 @@
                         $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
 
                         print_r($stmtRowSet);
+                        echo "<br>"
                         print_r($actorRowSet);
+                        echo "<br>"
 
                     }//end try
                     catch (PDOException $ex)
@@ -126,8 +128,8 @@
 
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
-                    <input type="hidden" name="movieIdent" value="<?php $_GET["movieIdent"]?>">
-                    Movie Title: <input type="text" name="title"><br><br>
+                    <input type="hidden" name="movieIdent" value="<?php echo $_GET["movieIdent"]?>">
+                    Movie Title: <input type="text" name="title" value="<?php echo $stmtRowSet[0]["movie_title"]?>"><br><br>
                     Year: <input type="text" name="year"><br><br>
 
                      <textarea rows="20" cols="55" id="div2" name="description">Add your movie description here.</textarea><br>
