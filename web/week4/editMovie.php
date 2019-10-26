@@ -20,7 +20,6 @@
             <ul class="navigation">
                 <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Home Page</a></li>
                 <li><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></li>
-                <li  class="active"><a href="https://morning-bastion-33855.herokuapp.com/week4/editMovie.php">Edit Movie</a></li>
                  <li><a href="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php">Add Movie</a></li>
             </ul>
         </nav>
@@ -31,6 +30,9 @@
                 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 {
                     //Do modify in database
+                    print_r($_POST);
+                    echo "<br>";
+
                 }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 else
                 {
@@ -151,11 +153,11 @@
                         </select><br><br>
                     Rating: <select name="rating">
                             <option value="" disabled selected>Select Rating</option>
-                            <option value="g">G</option>
-                            <option value="pg">PG</option>
-                            <option value="pg-13">PG-13</option>
-                            <option value="r">R</option>
-                            <option value="nc-17">NC-17</option>
+                            <option value="g"<?php if($stmtRowSet[0]["rating"] === "g"){echo "selected";}?>>G</option>
+                            <option value="pg"<?php if($stmtRowSet[0]["rating"] === "pg"){echo "selected";}?>>PG</option>
+                            <option value="pg-13"<?php if($stmtRowSet[0]["rating"] === "pg-13"){echo "selected";}?>>PG-13</option>
+                            <option value="r"<?php if($stmtRowSet[0]["rating"] === "r"){echo "selected";}?>>R</option>
+                            <option value="nc-17"<?php if($stmtRowSet[0]["rating"] === "nc-17"){echo "selected";}?>>NC-17</option>
                         </select><br><br>
 
 
