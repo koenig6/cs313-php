@@ -127,7 +127,7 @@
 
 
             <div>
-                <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
+                <form action="https://morning-bastion-33855.herokuapp.com/week4/editMovie.php" method="post">
                     <input type="hidden" name="movieIdent" value="<?php echo $_GET["movieIdent"];?>">
                     Movie Title: <input type="text" name="title" value="<?php echo $stmtRowSet[0]["movie_title"];?>"><br><br>
                     Year: <input type="text" name="year" value="<?php echo $stmtRowSet[0]["movie_year"];?>"><br><br>
@@ -136,18 +136,18 @@
                     Studio: <input type="text" name="studio" value="<?php echo $stmtRowSet[0]["studio"];?>"><br><br>
                     Genre: <select name="genre">
                             <option value="" disabled>Select Genre</option>
-                            <option value="adventure">adventure</option>
-                            <option value="comedy">comedy</option>
-                            <option value="crime">crime</option>
-                            <option value="docudrama">docudrama</option>
-                            <option value="drama">drama</option>
-                            <option value="fantasy">fantasy</option>
-                            <option value="historical">historical</option>
-                            <option value="historical fiction">historical fiction</option>
-                            <option value="horror">horror</option>
-                            <option value="mystery">mystery</option>
+                            <option value="adventure" <?php if($stmtRowSet[0]["genre"] === "adventure"){echo "selected";}?>>adventure</option>
+                            <option value="comedy" <?php if($stmtRowSet[0]["genre"] === "comedy"){echo "selected";}?>>comedy</option>
+                            <option value="crime" <?php if($stmtRowSet[0]["genre"] === "crime"){echo "selected";}?>>crime</option>
+                            <option value="docudrama" <?php if($stmtRowSet[0]["genre"] === "docudrama"){echo "selected";}?>>docudrama</option>
+                            <option value="drama" <?php if($stmtRowSet[0]["genre"] === "drama"){echo "selected";}?>>drama</option>
+                            <option value="fantasy" <?php if($stmtRowSet[0]["genre"] === "fantasy"){echo "selected";}?>>fantasy</option>
+                            <option value="historical" <?php if($stmtRowSet[0]["genre"] === "historical"){echo "selected";}?>>historical</option>
+                            <option value="historical fiction" <?php if($stmtRowSet[0]["genre"] === "historical fiction"){echo "selected";}?>>historical fiction</option>
+                            <option value="horror" <?php if($stmtRowSet[0]["genre"] === "horror"){echo "selected";}?>>horror</option>
+                            <option value="mystery" <?php if($stmtRowSet[0]["genre"] === "mystery"){echo "selected";}?>>mystery</option>
                             <option value="romance" <?php if($stmtRowSet[0]["genre"] === "romance"){echo "selected";}?>>romance</option>
-                            <option value="science fiction">science fiction</option>
+                            <option value="science fiction" <?php if($stmtRowSet[0]["genre"] === "science fiction"){echo "selected";}?>>science fiction</option>
                         </select><br><br>
                     Rating: <select name="rating">
                             <option value="" disabled selected>Select Rating</option>
@@ -167,7 +167,7 @@
 
                     <ul id="myList"></ul>
 
-                    <input type="submit" value="Add Movie" name="btnSubmit" ><br><br>
+                    <input type="submit" value="Edit Movie" name="btnSubmit" ><br><br>
                 </form>
 
 
