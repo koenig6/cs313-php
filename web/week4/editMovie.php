@@ -410,7 +410,7 @@
                     <?php
                     foreach ($actorRowSet as $row)
                     {
-                        echo '<li>' . $row["actorname"] . '<input type=\'hidden\' name=\'actors[]\' value=\'' . $row["actorname"] . '\'></li>';
+                        echo '<li id=\'' . $row["actorname"] . '\'>' . $row["actorname"] . '<input type=\'hidden\' name=\'actors[]\' value=\'' . $row["actorname"] . '\'></li>';
                     }
 
                     ?>
