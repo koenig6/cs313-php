@@ -19,7 +19,7 @@ function addItem(){
 function removeItem(){
     var ul = document.getElementById("myList");
     var lname = document.getElementById("lname");
-    var li = document.getElementById(lname.value);
+    var li = document.getElementById(lname.value + ", " + fname.value);
     ul.removeChild(li);
 }
 
