@@ -156,7 +156,7 @@
 
                         $stmtTile->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
                         $stmtTile->bindValue(':year', urldecode(strtolower($_POST["year"])), PDO::PARAM_STR);
-                        $stmtTile->bindValue(':descritpion', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
+                        $stmtTile->bindValue(':description', urldecode(strtolower($_POST["description"])), PDO::PARAM_STR);
                         //this one is different becauase I am getting the id from the variable declared earlier
                         $stmtTile->bindValue(':studioid', $studioid, PDO::PARAM_INT);
                         $stmtTile->bindValue(':genreid', $genreid, PDO::PARAM_INT);
