@@ -58,6 +58,7 @@
                         //fetch the actor array. Each item in the array will be "last_name, first_name"
                         $actors = $_POST["actors"];
                         $actorids = array();
+                        $actorCount = 0;
 
                         foreach($actors as $actor)
                         {
@@ -75,14 +76,49 @@
                             }
 
 
-                            /*$queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname';
+                            $queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname LIMIT 1';
                             $stmtActors = $db->prepare($queryActors);
                             $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
-                            $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);*/
+                            $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);
+                            $stmtActors->execute();
 
+                            $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
+
+                            if(!empty(actorRowSet))
+                            {
+                                $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
+                            }
+                            else
+                            {
+                                $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
+                                $stmtActors = $db->prepare($queryActors);
+                                $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
+                                $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);
+                                $stmtActors->execute();
+
+                                $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
+
+                                if(!empty($actorRowSet))
+                                {
+                                    $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
+                                }
+                                else
+                                {
+                                    throw new Exception("Could not insert actor " . $FirstName . " "  . $LastName);
+                                }
+                            }
+
+
+                            echo "Actor: " . $actorids[$actorCount] . "<br>";
+                            $actorCount = $actorCount + 1;
                         }
 
-                        //check that year is a number
+                        foreach($actorids as $actorid)
+                        {
+                            echo "Actorid: " . $actorid . "<br>";
+                        }
+
+                        //**********check that year is a number
                         if(!is_numeric($_POST[year]))
                         {
                             throw new Exception("Year has to be a number");
