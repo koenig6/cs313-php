@@ -37,6 +37,12 @@
                     {
 
                         print_r($_POST);
+                        echo "<br>";
+
+                        $LastName = strtok(&_POST['actors'][0], ",");
+                        $FirstName =strtok(",");
+
+                        echo $LastName . " " . $FirstName;
 
                         //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
