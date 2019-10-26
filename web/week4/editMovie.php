@@ -28,10 +28,10 @@
         <main>
             <?php
 
-                if($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_POST['btnSubmit']))
+                if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 {
                     //Do modify in database
-                }//end if($_SERVER['REQUEST_METHOD'] === 'POST' and isset($_POST['btnSubmit']))
+                }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 else
                 {
                     //Display form with the current movie data
@@ -86,6 +86,26 @@
                                 1=1
                                 AND m.movieid=:movieIDENT';
 
+
+
+                        //prepare query to go to the database
+                        $stmt = $db->prepare($query);
+                        $actorStmt = $db->prepare($actorQuery);
+
+
+                        $stmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+                        $actorStmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
+
+                        //sends query to database and returns results
+                        $stmt->execute();
+                        $actorStmt->execute();
+
+                        $stmtRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        print_r($stmtRowSet);
+                        print_r($actorRowSet);
+
                     }//end try
                     catch (PDOException $ex)
                     {
@@ -97,24 +117,6 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-
-                    //prepare query to go to the database
-                    $stmt = $db->prepare($query);
-                    $actorStmt = $db->prepare($actorQuery);
-
-
-                    $stmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
-                    $actorStmt->bindValue(':movieIDENT', urldecode(strtolower($_GET["movieIdent"])), PDO::PARAM_STR);
-
-                    //sends query to database and returns results
-                    $stmt->execute();
-                    $actorStmt->execute();
-
-                    $stmtRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
-
-                    print_r($stmtRowSet);
-                    print_r($actorRowSet);
 
 
                 }//end else
