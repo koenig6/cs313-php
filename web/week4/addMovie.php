@@ -90,7 +90,7 @@
                             {
                                 $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
                             }
-                           /*else
+                            else
                             {
                                 $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
                                 $stmtActors = $db->prepare($queryActors);
@@ -100,6 +100,10 @@
 
                                 $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
+                                echo "Add Actor <br>"
+                                print_r($actorRowSet);
+                                echo $actorRowSet[0]["actorsid"];
+
                                 if(!empty($actorRowSet))
                                 {
                                     $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
@@ -108,7 +112,7 @@
                                 {
                                     throw new Exception("Could not insert actor " . $FirstName . " "  . $LastName);
                                 }
-                            }*/
+                            }
 
 
                             echo "Actor: " . $actorids[$actorCount] . "<br>";
