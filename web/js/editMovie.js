@@ -4,6 +4,9 @@ function addItem(){
     var newItem2 = document.getElementById("fname"); //get text from box
     var li = document.createElement("li"); // create li
     li.setAttribute('id',lname.value); //gives the li an id
+    li.setAttribute('type','hidden');
+    li.setAttribute('name','actors[]');
+    li.setAttribute('value',item.value); //gives li an id of the item
     li.appendChild(document.createTextNode(lname.value + ", " + fname.value)); // add to list
     ul.appendChild(li); // add to list
 }
