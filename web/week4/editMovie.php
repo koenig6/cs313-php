@@ -29,7 +29,7 @@
 
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
-                    <input type="hidden" name="movieIdent" value="<?php $_GET["movieIdent"]>">
+                    <input type="hidden" name="movieIdent" value="<?php $_GET["movieIdent"]?>">
                     Movie Title: <input type="text" name="title"><br><br>
                     Year: <input type="text" name="year"><br><br>
 
