@@ -300,11 +300,6 @@
                     //Display form with the current movie data
                     try
                     {
-
-                        print_r($_POST);
-                        echo " ELSE <br>";
-
-
                         //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
                         $dbOpts = parse_url($dbUrl);
@@ -367,9 +362,9 @@
                         $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
 
                         print_r($stmtRowSet);
-                        echo "<br>";
+                        echo "<br What is this for?>";
                         print_r($actorRowSet);
-                        echo "<br>";
+                        echo "<br And this one>";
 
                     }//end try
                     catch (PDOException $ex)
