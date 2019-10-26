@@ -253,7 +253,7 @@
                         $stmtTitle->bindValue(':studioid', $studioid, PDO::PARAM_INT);
                         $stmtTitle->bindValue(':genreid', $genreid, PDO::PARAM_INT);
                         $stmtTitle->bindValue(':ratingid', $ratingid, PDO::PARAM_INT);
-                        $stmtTitle->bindValue(':movieid', $_POST["movieIdent"], PDO::PARAM_INT);
+                        $stmtTitle->bindValue(':movieIdent', $_POST["movieIdent"], PDO::PARAM_INT);
 
                         //sends query to database and returns results
                         $stmtTitle->execute();
