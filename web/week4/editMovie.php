@@ -104,9 +104,9 @@
                         $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
 
                         print_r($stmtRowSet);
-                        echo "<br>"
+                        echo "<br>";
                         print_r($actorRowSet);
-                        echo "<br>"
+                        echo "<br>";
 
                     }//end try
                     catch (PDOException $ex)
