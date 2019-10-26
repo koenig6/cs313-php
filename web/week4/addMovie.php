@@ -90,7 +90,7 @@
                             print_r($actorRowSet);
                             echo $actorRowSet[0]["actorsid"];
 
-                            if(!empty(actorRowSet))
+                            if(!empty($actorRowSet))
                             {
                                 $actorids[$actorCount] = $actorRowSet[0]["actorsid"];
                             }
