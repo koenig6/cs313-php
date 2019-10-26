@@ -6,7 +6,7 @@ function addItem(){
     li.setAttribute('id',lname.value); //gives the li an id
     li.setAttribute('type','hidden');
     li.setAttribute('name','actors[]');
-    li.setAttribute('value',item.value); //gives li an id of the item
+    li.setAttribute('value',lname.value + ", " fname.value); //gives li an id of the item
     li.appendChild(document.createTextNode(lname.value + ", " + fname.value)); // add to list
     ul.appendChild(li); // add to list
 }
