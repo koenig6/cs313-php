@@ -151,7 +151,7 @@
                         }
 
                         //add movie
-                        $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:title, :year, :description, :studioid, :genreid, :ratingid)RETURNING movieid LIMIT 1';
+                        $queryTitle = 'INSERT INTO movie (title, year, description, studioid, genreid, ratingid) VALUES (:title, :year, :description, :studioid, :genreid, :ratingid)RETURNING movieid';
                         $stmtTitle = $db->prepare($queryTitle);
 
                         $stmtTile->bindValue(':title', urldecode(strtolower($_POST["title"])), PDO::PARAM_STR);
