@@ -35,6 +35,9 @@
 
                     try
                     {
+
+                        print_r($_POST["actors"]);
+
                         //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
                         $dbOpts = parse_url($dbUrl);
@@ -258,7 +261,7 @@
                     <button type="button" onclick="addItem()">Add Actor To List</button>
                     <button type="button" onclick="removeItem()">Remove Actor From List</button>
 
-                    <ul id="myList">Actor's To Be Added</ul>
+                    <ul id="myList" name="actors">Actor's To Be Added</ul>
 
                     <input type="submit" value="Add Movie" name="btnSubmit" ><br><br>
                 </form>
