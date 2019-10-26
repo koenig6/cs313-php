@@ -130,9 +130,9 @@
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
                     <input type="hidden" name="movieIdent" value="<?php echo $_GET["movieIdent"];?>">
                     Movie Title: <input type="text" name="title" value="<?php echo $stmtRowSet[0]["movie_title"];?>"><br><br>
-                    Year: <input type="text" name="year"><br><br>
+                    Year: <input type="text" name="year" value="<?php echo $stmtRowSet[0]["movie_year"];?>"><br><br>
 
-                     <textarea rows="20" cols="55" id="div2" name="description">Add your movie description here.</textarea><br>
+                     <textarea rows="20" cols="55" id="div2" name="description"><?php echo $stmtRowSet[0]["movie_desc"];?></textarea><br>
                     Studio: <input type="text" name="studio"><br><br>
                     Genre: <select name="genre">
                             <option value="" disabled selected>Select Genre</option>
