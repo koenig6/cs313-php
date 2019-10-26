@@ -76,6 +76,7 @@
                                 throw new Exception("Actor's papa gave them a last name (or papa and mama, we're modern people here), please enter it.");
                             }
 
+                            echo "<br>" . $FirstName . " " . $LastName . "<br>";
                             /*$queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname';
                             $stmtActors = $db->prepare($queryActors);
                             $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
