@@ -60,7 +60,7 @@
                             $LastName = rtrim(ltrim(strtok($actor, ",")));
                             $FirstName = rtrim(ltrim(strtok(",")));
 
-                            echo "<br TOP OF THE PAGE 2>" . $FirstName . " + " . $LastName . "<br>";
+                            echo "<br TOP OF THE>" . $FirstName . " + " . $LastName . "<br>";
 
                             if($FirstName === "" || $LastName === "")
                             {
@@ -302,7 +302,7 @@
                     {
 
                         print_r($_POST);
-                        echo "<br>";
+                        echo " ELSE <br>";
 
 
                         //connecting to database
