@@ -69,13 +69,9 @@
 
                             echo "<br>" . $FirstName . " + " . $LastName . "<br>";
 
-                            if($FirstName === "")
+                            if($FirstName === "" || $LastName === "")
                             {
-                                throw new Exception("Actor's mama gave them a first name, please enter it.");
-                            }
-                            if($LastName === "")
-                            {
-                                throw new Exception("Actor's papa gave them a last name (or papa and mama, we're modern people here), please enter it.");
+                                throw new Exception("Actor's mama gave them a full name, please enter it.");
                             }
 
 
