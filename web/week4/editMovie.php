@@ -30,8 +30,7 @@
                 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 {
                     //Do modify in database
-                    print_r($_POST);
-                    echo "TOP OF THE PAGE<br>";
+                    //print_r($_POST); this is for testing
                     try
                     {
                         //connecting to database
@@ -79,7 +78,7 @@
                             echo $actorRowSet . "<br>";
 
                             echo "Find Actor <br>";
-                            print_r($actorRowSet);
+                            //print_r($actorRowSet); for testing
                             echo $actorRowSet[0]["actorsid"];
 
                             if(!empty($actorRowSet))
@@ -99,7 +98,7 @@
                                 $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
                                 echo "Add Actor <br>";
-                                print_r($actorRowSet);
+                                //print_r($actorRowSet); for testing
                                 echo $actorRowSet[0]["actorsid"];
 
                                 if(!empty($actorRowSet))
@@ -137,7 +136,7 @@
                         $stmtGenre->execute();
 
                         $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($genreRowSet);
+                        //print_r($genreRowSet); for testing
                         echo $genreRowSet[0]["genreid"];
 
                         $genreid = -1;
@@ -161,7 +160,7 @@
                         $stmtRating->execute();
 
                         $ratingRowSet = $stmtRating->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($ratingRowSet);
+                        //print_r($ratingRowSet); for testing
                         echo $ratingRowSet[0]["ratingid"];
 
                         $ratingid = -1;
@@ -190,7 +189,7 @@
                         $stmtStudio->execute();
 
                         $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($studioRowSet);
+                        //print_r($studioRowSet); for testing
                         echo $studioRowSet[0]["studioid"];
 
                         $studioid = -1;
