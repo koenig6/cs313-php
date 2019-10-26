@@ -121,7 +121,7 @@
                     }
 
 
-                }//end else
+
 
             ?>
 
@@ -169,11 +169,10 @@
 
                     <input type="submit" value="Edit Movie" name="btnSubmit" ><br><br>
                 </form>
-
-
-
-
             </div>
+            <?php
+                }//end else
+            ?>
         </main>
         <script src="/js/editMovie.js"></script>
     </body>
