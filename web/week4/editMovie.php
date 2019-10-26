@@ -259,6 +259,28 @@
                         $stmtTitle->execute();
 
 
+                        //****************ASSOCIATE MOVIE TO ACTORS********************
+                        $queryDelAM = 'DELETE FROM movietoactor WHERE movieid = :movieIdent';
+                        //prepare query to go to the database
+                        $stmtDelAM = $db->prepare($queryDelAM);
+                        $stmtDelAM->bindValue(':movieIdent', $_POST["movieIdent"], PDO::PARAM_INT);
+                        //sends query to database and returns results
+                        $stmtDelAM->execute();
+
+                        foreach($actorids as $actorid)
+                        {
+                            $queryAM = 'INSERT INTO movietoactor (movieid, actorsid) VALUES (:movieid, :actorsid) ON CONFLICT ON CONSTRAINT movietoactor_pkey DO NOTHING';
+                            //prepare query to go to the database
+                            $stmtAM = $db->prepare($queryAM);
+                            $stmtAM->bindValue(':movieid', $_POST["movieIdent"], PDO::PARAM_INT);
+                            $stmtAM->bindValue(':actorsid', $actorid, PDO::PARAM_INT);
+                            //sends query to database and returns results
+                            $stmtAM->execute();
+                        }
+
+                        echo "Movie added successfully!<br>";
+
+
 
                     }//end try
                     catch (PDOException $ex)
