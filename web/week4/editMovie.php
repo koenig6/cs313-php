@@ -99,7 +99,7 @@
 
                                 echo "Add Actor <br>";
                                 //print_r($actorRowSet); for testing
-                                echo $actorRowSet[0]["actorsid"];
+                                //echo $actorRowSet[0]["actorsid"];
 
                                 if(!empty($actorRowSet))
                                 {
