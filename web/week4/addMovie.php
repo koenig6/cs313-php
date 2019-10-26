@@ -35,8 +35,8 @@
                     try
                     {
 
-                        print_r($_POST);
-                        echo "<br>";
+                        //print_r($_POST);
+                       // echo "<br>";
 
 
                         //connecting to database
@@ -67,7 +67,7 @@
                             $LastName = rtrim(ltrim(strtok($actor, ",")));
                             $FirstName = rtrim(ltrim(strtok(",")));
 
-                            echo "<br>" . $FirstName . " + " . $LastName . "<br>";
+                            //echo "<br>" . $FirstName . " + " . $LastName . "<br>";
 
                             if($FirstName === "" || $LastName === "")
                             {
@@ -83,11 +83,11 @@
 
                             $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
-                            echo $actorRowSet . "<br>";
+                            //echo $actorRowSet . "<br>";
 
-                            echo "Find Actor <br>";
-                            print_r($actorRowSet);
-                            echo $actorRowSet[0]["actorsid"];
+                            //echo "Find Actor <br>";
+                            //print_r($actorRowSet);
+                            //echo $actorRowSet[0]["actorsid"];
 
                             if(!empty($actorRowSet))
                             {
@@ -96,7 +96,7 @@
                             else
                             {
 
-                                echo "Entered Insert Actor<br>";
+                                //echo "Entered Insert Actor<br>";
                                 $queryActors = 'INSERT INTO actors (actorsfirstname, actorslastname) VALUES(:firstname, :lastname) RETURNING actorsid';
                                 $stmtActors = $db->prepare($queryActors);
                                 $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
@@ -105,9 +105,9 @@
 
                                 $actorRowSet = $stmtActors->fetchAll(PDO::FETCH_ASSOC);
 
-                                echo "Add Actor <br>";
-                                print_r($actorRowSet);
-                                echo $actorRowSet[0]["actorsid"];
+                                //echo "Add Actor <br>";
+                                //print_r($actorRowSet);
+                                //echo $actorRowSet[0]["actorsid"];
 
                                 if(!empty($actorRowSet))
                                 {
@@ -120,14 +120,14 @@
                             }
 
 
-                            echo "Actor: " . $actorids[$actorCount] . "<br>";
+                            //echo "Actor: " . $actorids[$actorCount] . "<br>";
                             $actorCount = $actorCount + 1;
                         }
 
-                        foreach($actorids as $actorid)
-                        {
-                            echo "Actorid: " . $actorid . "<br>";
-                        }
+                        //foreach($actorids as $actorid)
+                        //{
+                            //echo "Actorid: " . $actorid . "<br>";
+                        //}
 
                         //**********check that year is a number
                         if(!is_numeric($_POST[year]))
@@ -144,8 +144,8 @@
                         $stmtGenre->execute();
 
                         $genreRowSet = $stmtGenre->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($genreRowSet);
-                        echo $genreRowSet[0]["genreid"];
+                        // print_r($genreRowSet);
+                        //echo $genreRowSet[0]["genreid"];
 
                         $genreid = -1;
                         if(!empty($genreRowSet))
@@ -157,7 +157,7 @@
                             throw new Exception("Please select a valid genre.");
                         }
 
-                        echo $genreid . '<br>';
+                        //echo $genreid . '<br>';
 
 
                         //********THIS IS FOR ADDING A RATING TO A NEW MOVIE*****
@@ -169,8 +169,8 @@
                         $stmtRating->execute();
 
                         $ratingRowSet = $stmtRating->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($ratingRowSet);
-                        echo $ratingRowSet[0]["ratingid"];
+                        //print_r($ratingRowSet);
+                        //echo $ratingRowSet[0]["ratingid"];
 
                         $ratingid = -1;
                         if(!empty($ratingRowSet))
@@ -182,7 +182,7 @@
                             throw new Exception("Please select a valid rating.");
                         }
 
-                        echo $ratingid . '<br>';
+                        //echo $ratingid . '<br>';
 
 
                         //********THIS IS FOR ADDING A STUDIO TO A NEW MOVIE*****
@@ -198,8 +198,8 @@
                         $stmtStudio->execute();
 
                         $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($studioRowSet);
-                        echo $studioRowSet[0]["studioid"];
+                        //print_r($studioRowSet);
+                        //echo $studioRowSet[0]["studioid"];
 
                         $studioid = -1;
                         if(!empty($studioRowSet))
@@ -217,8 +217,8 @@
                             $stmtStudio->execute();
 
                             $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
-                            print_r($studioRowSet);
-                            echo $studioRowSet[0]["studioid"];
+                            //print_r($studioRowSet);
+                            //echo $studioRowSet[0]["studioid"];
 
                             if(!empty($studioRowSet))
                             {
@@ -231,7 +231,7 @@
                             }
                         }
 
-                        echo $studioid . '<br>';
+                        //echo $studioid . '<br>';
 
 
 
@@ -258,8 +258,8 @@
                         $stmtTitle->execute();
 
                         $titleRowSet = $stmtTitle->fetchAll(PDO::FETCH_ASSOC);
-                        print_r($titleRowSet);
-                        echo $titleRowSet[0]["movieid"];
+                        //print_r($titleRowSet);
+                        //echo $titleRowSet[0]["movieid"];
 
                         $movieid = -1;
                         if(!empty($titleRowSet))
@@ -273,7 +273,7 @@
                         }
 
 
-                        echo "New Movie: " . $movieid . '<br>';
+                        //echo "New Movie: " . $movieid . '<br>';
 
 
                         //****************ASSOCIATE MOVIE TO ACTORS********************
