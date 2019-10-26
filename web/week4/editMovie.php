@@ -208,7 +208,7 @@
                             $stmtStudio->execute();
 
                             $studioRowSet = $stmtStudio->fetchAll(PDO::FETCH_ASSOC);
-                            print_r($studioRowSet);
+                            //print_r($studioRowSet); for testing
                             echo $studioRowSet[0]["studioid"];
 
                             if(!empty($studioRowSet))
@@ -360,10 +360,10 @@
                         $stmtRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         $actorRowSet = $actorStmt->fetchAll(PDO::FETCH_ASSOC);
 
-                        print_r($stmtRowSet);
-                        echo "<br What is this for?>";
-                        print_r($actorRowSet);
-                        echo "<br And this one>";
+                        //print_r($stmtRowSet); for testing
+                        echo "<br>";
+                        //print_r($actorRowSet); for testing
+                        echo "<br>";
 
                     }//end try
                     catch (PDOException $ex)
@@ -376,10 +376,6 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-
-
-
-
             ?>
 
 
