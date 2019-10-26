@@ -128,8 +128,8 @@
 
             <div>
                 <form action="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php" method="post">
-                    <input type="hidden" name="movieIdent" value="<?php echo $_GET["movieIdent"]?>">
-                    Movie Title: <input type="text" name="title" value="<?php echo $stmtRowSet[0]["movie_title"]?>"><br><br>
+                    <input type="hidden" name="movieIdent" value="<?php echo $_GET["movieIdent"];?>">
+                    Movie Title: <input type="text" name="title" value="<?php echo $stmtRowSet[0]["movie_title"];?>"><br><br>
                     Year: <input type="text" name="year"><br><br>
 
                      <textarea rows="20" cols="55" id="div2" name="description">Add your movie description here.</textarea><br>
