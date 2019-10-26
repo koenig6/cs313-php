@@ -7,7 +7,12 @@ function addItem(){
    // li.setAttribute('type','hidden');
    // li.setAttribute('name','actors[]');
    // li.setAttribute('value',lname.value + ", " + fname.value); //gives li an id of the item
-    li.appendChild(document.createTextNode(lname.value + ", " + fname.value + "<input type=\"hidden\" name=\"actors[]\" value=\"" + lname.value + ", " + fname.value + "\"/>" )); // add to list
+    li.appendChild(document.createTextNode(lname.value + ", " + fname.value)); // add to list
+    var input = document.createElement("input");
+    input.setAttribute('type', 'hidden');
+    input.setAttribute('name', 'actors[]');
+    input.setAttribute('value', lname.value + ", " + fname.value);
+    li.appendChild(input);
     ul.appendChild(li); // add to list
 }
 
