@@ -39,10 +39,6 @@
                         print_r($_POST);
                         echo "<br>";
 
-                        $LastName = strtok($_POST["actors"][0], ",");
-                        $FirstName =strtok(",");
-
-                        echo $LastName . " " . $FirstName;
 
                         //connecting to database
                         $dbUrl = getenv('DATABASE_URL');
@@ -56,12 +52,42 @@
                         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+
+                        //********ADDING ACTORS TO THE DATABASE************************
+                        //fetch the actor array. Each item in the array will be "last_name, first_name"
+                        $actors = $_POST["actors"];
+                        $actorids = array();
+
+                        foreach($actors as $actor)
+                        {
+                            //break the string apart using strtok. This will return everything before the next comma for
+                            //the string passed in on the first call. Each next call will return everything after the last
+                            //comma but before the next comma until there is nothing left in the string.
+                            $LastName = rtrim(ltrim(strtok($actor, ",")));
+                            $FirstName = rtrim(ltrim(strtok(",")));
+
+                            if($FirstName === "")
+                            {
+                                throw new Exception("Actor's mama gave them a first name, please enter it.");
+                            }
+                            if($LastName === "")
+                            {
+                                throw new Exception("Actor's papa gave them a last name (or papa and mama, we're modern people here), please enter it.");
+                            }
+
+                            /*$queryActors = 'SELECT actorsid FROM actors WHERE actorsfirstname = :firstname AND actorslastname = :lastname';
+                            $stmtActors = $db->prepare($queryActors);
+                            $stmtActors->bindValue(':firstname', strtolower($FirstName), PDO::PARAM_STR);
+                            $stmtActors->bindValue(':lastname', strtolower($LastName), PDO::PARAM_STR);*/
+
+                        }
+
                         //check that year is a number
                         if(!is_numeric($_POST[year]))
                         {
                             throw new Exception("Year has to be a number");
                         }
-
 
                         //********THIS IS FOR ADDING A GENRE TO A MOVIE *****
                         $queryGenre = 'SELECT genreid FROM genre WHERE genrename = :genreid LIMIT 1';
