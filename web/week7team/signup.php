@@ -27,7 +27,7 @@
 
                  try
                     {
-                            $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+                            $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
 
                             //connecting to database
                             $dbUrl = getenv('DATABASE_URL');
@@ -75,7 +75,7 @@
         <div>
                 <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
-                    password (7 letters and a number):<input type="password" id ="pwd1" name="pwd1"><br><?php if(isset($_POST['btnSubmit'])){ ?><span color="red">Non matching passwords</span><?php }?><br>
+                    password (7 letters and a number):<input type="password" id ="pwd1" name="pwd1"><br><br>
                     password:<input type="password"  id="pwd2" name="pwd2"><br><br>
                     <input type="submit" value="addUser" name="btnSubmit"  ><br><br>
 
