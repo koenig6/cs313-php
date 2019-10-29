@@ -93,9 +93,11 @@ $_SESSION["BADPASSWORD"] = "";
            {
               echo "<h3 style='color:red;'>Passwords Do Not Match</h3>";
            }
+             echo $_SESSION["BADPASSWORD"];
          ?>
 
         <div>
+
                 <form onsubmit="return isIdentical()" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
                     password (7 letters and a number):<input type="password" id ="pwd1" name="pwd1" onkeyup="checkPassword()"><br><br>
