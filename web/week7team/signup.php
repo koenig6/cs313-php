@@ -28,7 +28,7 @@
                     {
                             if (isset($_POST['pwd1'])) && (isset($_POST['pwd2']))
                             {
-                                if(($_POST['pwd1']) == ($_POST['pwd2'])
+                                if(($_POST['pwd1']) == ($_POST['pwd2']))
                                 {
                                     $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
 
