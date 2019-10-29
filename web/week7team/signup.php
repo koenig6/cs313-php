@@ -28,7 +28,7 @@
 
                  try
                     {
-                            /*$passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+                            $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
                             //connecting to database
                             $dbUrl = getenv('DATABASE_URL');
@@ -50,7 +50,7 @@
                             $stmt->bindValue(':hashpassword', ($passwordHash, PDO::PARAM_STR));
                             $stmt->execute();
 
-                            header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");*/
+                            header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
 
 
 
@@ -74,8 +74,8 @@
         <div>
                 <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
-                    password (7 letters and a number):<input type="password" name="pwd">><br><br>
-                    password:<input type="password" name="pwd2">><br><br>
+                    password (7 letters and a number):<input type="password" name="pwd"><br><br>
+                    password:<input type="password" name="pwd2"><br><br>
                     <input type="submit" value="addUser" name="btnSubmit" ><br><br>
 
                 </form>
