@@ -71,12 +71,12 @@ session_start();
                                 }
                                 else
                                 {
-                                    header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                                    header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
                                 }
                             }
                             else
                             {
-                                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
                             }
 
 

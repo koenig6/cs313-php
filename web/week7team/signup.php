@@ -74,13 +74,31 @@
         <div>
                 <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
-                    password (7 letters and a number):<input type="password" name="pwd"><br><br>
-                    password:<input type="password" name="pwd2"><br><br>
-                    <input type="submit" value="addUser" name="btnSubmit" ><br><br>
+                    password (7 letters and a number):<input type="password" id ="pwd1" name="pwd"><br><br>
+                    password:<input type="password"  id="pwd2" name="pwd2"><br><br>
+                    <input type="submit" value="addUser" name="btnSubmit" onsubmit="isIdentical()" ><br><br>
 
                 </form>
         </div>
         <?php }//end else ?>
+
+        <script>
+            function isIdentical() {
+    var item1 = document.getElementById("pwd1").value
+    var item2 = document.getElementById("pwd2").value
+    if (item1.length != item2.length) {
+        alert("Passwords are not identical.");
+        return false;
+    }
+    for (var i = 0; i < item1.length; i++) {
+        if (item1.charAt(i) != item2.charAt(i)) {
+            alert("Passwords are not identical.");
+            return false;
+        }
+    }
+}
+
+        </script>
 
 	</body>
 </html>
