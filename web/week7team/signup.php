@@ -94,6 +94,7 @@ $_SESSION["BADPASSWORD"] = "";
               echo "<h3 style='color:red;'>Passwords Do Not Match</h3>";
            }
              echo $_SESSION["BADPASSWORD"];
+             echo "line 97";
          ?>
 
         <div>
