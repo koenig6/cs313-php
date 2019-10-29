@@ -57,7 +57,7 @@ session_start();
                             $stmt->bindValue(':hashpassword', $passwordHash, PDO::PARAM_STR);
                             $stmt->execute();*/
 
-                            header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                           // header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
 
                             if(password_verify(string $password, string $hash))
                              {
