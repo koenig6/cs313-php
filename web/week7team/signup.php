@@ -47,8 +47,8 @@
                             $queryUser = 'INSERT INTO users (username, userpassword) VALUES(:name, :hashpassword)';
                             $stmt = $db->prepare($queryUser);
                             $stmt->bindValue(':name', ($_POST["username"}, PDO::PARAM_STR));
-                           // $stmt->bindValue(':hashpassword', ($passwordHash, PDO::PARAM_STR));
-                          //  $stmt->execute();
+                            $stmt->bindValue(':hashpassword', ($passwordHash, PDO::PARAM_STR));
+                            $stmt->execute();
 
                             //header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
 
