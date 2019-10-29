@@ -90,7 +90,7 @@ $_SESSION["BADPASSWORD"] = "";
         {
            if($_SESSION["BADPASSWORD"] == 1)
            {
-              echo "<span color='red'>Passwords do not match</span>";
+              echo "<h3 style='color:red;'>Passwords Do Not Match</h3>";
            }
          ?>
 
