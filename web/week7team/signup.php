@@ -76,7 +76,7 @@
                     Please enter your username:<input type="text" name="username"><br><br>
                     password (7 letters and a number):<input type="password" id ="pwd1" name="pwd"><br><br>
                     password:<input type="password"  id="pwd2" name="pwd2"><br><br>
-                    <input type="submit" value="addUser" name="btnSubmit" onsubmit="isIdentical()" ><br><br>
+                    <input type="submit" value="addUser" name="btnSubmit" onsubmit="return isIdentical()" ><br><br>
 
                 </form>
         </div>
