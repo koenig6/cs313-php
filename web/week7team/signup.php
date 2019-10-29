@@ -17,6 +17,7 @@
             </ul>
         </nav>
          <?php
+        require 'password.php';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
                 {
