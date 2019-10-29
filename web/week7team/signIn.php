@@ -1,13 +1,13 @@
 <?php
 // Start the session
 session_start();
-if(!empty($_GET["action"]))
+if(!empty($_GET[""]))
 {
 
 }
 else
 {
-    "https://morning-bastion-33855.herokuapp.com/week7team/signin.php"
+    "https://morning-bastion-33855.herokuapp.com/week7team/signin.php";
 }
 
 ?>
