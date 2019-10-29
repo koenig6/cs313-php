@@ -75,7 +75,7 @@
                         die();
                     }
                 }else{
-                    echo "Passwords didn't match"
+                    echo "Passwords didn't match";
 
             }//end comparision
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
