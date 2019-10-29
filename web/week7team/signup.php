@@ -29,7 +29,7 @@
             $pwd2 = $_POST('pwd2');
             if($pwd1 == $pwd2)
             {
-                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
+
 
 
 
@@ -76,8 +76,8 @@
                     }
                 }//end comparision
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
-        else
-        {
+       // else
+       // {
          ?>
 
         <div>
@@ -89,7 +89,7 @@
 
                 </form>
         </div>
-        <?php }//end else ?>
+      <?php// }//end else ?>
 
         <script>
             function isIdentical() {
