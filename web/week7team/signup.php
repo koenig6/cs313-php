@@ -56,6 +56,10 @@
 
 
                                 }//end comparison
+                                else
+                                {
+                                    echo 'Passwords do not match';
+                                }//end else
                             }//end isset
 
 
