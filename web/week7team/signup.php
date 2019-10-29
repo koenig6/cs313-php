@@ -88,12 +88,12 @@ $_SESSION["BADPASSWORD"] = "";
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
        else
         {
-           echo $_SESSION["BADPASSWORD"];
+           echo $_"BADPASSWORD"];
            if($_SESSION["BADPASSWORD"] == 1)
            {
               echo "<h3 style='color:red;'>Passwords Do Not Match</h3>";
            }
-             echo $_SESSION["BADPASSWORD"];
+             echo "here is session var " . $_SESSION["BADPASSWORD"];
              echo "line 97";
          ?>
 
