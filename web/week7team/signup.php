@@ -28,8 +28,8 @@
 
             $pwd1 = $_POST('pwd1');
             $pwd2 = $_POST('pwd2');
-            if($pwd1 == $pwd2)
-            {
+           // if($pwd1 == $pwd2)
+           // {
                 echo "we are here! line 33";
 
 
@@ -75,10 +75,10 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-                }else{
-                    echo "Passwords didn't match";
+                //}//else{
+                   // echo "Passwords didn't match";
 
-            }//end comparision
+            //}//end comparision
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
        // else
        // {
