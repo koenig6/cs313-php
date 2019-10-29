@@ -74,7 +74,10 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-                }//end comparision
+                }else{
+                    echo "Passwords didn't match"
+
+            }//end comparision
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
        // else
        // {
