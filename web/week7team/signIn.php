@@ -97,15 +97,17 @@ session_start();
          ?>
 
         <div>
-                <form action="" method="post">
+                <form onsubmit="return isIdentical()" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
                     password (7 letters and a number):<input type="password" name="pwd1"><br><br>
                     <input type="submit" value="Login" name="btnSubmit" ><br><br>
+                    <span id="error" style="color:red"></span>
+		            <span id="error2" style="color:red"></span>
 
                 </form>
         </div>
         <?php }//end else ?>
 
-
+        <script src="team.js"></script>
 	</body>
 </html>
