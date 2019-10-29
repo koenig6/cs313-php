@@ -95,6 +95,6 @@
       <?php }//end else ?>
 
 
-        <script src="team.js"></script>
+        <!--<script src="team.js"></script>-->
 	</body>
 </html>
