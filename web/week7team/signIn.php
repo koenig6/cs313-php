@@ -35,7 +35,7 @@ session_start();
         {
                  try
                     {
-                            $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+                           // $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
                             //connecting to database
                             $dbUrl = getenv('DATABASE_URL');
@@ -55,9 +55,9 @@ session_start();
                             $stmt = $db->prepare($queryUser);
                             $stmt->bindValue(':name', $_POST["username"], PDO::PARAM_STR);
                             $stmt->bindValue(':hashpassword', $passwordHash, PDO::PARAM_STR);
-                            $stmt->execute();*/
+                            $stmt->execute();
 
-                           // header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                            header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
 
                             if(password_verify(string $password, string $hash))
                              {
@@ -66,7 +66,7 @@ session_start();
                              else
                              {
                                  echo 'Invalid password';
-                             }
+                             }*/
 
 
 
