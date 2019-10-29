@@ -1,14 +1,6 @@
 <?php
 // Start the session
 session_start();
-if(!empty($_GET[""]))
-{
-
-}
-else
-{
-    "https://morning-bastion-33855.herokuapp.com/week7team/signin.php";
-}
 
 ?>
 <!DOCTYPE html>
@@ -74,7 +66,7 @@ else
 
                                 if(password_verify($_POST["pwd"], $hashedPassword))
                                 {
-                                    echo 'Password is valid!';
+                                    $_SESSION["username"] = $_POST["username"];
                                     header("Location: https://morning-bastion-33855.herokuapp.com/week7team/welcome.php");
                                 }
                                 else
@@ -108,7 +100,7 @@ else
                 <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
                     password (7 letters and a number):<input type="password" name="pwd"><br><br>
-                    <input type="submit" value="Login In" name="btnSubmit" ><br><br>
+                    <input type="submit" value="Login" name="btnSubmit" ><br><br>
 
                 </form>
         </div>

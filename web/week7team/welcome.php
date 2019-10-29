@@ -2,14 +2,6 @@
 // Start the session
 session_start();
 
-if(!empty($_GET[""]))
-{
-
-}
-else
-{
-    "https://morning-bastion-33855.herokuapp.com/week7team/signin.php";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -23,7 +15,7 @@ else
 	</head>
 	<body>
 
-		Welcome  <?php echo $_POST["username"]; ?><br>
+		Welcome  <?php echo $_SESSION["username"]; ?><br>
 
 	</body>
 </html>
