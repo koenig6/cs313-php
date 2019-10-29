@@ -1,6 +1,6 @@
 function isIdentical() {
-	var item1 = document.getElementById("p1").value
-	var item2 = document.getElementById("p2").value
+	var item1 = document.getElementById("pwd1").value
+	var item2 = document.getElementById("pwd2").value
 	var numCount = 0;
 	var charCount = 0;
 
@@ -34,8 +34,8 @@ function isIdentical() {
 }
 
 function checkPassword() {
-	var item1 = document.getElementById("p1").value
-	var item2 = document.getElementById("p2").value
+	var item1 = document.getElementById("pwd1").value
+	var item2 = document.getElementById("pwd2").value
 	var isSame = true;
 	var numCount = 0;
 	var charCount = 0;
