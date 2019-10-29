@@ -66,7 +66,7 @@ $_SESSION["BADPASSWORD"] = "";
                                 else
                                 {
                                     $_SESSION["BADPASSWORD"] = 1;
-                                         header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signup.php");
+                                    header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signup.php");
 
                                 }//end else
                             }//end isset
@@ -90,7 +90,7 @@ $_SESSION["BADPASSWORD"] = "";
         {
            if($_SESSION["BADPASSWORD"] == 1)
            {
-              echo '<span color='red'>Passwords do not match</span>';
+              echo "<span color='red'>Passwords do not match</span>";
            }
          ?>
 
