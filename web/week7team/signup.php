@@ -20,7 +20,6 @@
 
 
          <?php
-        //require 'password.php';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
         {
@@ -50,9 +49,6 @@
                             $stmt->execute();
 
                             header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
-
-
-
 
                     }//end try
                     catch (PDOException $ex)
