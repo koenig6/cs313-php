@@ -28,7 +28,7 @@
 
                  try
                     {
-                            //$passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+                            $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
                             //connecting to database
                             $dbUrl = getenv('DATABASE_URL');
