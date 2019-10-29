@@ -43,7 +43,6 @@ else
         {
                  try
                     {
-                           // $passwordHash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
                             //connecting to database
                             $dbUrl = getenv('DATABASE_URL');
@@ -69,7 +68,7 @@ else
                             $userRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             $hashedPassword = -1;
-                          /*  if(!empty($userRowSet))
+                            if(!empty($userRowSet))
                             {
                                 $hashedPassword = $userRowSet[0]["userpassword"];
 
@@ -86,7 +85,7 @@ else
                             else
                             {
                                  header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
-                            }*/
+                            }
 
 
                     }//end try
