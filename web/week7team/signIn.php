@@ -68,7 +68,7 @@ else
                             //array that holds the results from the database
                             $userRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                            $hashedPassword = -1
+                            $hashedPassword = -1;
                           /*  if(!empty($userRowSet))
                             {
                                 $hashedPassword = $userRowSet[0]["userpassword"];
@@ -87,10 +87,6 @@ else
                             {
                                  header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
                             }*/
-
-
-
-
 
 
                     }//end try
