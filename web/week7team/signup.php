@@ -1,3 +1,9 @@
+<?php
+// Start the session
+session_start();
+$_SESSION["BADPASSWORD"] = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -30,6 +36,7 @@
                             {
                                 if(($_POST['pwd1']) == ($_POST['pwd2']))
                                 {
+
                                     $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
 
                                     //connecting to database
@@ -58,7 +65,9 @@
                                 }//end comparison
                                 else
                                 {
-                                    echo 'Passwords do not match';
+                                    $_SESSION["BADPASSWORD"] = 1;
+                                         header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signup.php");
+
                                 }//end else
                             }//end isset
 
@@ -79,6 +88,10 @@
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
        else
         {
+           if($_SESSION["BADPASSWORD"] == 1)
+           {
+              echo '<span color='red'>Passwords do not match</span>';
+           }
          ?>
 
         <div>
