@@ -72,7 +72,7 @@
          ?>
 
         <div>
-                <form action="https://morning-bastion-33855.herokuapp.com/week7team/signup.php" method="post">
+                <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
                     password (7 letters and a number):<input type="password" name="pwd">><br><br>
                     password:<input type="password" name="pwd2">><br><br>
