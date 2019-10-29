@@ -16,22 +16,14 @@
 
             </ul>
         </nav>
+
+
+
          <?php
         require 'password.php';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
-                {
-            ?>
-
-		 <div>
-                <form action="https://morning-bastion-33855.herokuapp.com/week7team/signup.php" method="post">
-                    Please enter your username:<input type="text" name="username"><br><br>
-                    password (7 letters and a number):<input type="password" name="pwd">><br><br>
-                    password:<input type="password" name="pwd2">><br><br>
-                    <input type="submit" value="addUser" name="btnSubmit" ><br><br>
-
-                </form>
-             <?php
+        {
 
 
                  try
@@ -74,10 +66,21 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-            }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
+        }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
+        else
+        {
+         ?>
 
-             ?>
+        <div>
+                <form action="https://morning-bastion-33855.herokuapp.com/week7team/signup.php" method="post">
+                    Please enter your username:<input type="text" name="username"><br><br>
+                    password (7 letters and a number):<input type="password" name="pwd">><br><br>
+                    password:<input type="password" name="pwd2">><br><br>
+                    <input type="submit" value="addUser" name="btnSubmit" ><br><br>
+
+                </form>
         </div>
+        <?php }//end else ?>
 
 	</body>
 </html>
