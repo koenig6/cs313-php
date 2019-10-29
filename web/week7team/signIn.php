@@ -73,7 +73,7 @@ else
                             {
                                 $hashedPassword = $userRowSet[0]["userpassword"];
 
-                                if(password_verify($_POST["$pwd"], $hashedPassword))
+                                if(password_verify($_POST["pwd"], $hashedPassword))
                                 {
                                     echo 'Password is valid!';
                                     header("Location: https://morning-bastion-33855.herokuapp.com/week7team/welcome.php");
