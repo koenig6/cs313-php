@@ -1,6 +1,14 @@
 <?php
 // Start the session
 session_start();
+if(!empty($_GET["action"]))
+{
+
+}
+else
+{
+    "https://morning-bastion-33855.herokuapp.com/week7team/signin.php"
+}
 
 ?>
 <!DOCTYPE html>
@@ -51,22 +59,37 @@ session_start();
 
 
                             //getting user info from database for comparision
-                           /* $queryUser = 'SELECT userpassword FROM users WHERE username = :username';
+                            $queryUser = 'SELECT userpassword FROM users WHERE username = :username';
                             $stmt = $db->prepare($queryUser);
-                            $stmt->bindValue(':name', $_POST["username"], PDO::PARAM_STR);
-                            $stmt->bindValue(':hashpassword', $passwordHash, PDO::PARAM_STR);
+                            //binding puts my variables into my place holders
+                            $stmt->bindValue(':username', $_POST["username"], PDO::PARAM_STR);
                             $stmt->execute();
 
-                            header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                            //array that holds the results from the database
+                            $userRowSet = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                            if(password_verify(string $password, string $hash))
-                             {
-                                 echo 'Password is valid!';
-                             }
-                             else
-                             {
-                                 echo 'Invalid password';
-                             }*/
+                            $hashedPassword = -1
+                            if(!empty($userRowSet))
+                            {
+                                $hashedPassword = $userRowSet[0]["userpassword"];
+
+                                if(password_verify($_POST["$pwd"], $hashedPassword))
+                                {
+                                    echo 'Password is valid!';
+                                    header("Location: https://morning-bastion-33855.herokuapp.com/week7team/welcome.php");
+                                }
+                                else
+                                {
+                                    header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                                }
+                            }
+                            else
+                            {
+                                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signin.php");
+                            }
+
+
+
 
 
 
