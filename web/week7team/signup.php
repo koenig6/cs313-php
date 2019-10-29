@@ -26,8 +26,8 @@
         {
             echo "we are here! line 27";
 
-            $pwd1 = $_POST('pwd1');
-            $pwd2 = $_POST('pwd2');
+            //$pwd1 = $_POST('pwd1');
+            //$pwd2 = $_POST('pwd2');
            // if($pwd1 == $pwd2)
            // {
                 echo "we are here! line 33";
