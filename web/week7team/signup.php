@@ -27,9 +27,9 @@
 
             $pwd1 = $_POST('pwd1');
             $pwd2 = $_POST('pwd2');
-            if(pwd1 == pwd2)
+            if($pwd1 == $pwd2)
             {
-                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signup.php");
+                 header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
 
 
 
