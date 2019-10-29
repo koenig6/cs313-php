@@ -64,7 +64,7 @@ session_start();
                             {
                                 $hashedPassword = $userRowSet[0]["userpassword"];
 
-                                if(password_verify($_POST["pwd"], $hashedPassword))
+                                if(password_verify($_POST["pwd1"], $hashedPassword))
                                 {
                                     $_SESSION["username"] = $_POST["username"];
                                     header("Location: https://morning-bastion-33855.herokuapp.com/week7team/welcome.php");
@@ -99,7 +99,7 @@ session_start();
         <div>
                 <form action="" method="post">
                     Please enter your username:<input type="text" name="username"><br><br>
-                    password (7 letters and a number):<input type="password" name="pwd"><br><br>
+                    password (7 letters and a number):<input type="password" name="pwd1"><br><br>
                     <input type="submit" value="Login" name="btnSubmit" ><br><br>
 
                 </form>
