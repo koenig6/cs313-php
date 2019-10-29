@@ -24,16 +24,6 @@
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
         {
-            echo "we are here! line 27";
-
-            //$pwd1 = $_POST('pwd1');
-            //$pwd2 = $_POST('pwd2');
-           // if($pwd1 == $pwd2)
-           // {
-                echo "we are here! line 33";
-
-
-
 
                  try
                     {
@@ -75,13 +65,11 @@
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
-                //}//else{
-                   // echo "Passwords didn't match";
 
-            //}//end comparision
+
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
-       // else
-       // {
+       else
+        {
          ?>
 
         <div>
@@ -93,25 +81,9 @@
 
                 </form>
         </div>
-      <?php// }//end else ?>
+      <?php }//end else ?>
 
-        <script>
-            function isIdentical() {
-    var item1 = document.getElementById("pwd1").value
-    var item2 = document.getElementById("pwd2").value
-    if (item1.length != item2.length) {
-        alert("Passwords are not identical.");
-        return false;
-    }
-    for (var i = 0; i < item1.length; i++) {
-        if (item1.charAt(i) != item2.charAt(i)) {
-            alert("Passwords are not identical.");
-            return false;
-        }
-    }
-}
 
-        </script>
 
 	</body>
 </html>
