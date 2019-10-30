@@ -23,8 +23,6 @@ session_start();
             </ul>
         </nav>
 
-
-
          <?php
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
@@ -40,14 +38,9 @@ session_start();
 
             if ($pwd1 == $pwd2)
             {
-
-
-                 try
+                try
                     {
-
-                                {
-
-                                    $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
+                                  $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
 
                                     //connecting to database
                                     $dbUrl = getenv('DATABASE_URL');
@@ -70,9 +63,7 @@ session_start();
                                     $stmt->execute();
 
                                     header("Location: https://morning-bastion-33855.herokuapp.com/week7team/signIn.php");
-
-
-
+                                    die();
                     }//end try
                     catch (PDOException $ex)
                     {
