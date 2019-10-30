@@ -24,24 +24,6 @@ session_start();
         </nav>
 
          <?php
-                Public function checkPassword($pwd1, &$errors)
-                {
-                    $errors_init = $errors;
-
-                    if (strlen($pwd) < 8) {
-                        $errors[] = "Password too short!";
-                    }
-
-                    if (!preg_match("#[0-9]+#", $pwd)) {
-                        $errors[] = "Password must include at least one number!";
-                    }
-
-                    if (!preg_match("#[a-zA-Z]+#", $pwd)) {
-                        $errors[] = "Password must include at least one letter!";
-                    }
-
-                    return ($errors == $errors_init);
-                }
 
 
 
@@ -57,8 +39,27 @@ session_start();
                 $star = "*";
             }
 
-            if (($pwd1 == $pwd2) && (checkPassword($pwd1, &$errors) == true))
+            if ($pwd1 == $pwd2)
             {
+                  Public function checkPassword($pwd1, &$errors)
+                {
+                    $errors_init = $errors;
+
+                    if (strlen($pwd) < 7) {
+                        $errors[] = "Password too short!";
+                    }
+
+                    if (!preg_match("#[0-9]+#", $pwd)) {
+                        $errors[] = "Password must include at least one number!";
+                    }
+
+                    if (!preg_match("#[a-zA-Z]+#", $pwd)) {
+                        $errors[] = "Password must include at least one letter!";
+                    }
+
+                    return ($errors == $errors_init);
+                }//end checkPassword()
+
                 try
                     {
                                   $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
