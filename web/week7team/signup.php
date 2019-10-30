@@ -33,15 +33,7 @@ session_start();
             $pwd1 = $_POST['pwd1'];
             $pwd2 = $_POST['pwd2'];
 
-            if ($pwd1 != $pwd2)
-            {
-                $passError = "Your passwords do not match";
-                $star = "*";
-            }
-
-            if ($pwd1 == $pwd2)
-            {
-                  Public function checkPassword($pwd1, &$errors)
+            Public function checkPassword($pwd1, &$errors)
                 {
                     $errors_init = $errors;
 
@@ -60,6 +52,14 @@ session_start();
                     return ($errors == $errors_init);
                 }//end checkPassword()
 
+            if ($pwd1 != $pwd2)
+            {
+                $passError = "Your passwords do not match";
+                $star = "*";
+            }
+
+            if ($pwd1 == $pwd2)
+            {
                 try
                     {
                                   $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
