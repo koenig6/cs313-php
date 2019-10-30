@@ -50,11 +50,6 @@ session_start();
 
             if ($pwd1 == $pwd2)
             {
-                 if (strlen($pwd) > 7)
-                 {
-                     if(preg_match("#[0-9]+#", $pwd))
-                     {
-
                         try
                             {
                                           $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
@@ -92,18 +87,6 @@ session_start();
                                 echo 'Error!: ' . $ex->getMessage();
                                 die();
                             }
-                     }// password number check
-                     else
-                     {
-                          echo 'Error! Password needs at least 1 number! ';
-                     }
-                     }// password length check
-                else
-                {
-                    echo 'Error! Password too short! ';
-                }
-
-
 
                 }// end if ($pwd1 == $pwd2)
 
