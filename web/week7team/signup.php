@@ -24,6 +24,27 @@ session_start();
         </nav>
 
          <?php
+                Public function checkPassword($pwd1, &$errors)
+                {
+                    $errors_init = $errors;
+
+                    if (strlen($pwd) < 8) {
+                        $errors[] = "Password too short!";
+                    }
+
+                    if (!preg_match("#[0-9]+#", $pwd)) {
+                        $errors[] = "Password must include at least one number!";
+                    }
+
+                    if (!preg_match("#[a-zA-Z]+#", $pwd)) {
+                        $errors[] = "Password must include at least one letter!";
+                    }
+
+                    return ($errors == $errors_init);
+                }
+
+
+
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
         {
@@ -36,7 +57,7 @@ session_start();
                 $star = "*";
             }
 
-            if ($pwd1 == $pwd2)
+            if (($pwd1 == $pwd2) && (checkPassword($pwd1, &$errors) == true))
             {
                 try
                     {
