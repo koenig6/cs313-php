@@ -33,24 +33,14 @@ session_start();
             $pwd1 = $_POST['pwd1'];
             $pwd2 = $_POST['pwd2'];
 
-            Public function checkPassword($pwd1, &$errors)
-                {
-                    $errors_init = $errors;
 
-                    if (strlen($pwd) < 7) {
-                        $errors[] = "Password too short!";
-                    }
-
-                    if (!preg_match("#[0-9]+#", $pwd)) {
+                    /*if (!preg_match("#[0-9]+#", $pwd)) {
                         $errors[] = "Password must include at least one number!";
                     }
 
                     if (!preg_match("#[a-zA-Z]+#", $pwd)) {
                         $errors[] = "Password must include at least one letter!";
-                    }
-
-                    return ($errors == $errors_init);
-                }//end checkPassword()
+                    }*/
 
             if ($pwd1 != $pwd2)
             {
@@ -60,6 +50,9 @@ session_start();
 
             if ($pwd1 == $pwd2)
             {
+                 if (strlen($pwd) > 7)
+                 {
+
                 try
                     {
                                   $passwordHash = password_hash($_POST["pwd1"], PASSWORD_DEFAULT);
@@ -97,6 +90,13 @@ session_start();
                         echo 'Error!: ' . $ex->getMessage();
                         die();
                     }
+                     }// password length check
+                else
+                {
+                    echo 'Error! Password too short! ';
+                }
+
+
 
                 }// end if ($pwd1 == $pwd2)
 
@@ -104,7 +104,7 @@ session_start();
         ?>
 
         <div>
-            <form onsubmit="checkPassword($pwd1, &$errors)" method="post">
+            <form action="" method="post">
               Please enter your username:<input type="text" name="username"><br><br>
               password (7 letters and a number):<input type="password" id ="pwd1" name="pwd1"><span style="color:red;"><?php echo $star; ?></span><br><br>
               password:<input type="password"  id="pwd2" name="pwd2"><span style="color:red;"><?php echo $star; ?></span><br><br>
