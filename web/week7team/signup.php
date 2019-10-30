@@ -88,10 +88,7 @@ session_start();
                 }// end if ($pwd1 == $pwd2)
 
         }//end if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnSubmit']))
-       else
-        {
-
-         ?>
+        ?>
 
         <div>
             <form action="" method="post">
@@ -101,7 +98,7 @@ session_start();
               <input type="submit" value="addUser" name="btnSubmit"  ><span style="color:red;"><?php echo $passError; ?></span><br><br>
                  </form>
   </div>
-      <?php }//end else ?>
+
 
 
         <!--<script src="team.js"></script>-->
