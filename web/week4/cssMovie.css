@@ -39,6 +39,7 @@ nav ul li a:hover {
     background-color: #2E9CCA; /*when mouse is on nav link it will be this color*/
     color: #25274D;
 }
+
 nav ul li.active a {
     background-color: #29648A; /*makes current page link color*/
     color: #AAABB8;
@@ -62,7 +63,7 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #AAABB8;
   border-radius: 4px;
   box-sizing: border-box;
 }
