@@ -24,7 +24,7 @@ session_start();
 
         <nav>
             <ul class="navigation">
-                <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Home Page</a></li>
+                <li><a href="https://morning-bastion-33855.herokuapp.com/assignMain.php">Assignment Page</a></li>
                 <li class="active"><a href="https://morning-bastion-33855.herokuapp.com/week4/movie.php">Movie Database</a></li>
                  <li><a href="https://morning-bastion-33855.herokuapp.com/week4/addMovie.php">Add Movie</a></li>
             </ul>
