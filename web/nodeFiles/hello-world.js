@@ -1,5 +1,9 @@
 var http= require('http');
 
-var server = http.createServer();
+function sayHello()
+{
+    console.log('Hello World!');
+}
+
+var server = http.createServer(sayHello);
 server.listen(5000);
-//console.log('Hello World!');
